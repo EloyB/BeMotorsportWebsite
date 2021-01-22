@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 
 export default function Layout({ children }) {
   return (
-    <div className="relative">
+    <div className="relative box-border">
       <Navbar />
       {children}
     </div>

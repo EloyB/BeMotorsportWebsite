@@ -20,7 +20,7 @@ export default function Navbar() {
   return (
     <div className={`fixed z-50 w-full shadow-md bg-white py-4 px-5 `}>
       <div
-        className={`max-w-screen-lg m-auto md:flex md:items-center ${
+        className={`max-w-screen-xl m-auto md:flex md:items-center ${
           hitScrollPoint ? "md:justify-between" : "md:justify-center"
         }`}
       >
