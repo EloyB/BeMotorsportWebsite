@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import ContentItem from "../components/ContentItem";
 
 export default function contact() {
   return (
@@ -12,62 +13,60 @@ export default function contact() {
               Ons Team
             </h1>
             <p className="text-xl font-light md:text-lg lg:text-xl">
-              BE motorsport is een familiebedrijf met een grote interesse voor de motorsport. Racing
-              is de metafoor die ons heeft doen nadenken over dit nieuwe project. Het zakendoen zit
-              bij de familie Beyens in hart en nieren, en van daaruit is de passie ontstaan om beide
+              BE motorsport is een familiebedrijf met een grote interesse voor
+              de motorsport. Racing is de metafoor die ons heeft doen nadenken
+              over dit nieuwe project. Het zakendoen zit bij de familie Beyens
+              in hart en nieren, en van daaruit is de passie ontstaan om beide
               te gaan combineren
             </p>
           </div>
         </div>
       </div>
       <div className="bg-gray-50 py-10">
-        <div className="px-8 xl:px-0 md:flex md:items-center lg:max-w-screen-xl lg:m-auto py-10">
-          <img className="md:w-1/3" src="/wie-zijn-wij.jpg" alt="groepsfoto" />
-          <div className="md:text-left inline-block md:px-5 lg:pl-16">
-            <div className="pt-3 pb-1 md:pt-0">
-              <p className="text-motorblue font-medium">Sales Manager</p>
-              <h1 className="text-4xl font-medium sm:text-5xl md:text-3xl lg:text-4xl">
-                Didier Beyens
-              </h1>
+        <ContentItem
+          image="/wie-zijn-wij.jpg"
+          subTitle="Sales-Manager"
+          title="Didier beyens"
+          body="Heb je vragen over onze pakketten? Aarzel zeker niet om contact met mij op te nemen. Ik help je graag verder!"
+          extension={
+            <div className="flex space-x-2">
+              <div className="w-7 h-7 bg-motorblue rounded-full my-3"></div>
+              <div className="w-7 h-7 bg-motorblue rounded-full my-3"></div>
             </div>
-            <p className="text-base font-light lg:text-xl">
-              Heb je vragen over onze pakketten? Aarzel zeker niet om contact met mij op te nemen.
-              Ik help je graag verder!
-            </p>
-          </div>
-        </div>
-        <div className="px-8 xl:px-0 md:flex md:flex-row-reverse md:items-center lg:max-w-screen-xl lg:m-auto py-10">
-          <img className="md:w-1/3" src="/wie-zijn-wij.jpg" alt="groepsfoto" />
-          <div className="md:text-right inline-block md:px-5 lg:pr-16">
-            <div className="pt-3 pb-1 md:pt-0">
-              <p className="text-motorblue font-medium">CEO</p>
-              <h1 className="text-4xl font-medium sm:text-5xl md:text-3xl lg:text-4xl">
-                Stephan Beyens
-              </h1>
+          }
+        />
+        <ContentItem
+          image="/wie-zijn-wij.jpg"
+          subTitle="CEO"
+          title="Stephan beyens"
+          body="Heb je technische vragen of wil je graag brainstormen over hoe we
+          jullie bedrijf kunnen verder helpen? Aarzel dan zeker niet om
+          contact met mij op te nemen! Persoonlijk contact blijft belangrijk
+          in zaken doen, so, let's meet!"
+          extension={
+            <div className="flex space-x-2">
+              <div className="w-7 h-7 bg-motorblue rounded-full my-3"></div>
+              <div className="w-7 h-7 bg-motorblue rounded-full my-3"></div>
             </div>
-            <p className="text-base font-light lg:text-xl">
-              Heb je technische vragen of wil je graag brainstormen over hoe we jullie bedrijf
-              kunnen verder helpen? Aarzel dan zeker niet om contact met mij op te nemen!
-              Persoonlijk contact blijft belangrijk in zaken doen, so, let's meet!
-            </p>
-          </div>
-        </div>
-        <div className="px-8 xl:px-0 md:flex md:items-center lg:max-w-screen-xl lg:m-auto py-10">
-          <img className="md:w-1/3" src="/wie-zijn-wij.jpg" alt="groepsfoto" />
-          <div className="md:text-left inline-block md:px-5 lg:pl-16">
-            <div className="pt-3 pb-1 md:pt-0">
-              <p className="text-motorblue font-medium">Creative Mind</p>
-              <h1 className="text-4xl font-medium sm:text-5xl md:text-3xl lg:text-4xl">
-                Julie Beyens
-              </h1>
+            
+          }
+          reverse
+        />
+        <ContentItem
+          image="/wie-zijn-wij.jpg"
+          subTitle="Creative Mind"
+          title="Julie beyens"
+          body="Wil je graag een creatief event organiseren voor je team? Of wil
+          je graag een teambuilding organiseren met leuke workshops? Weet je
+          niet goed waar te starten? Twijfel dan zeker niet en bel me op! Ik
+          help je graag verder!"
+          extension={
+            <div className="flex space-x-2">
+              <div className="w-7 h-7 bg-motorblue rounded-full my-3"></div>
+              <div className="w-7 h-7 bg-motorblue rounded-full my-3"></div>
             </div>
-            <p className="text-base font-light lg:text-xl">
-              Wil je graag een creatief event organiseren voor je team? Of wil je graag een
-              teambuilding organiseren met leuke workshops? Weet je niet goed waar te starten?
-              Twijfel dan zeker niet en bel me op! Ik help je graag verder!
-            </p>
-          </div>
-        </div>
+          }
+        />
       </div>
       <div className="py-10 bg-gray-800">
         <div className="max-w-screen-xl m-auto px-8 flex flex-col sm:flex-row xl:px-0">
