@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function Navbar() {
   const [openMenu, setOpenMenu] = useState(false);
   const [hitScrollPoint, setHitScrollPoint] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,7 +29,7 @@ export default function Navbar() {
         <div
           className={`flex items-center ${hitScrollPoint ? "justify-between" : "justify-center"}`}
         >
-          <div className="w-40 h-10 bg-gray-500"></div>
+          <div className="w-40 h-10 bg-gray-500" onClick={() => router.push("/")}></div>
           <div
             className={`cursor-pointer ${hitScrollPoint ? "block" : "hidden"} md:hidden`}
             onClick={() => setOpenMenu(!openMenu)}
@@ -54,13 +56,13 @@ export default function Navbar() {
           } md:flex-row md:space-x-3 md:pt-0`}
         >
           <Link href="/">
-            <a>Trackdays</a>
+            <a className="text-lg hover:text-motorblue">Trackdays</a>
           </Link>
           <Link href="/">
-            <a>Boeken</a>
+            <a className="text-lg hover:text-motorblue">Boeken</a>
           </Link>
-          <Link href="/">
-            <a>Contact</a>
+          <Link href="/contact">
+            <a className="text-lg hover:text-motorblue">Contact</a>
           </Link>
         </div>
       </div>
