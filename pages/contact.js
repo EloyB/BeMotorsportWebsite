@@ -13,10 +13,9 @@ export default function contact() {
               Ons Team
             </h1>
             <p className="text-xl font-light md:text-lg lg:text-xl">
-              BE motorsport is een familiebedrijf met een grote interesse voor
-              de motorsport. Racing is de metafoor die ons heeft doen nadenken
-              over dit nieuwe project. Het zakendoen zit bij de familie Beyens
-              in hart en nieren, en van daaruit is de passie ontstaan om beide
+              BE motorsport is een familiebedrijf met een grote interesse voor de motorsport. Racing
+              is de metafoor die ons heeft doen nadenken over dit nieuwe project. Het zakendoen zit
+              bij de familie Beyens in hart en nieren, en van daaruit is de passie ontstaan om beide
               te gaan combineren
             </p>
           </div>
@@ -24,7 +23,7 @@ export default function contact() {
       </div>
       <div className="bg-gray-50 py-10">
         <ContentItem
-          image="/wie-zijn-wij.jpg"
+          image="/didier.jpg"
           subTitle="Sales-Manager"
           title="Didier beyens"
           body="Heb je vragen over onze pakketten? Aarzel zeker niet om contact met mij op te nemen. Ik help je graag verder!"
@@ -36,7 +35,7 @@ export default function contact() {
           }
         />
         <ContentItem
-          image="/wie-zijn-wij.jpg"
+          image="/stephan.jpg"
           subTitle="CEO"
           title="Stephan beyens"
           body="Heb je technische vragen of wil je graag brainstormen over hoe we
@@ -48,7 +47,6 @@ export default function contact() {
               <div className="w-7 h-7 bg-motorblue rounded-full my-3"></div>
               <div className="w-7 h-7 bg-motorblue rounded-full my-3"></div>
             </div>
-            
           }
           reverse
         />
@@ -68,14 +66,19 @@ export default function contact() {
           }
         />
       </div>
-      <div className="py-10 bg-gray-800">
-        <div className="max-w-screen-xl m-auto px-8 flex flex-col sm:flex-row xl:px-0">
+      <div className="py-10 bg-gray-800 relative">
+        <img
+          className="absolute w-full h-full object-cover inset-0"
+          src="/mapview.png"
+          alt="europa"
+        />
+        <div className="max-w-screen-xl m-auto px-8 flex flex-col sm:flex-row xl:px-0 relative">
           <div className="pb-8 flex flex-col items-center sm:w-full sm:items-start sm:justify-end sm:pb-0">
             <h1 className="text-white text-center sm:text-left text-4xl font-medium lg:text-4xl">
               Contact us
             </h1>
           </div>
-          <div className="bg-white rounded-md shadow-md p-6 space-y-3 sm:w-full">
+          <div className="bg-white rounded-md shadow-md p-6 space-y-3 sm:w-full lg:w-2/3">
             <div className="bg-gray-50 w-full h-10 rounded"></div>
             <div className="bg-gray-50 w-full h-10 rounded"></div>
             <div className="bg-gray-50 w-full h-40 rounded"></div>

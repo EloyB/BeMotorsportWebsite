@@ -29,7 +29,12 @@ export default function Navbar() {
         <div
           className={`flex items-center ${hitScrollPoint ? "justify-between" : "justify-center"}`}
         >
-          <div className="w-40 h-10 bg-gray-500" onClick={() => router.push("/")}></div>
+          <div
+            className="w-40 xs:w-60 h-10 flex items-center justify-center"
+            onClick={() => router.push("/")}
+          >
+            <img src="/logo.svg" alt="logo zonder donut" />
+          </div>
           <div
             className={`cursor-pointer ${hitScrollPoint ? "block" : "hidden"} md:hidden`}
             onClick={() => setOpenMenu(!openMenu)}
@@ -53,7 +58,7 @@ export default function Navbar() {
             !hitScrollPoint ? "hidden" : openMenu ? "block" : "hidden"
           } flex flex-col bg-white pt-4 space-y-3 text-right ${
             hitScrollPoint ? "md:block" : "md:hidden"
-          } md:flex-row md:space-x-3 md:pt-0`}
+          } md:flex-row md:space-x-8 md:pt-0`}
         >
           <Link href="/">
             <a className="text-lg hover:text-motorblue">Trackdays</a>
