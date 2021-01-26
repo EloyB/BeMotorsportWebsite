@@ -12,7 +12,7 @@ export default function Home() {
         <div className="px-8 pt-8">
           <h1 className="text-3xl font-medium text-center py-5">Create your business experience</h1>
         </div>
-        <div className="m-auto py-10 px-8 space-y-5 grid grid-cols-1 sm:space-y-0 sm:grid-cols-2 sm:gap-5 lg:max-w-screen-lg lg:px-0 xl:max-w-screen-xl">
+        <div className="m-auto py-10 px-8 space-y-5 grid grid-cols-1 sm:space-y-0 sm:grid-cols-2 lg:grid-cols-4 sm:gap-5 lg:max-w-screen-lg lg:px-0 xl:max-w-screen-xl">
           <div className="cursor-pointer w-full h-52 bg-gray-200 flex items-center justify-center lg:h-64 transition-transform transform ease-in-out hover:scale-105">
             <h1 className="text-3xl font-medium">Renting</h1>
           </div>
@@ -42,7 +42,7 @@ export default function Home() {
                 <span className="block xl:inline-block">Wij maken het waar!</span>
               </p>
               <div className="mt-7 lg:mt-9">
-                <Link href="/">
+                <Link href="/contact">
                   <a className="bg-motorblue hover:bg-opacity-90 rounded-md text-white font-medium px-8 py-3">
                     Meer over ons
                   </a>

@@ -6,6 +6,9 @@ module.exports = {
       colors: {
         motorblue: "#0076BD",
       },
+      screens: {
+        xs: "400px",
+      },
     },
   },
   variants: {
