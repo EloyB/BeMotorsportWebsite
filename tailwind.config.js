@@ -9,6 +9,9 @@ module.exports = {
       screens: {
         xs: "400px",
       },
+      fontFamily: {
+        raleway: "Raleway, sans-serif",
+      },
     },
   },
   variants: {
