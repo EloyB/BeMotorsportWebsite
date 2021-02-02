@@ -60,7 +60,7 @@ export default function Navbar() {
             hitScrollPoint ? "md:block" : "md:hidden"
           } md:flex-row md:space-x-8 md:pt-0`}
         >
-          <Link href="/">
+          <Link href="/trackdays">
             <a className="text-lg hover:text-motorblue">Trackdays</a>
           </Link>
           <Link href="/">
