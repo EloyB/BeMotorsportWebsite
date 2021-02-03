@@ -13,6 +13,13 @@ export default function DriversStep() {
           <TextInput label="Last Name" />
           <TextInput label="Age" />
           <Checkbox label="Has experience" />
+          <button
+            className="px-6 py-3 w-full bg-motorblue text-white focus:outline-none sm:px-16 sm:w-auto"
+            onClick={(e) => handleButtonClick(e.target.value)}
+            value="next"
+          >
+            Add driver
+          </button>
         </div>
         <div className="w-full pt-5 space-y-5 lg:pl-5">
           <DriverItem />
