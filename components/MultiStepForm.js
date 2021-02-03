@@ -42,7 +42,7 @@ export default function MultiStepForm() {
             back
           </button>
           <button
-            className="px-6 py-3 rounded-md bg-motorblue text-white focus:outline-none sm:px-16"
+            className="px-6 py-3 bg-motorblue text-white focus:outline-none sm:px-16"
             onClick={(e) => handleButtonClick(e.target.value)}
             value="next"
           >

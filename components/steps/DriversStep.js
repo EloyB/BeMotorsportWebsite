@@ -1,28 +1,23 @@
 import React from "react";
+import Checkbox from "../Checkbox";
+import DriverItem from "../DriverItem";
 import TextInput from "../TextInput";
 
 export default function DriversStep() {
   return (
     <div className="w-full py-10 px-5 bg-gray-50">
-      <p className="max-w-screen-lg m-auto font-bold text-2xl">Drivers</p>
-      <div className="max-w-screen-lg m-auto w-full py-4 space-y-4 flex flex-col sm:flex-row sm:space-y-0 sm:space-x-5">
-        <div className="space-y-4 sm:w-1/2">
+      <p className="max-w-screen-lg m-auto font-bold text-2xl pb-5 md:text-4xl">Drivers</p>
+      <div className="max-w-screen-lg m-auto divide-y-2 lg:flex lg:divide-y-0 lg:divide-x-2">
+        <div className="w-full space-y-4 pb-5 lg:pr-5">
           <TextInput label="First Name" />
           <TextInput label="Last Name" />
-          <TextInput label="Email" />
-          <TextInput label="Phone Number" />
+          <TextInput label="Age" />
+          <Checkbox label="Has experience" />
         </div>
-        <div className="space-y-4 w-full sm:w-1/2">
-          <TextInput label="Street" />
-          <TextInput label="City" />
-          <div className="flex gap-4 w-full">
-            <TextInput label="Number" />
-            <TextInput label="Appartment" />
-          </div>
-          <div className="flex gap-4 w-full">
-            <TextInput label="Zip code" />
-            <TextInput label="Country" />
-          </div>
+        <div className="w-full pt-5 space-y-5 lg:pl-5">
+          <DriverItem />
+          <DriverItem />
+          <DriverItem />
         </div>
       </div>
     </div>

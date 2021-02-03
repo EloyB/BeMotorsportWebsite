@@ -42,7 +42,7 @@ export default function TrackdayItem({ index, circuitname, date, country }) {
       <div
         className={`${
           open ? "flex" : "hidden"
-        } py-6 space-y-5 flex-col lg:flex-row lg:items-center lg:justify-between lg:space-y-0`}
+        } py-6 space-y-5 flex-col lg:flex-row lg:items-start lg:justify-between lg:space-y-0`}
       >
         <div className="space-y-5 flex flex-col sm:flex-row sm:space-y-0 sm:justify-between lg:w-2/3 xl:w-1/2">
           <div>
@@ -58,7 +58,7 @@ export default function TrackdayItem({ index, circuitname, date, country }) {
           <div>
             <p className="text-gray-600 text-md font-semibold">Available formulas</p>
             <TrackdayAssetItem checked description="Renting" />
-            <TrackdayAssetItem description="VIP" />
+            <TrackdayAssetItem description="Share a ride" />
           </div>
         </div>
         <div className="flex space-x-3 pt-6 lg:flex-col lg:pt-0 lg:space-x-0 lg:space-y-2">
