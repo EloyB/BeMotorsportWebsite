@@ -63,7 +63,7 @@ export default function Navbar() {
           <Link href="/trackdays">
             <a className="text-lg hover:text-motorblue">Trackdays</a>
           </Link>
-          <Link href="/">
+          <Link href="/reservation">
             <a className="text-lg hover:text-motorblue">Boeken</a>
           </Link>
           <Link href="/contact">
