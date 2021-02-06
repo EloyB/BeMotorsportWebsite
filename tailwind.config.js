@@ -12,10 +12,17 @@ module.exports = {
       fontFamily: {
         raleway: "Raleway, sans-serif",
       },
+      transitionProperty: {
+        height: "height",
+      },
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      height: ["group-hover"],
+      display: ["responsive", "group-hover"],
+      transitionProperty: ["hover"],
+    },
   },
   plugins: [],
 };
