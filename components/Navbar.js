@@ -9,7 +9,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 150) {
+      if (window.scrollY > 20) {
         setHitScrollPoint(true);
       } else {
         setHitScrollPoint(false);
