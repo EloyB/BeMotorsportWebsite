@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import PrimaryButton from "./buttons/PrimaryButton";
 import DriversStep from "./steps/DriversStep";
 import PersonalInformationStep from "./steps/PersonalInformationStep";
+import TrackdaysStep from "./steps/TrackdaysStep";
 
 export default function MultiStepForm() {
   const [activeStep, setActiveStep] = useState(0);
@@ -8,6 +10,7 @@ export default function MultiStepForm() {
   const steps = [
     { name: "personal information", component: <PersonalInformationStep /> },
     { name: "drivers", component: <DriversStep /> },
+    { name: "trackdays", component: <TrackdaysStep /> },
   ];
 
   const handleButtonClick = (action) => {
@@ -19,7 +22,7 @@ export default function MultiStepForm() {
         setActiveStep(activeStep - 1);
         break;
       case "next":
-        if (activeStep === steps.length) {
+        if (activeStep + 1 === steps.length) {
           return;
         }
         setActiveStep(activeStep + 1);
@@ -41,13 +44,7 @@ export default function MultiStepForm() {
           >
             back
           </button>
-          <button
-            className="px-6 py-3 bg-motorblue text-white focus:outline-none sm:px-16"
-            onClick={(e) => handleButtonClick(e.target.value)}
-            value="next"
-          >
-            next
-          </button>
+          <PrimaryButton label="next" onClick={(value) => handleButtonClick(value)} />
         </div>
       </div>
     </div>

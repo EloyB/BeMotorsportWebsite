@@ -3,10 +3,10 @@ import React from "react";
 export default function DriverItem() {
   return (
     <div className="bg-white w-full flex justify-between">
-      <div className="bg-motorblue flex items-center justify-center px-3 py-5">
+      <div className="bg-motorblue flex items-center justify-center px-3 py-8">
         <p className="text-white font-bold text-lg">#1</p>
       </div>
-      <div className="flex flex-1 flex-col justify-center pl-3">
+      <div className="flex flex-1 flex-col justify-center pl-5">
         <p className="text-base font-bold">Driver Name + Last name</p>
         <p className="text-base">Age</p>
       </div>

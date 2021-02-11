@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from "react";
 import ReactMapGL, { Marker } from "react-map-gl";
 import TrackdayItem from "../components/TrackdayItem";
+import firebase from "../context/firebase";
+import { useStateValue } from "../context/StateProvider";
 
-export default function trackdays() {
+export default function trackdays({ circuits }) {
+  const [{ filteredTrackdays }, dispatch] = useStateValue();
+
   const [viewport, setViewPort] = useState({
     longitude: 5.97521,
     latitude: 50.43258,
@@ -13,6 +17,22 @@ export default function trackdays() {
 
   const mbToken =
     "pk.eyJ1IjoicXdlYmRlc2lnbiIsImEiOiJja2tmbzV3ZWUwY2gzMndtcHJjYzd1NmZ2In0.39BM3JaR3bYywwvVHDzKCA";
+
+  useEffect(() => {
+    firebase
+      .firestore()
+      .collection("trackdays")
+      .get()
+      .then((res) => {
+        dispatch({
+          type: "SET_TRACKDAYS",
+          list: res.docs.map((entry) => ({
+            id: entry.id,
+            ...entry.data(),
+          })),
+        });
+      });
+  }, []);
 
   return (
     <div>
@@ -33,21 +53,48 @@ export default function trackdays() {
             mapStyle="mapbox://styles/mapbox/dark-v10"
             onViewportChange={(viewport) => setViewPort(viewport)}
           >
-            <Marker longitude={5.97521} latitude={50.43258}>
-              <div className="cursor-pointer max-w-screen-xl mx-auto h-2 w-2 rounded-full bg-motorblue"></div>
-            </Marker>
+            {circuits.map((item, index) => (
+              <Marker key={index} longitude={item.coordinates.lng} latitude={item.coordinates.lat}>
+                <div
+                  className="cursor-pointer max-w-screen-xl mx-auto h-3 w-3 rounded-full bg-motorblue"
+                  onClick={() => {
+                    dispatch({
+                      type: "FILTER_TRACKDAYS",
+                      name: item.name,
+                    });
+                  }}
+                ></div>
+              </Marker>
+            ))}
           </ReactMapGL>
         </div>
         <div className="max-w-screen-xl m-auto px-5 py-4 md:px-8 flex items-center justify-end space-x-2 xl:px-0">
           <div className="bg-gray-200 h-8 w-32"></div>
           <div className="bg-gray-200 h-8 w-10"></div>
         </div>
-        <div className="max-w-screen-xl m-auto px-5 py-4 lg:px-0">
-          <TrackdayItem index={1} />
-          <TrackdayItem index={2} />
-          <TrackdayItem index={3} />
+        <div className="max-w-screen-xl m-auto px-5 pt-4 pb-12 lg:px-0">
+          {filteredTrackdays.length > 0 ? (
+            filteredTrackdays.map((item, index) => (
+              <TrackdayItem key={index} index={index} trackday={item} />
+            ))
+          ) : (
+            <p className="text-center font-semibold text-motorblue">
+              Selecteer een circuit op de kaart om de beschikbare trackdays te zien
+            </p>
+          )}
         </div>
       </div>
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const circuits = await firebase.firestore().collection("circuits").get();
+  const circuitsData = circuits.docs.map((entry) => ({
+    id: entry.id,
+    ...entry.data(),
+  }));
+  return {
+    props: { circuits: circuitsData },
+  };
 }

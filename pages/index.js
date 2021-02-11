@@ -17,20 +17,6 @@ export default function Home() {
             </h1>
           </div>
         </div>
-        {/* <div className="m-auto py-10 px-8 space-y-5 grid grid-cols-1 sm:space-y-0 sm:grid-cols-2 lg:grid-cols-4 sm:gap-5 lg:max-w-screen-lg lg:px-0 xl:max-w-screen-xl">
-          <div className="cursor-pointer w-full h-52 bg-gray-200 flex items-center justify-center lg:h-64 transition-transform transform ease-in-out hover:scale-105">
-            <h1 className="text-3xl font-medium">Renting</h1>
-          </div>
-          <div className="cursor-pointer w-full h-52 bg-gray-200 flex items-center justify-center lg:h-64 transition-transform transform ease-in-out hover:scale-105">
-            <h1 className="text-3xl font-medium">Share a ride</h1>
-          </div>
-          <div className="cursor-pointer w-full h-52 bg-gray-200 flex items-center justify-center lg:h-64 transition-transform transform ease-in-out hover:scale-105">
-            <h1 className="text-3xl font-medium">VIP</h1>
-          </div>
-          <div className="cursor-pointer w-full h-52 bg-gray-200 flex items-center justify-center lg:h-64 transition-transform transform ease-in-out hover:scale-105">
-            <h1 className="text-3xl font-medium">Business</h1>
-          </div>
-        </div> */}
         <PlansSection />
         <div className="bg-gray-50 py-10 px-8 ">
           <div className="md:px-0 md:flex md:flex-row-reverse md:items-center lg:max-w-screen-xl lg:m-auto">
