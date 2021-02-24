@@ -6,7 +6,7 @@ import { useStateValue } from "../context/StateProvider";
 
 export default function trackdays({ circuits }) {
   const [{ filteredTrackdays }, dispatch] = useStateValue();
-
+  const [showCircuitPopup, setShowCircuitPopup] = useState({ show: false, circuit: {} });
   const [viewport, setViewPort] = useState({
     longitude: 5.97521,
     latitude: 50.43258,
@@ -46,13 +46,21 @@ export default function trackdays({ circuits }) {
             de dag of auto van je keuze reeds geblokkeerd is. We zoeken samen naar een oplossing.
           </p>
         </div>
-        <div className="w-full h-96 max-w-screen-xl m-auto">
+        <div className="relative w-full h-96 max-w-screen-xl m-auto">
           <ReactMapGL
             {...viewport}
             mapboxApiAccessToken={mbToken}
             mapStyle="mapbox://styles/mapbox/dark-v10"
             onViewportChange={(viewport) => setViewPort(viewport)}
           >
+            <div
+              className={`p-4 bg-white absolute top-5 right-5 border-r-4 border-motorblue text-right ${
+                showCircuitPopup.show ? "block" : "hidden"
+              }`}
+            >
+              <p className="font-semibold">{showCircuitPopup.circuit.name}</p>
+              <p className="text-xs">{showCircuitPopup.circuit.country}</p>
+            </div>
             {circuits.map((item, index) => (
               <Marker key={index} longitude={item.coordinates.lng} latitude={item.coordinates.lat}>
                 <div
@@ -63,6 +71,8 @@ export default function trackdays({ circuits }) {
                       name: item.name,
                     });
                   }}
+                  onMouseEnter={() => setShowCircuitPopup({ show: true, circuit: item })}
+                  onMouseLeave={() => setShowCircuitPopup({ show: false, circuit: {} })}
                 ></div>
               </Marker>
             ))}
@@ -78,9 +88,11 @@ export default function trackdays({ circuits }) {
               <TrackdayItem key={index} index={index} trackday={item} />
             ))
           ) : (
-            <p className="text-center font-semibold text-motorblue">
-              Selecteer een circuit op de kaart om de beschikbare trackdays te zien
-            </p>
+            <div className="bg-gray-50 px-4 py-7 text-center">
+              <p className="font-semibold text-motorblue">
+                Selecteer een circuit op de kaart om de beschikbare trackdays te zien
+              </p>
+            </div>
           )}
         </div>
       </div>

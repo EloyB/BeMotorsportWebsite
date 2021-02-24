@@ -1,16 +1,24 @@
 import React from "react";
+import { useStateValue } from "../context/StateProvider";
 
-export default function DriverItem() {
+export default function DriverItem({ driver, index }) {
+  const [{ drivers }, dispatch] = useStateValue();
+
   return (
     <div className="bg-white w-full flex justify-between">
       <div className="bg-motorblue flex items-center justify-center px-3 py-8">
-        <p className="text-white font-bold text-lg">#1</p>
+        <p className="text-white font-bold text-lg">#{index + 1}</p>
       </div>
       <div className="flex flex-1 flex-col justify-center pl-5">
-        <p className="text-base font-bold">Driver Name + Last name</p>
-        <p className="text-base">Age</p>
+        <p className="text-base font-bold">
+          {driver.firstName} {driver.lastName}
+        </p>
+        <p className="text-base">{driver.age}</p>
       </div>
-      <div className="flex justify-center items-center px-3">
+      <div
+        className="flex justify-center items-center px-3"
+        onClick={() => dispatch({ type: "DELETE_DRIVER", driver })}
+      >
         <svg
           className="w-5 h-5 text-motorblue cursor-pointer"
           fill="currentColor"

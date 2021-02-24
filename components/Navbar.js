@@ -3,16 +3,16 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 export default function Navbar() {
+  const router = useRouter();
   const [openMenu, setOpenMenu] = useState(false);
   const [hitScrollPoint, setHitScrollPoint] = useState(false);
-  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 20) {
         setHitScrollPoint(true);
       } else {
-        setHitScrollPoint(false);
+        setHitScrollPoint(true);
         setOpenMenu(false);
       }
     };
@@ -64,7 +64,7 @@ export default function Navbar() {
             <a className="text-lg hover:text-motorblue">Trackdays</a>
           </Link>
           <Link href="/reservation">
-            <a className="text-lg hover:text-motorblue">Boeken</a>
+            <a className="text-lg hover:text-motorblue">Offerte</a>
           </Link>
           <Link href="/contact">
             <a className="text-lg hover:text-motorblue">Contact</a>

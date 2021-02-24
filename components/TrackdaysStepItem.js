@@ -1,39 +1,57 @@
 import { clearStorage } from "mapbox-gl";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import PrimaryButton from "./buttons/PrimaryButton";
 import TrackdaysStepPlanItem from "./TrackdaysStepPlanItem";
 import { useStateValue } from "../context/StateProvider";
 import CarItem from "./CarItem";
 
 export default function TrackdaysStepItem({ index, trackday }) {
-  const [{ filteredTrackdays }, dispatch] = useStateValue();
-  const [open, setOpen] = useState(false);
-  const [selectedPlanIndex, setSelectedPlanIndex] = useState(-1);
-  const [selectedCarIndex, setSelectedCarIndex] = useState(-1);
-  const plans = ["Renting", "Share a ride", "VIP", "Business"];
-  const cars = [
-    { name: "Porsche Cayman GT4", image: "/porshe.jpg" },
-    { name: "Peugeot 107", image: "/peugeot.jpg" },
+  const plans = [
+    { name: "Renting", value: "Renting", show: trackday.plans.renting },
+    { name: "Share a ride", value: "Share", show: trackday.plans.share },
+    { name: "VIP", value: "Vip", show: trackday.plans.vip },
+    { name: "Business", value: "Business", show: trackday.plans.business },
   ];
+  const cars = [
+    {
+      name: "Porsche Cayman GT4",
+      value: "Porsche",
+      image: "/porshe.jpg",
+      show: trackday.cars.porsche,
+    },
+    { name: "Peugeot 107", value: "Peugeot", image: "/peugeot.jpg", show: trackday.cars.peugeot },
+  ];
+  const [{}, dispatch] = useStateValue();
+  const [open, setOpen] = useState(false);
+  const [selectedPlanIndex, setSelectedPlanIndex] = useState(
+    plans.findIndex((x) => x.value === trackday.selectedPlan)
+  );
+  const [selectedCarIndex, setSelectedCarIndex] = useState(
+    cars.findIndex((x) => x.value === trackday.selectedCar)
+  );
+  const [areOptionsSelected, setAreOptionsSelected] = useState(true);
 
   const handleConfirmTrackday = () => {
     if (selectedCarIndex === -1 || selectedPlanIndex === -1) {
-      console.log("no good");
+      setAreOptionsSelected(false);
       return;
     }
 
+    setAreOptionsSelected(true);
     dispatch({
       type: "UPDATE_SELECTED_TRACKDAY",
       trackday: {
         ...trackday,
-        selectedPlan: plans[selectedPlanIndex],
-        selectedCar: cars[selectedCarIndex].name,
+        selectedPlan: plans[selectedPlanIndex].value,
+        selectedCar: cars[selectedCarIndex].value,
       },
     });
+
+    setOpen(false);
   };
 
   return (
-    <div className={`p-8 space-y-3 bg-white`}>
+    <div className={`p-5 sm:p-8 space-y-3 bg-white`}>
       <div
         className="cursor-pointer flex justify-between items-center"
         onClick={() => setOpen(!open)}
@@ -50,59 +68,94 @@ export default function TrackdaysStepItem({ index, trackday }) {
             </p>
           </div>
         </div>
-        <button
-          className="h-5 w-5 cursor-pointer focus:outline-none"
-          onClick={() => setOpen(!open)}
-        >
-          <svg
-            className={`w-6 h-6 text-motorblue transform transition duration-300 ${
-              open ? "rotate-90" : "rotate-0"
-            }`}
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
+        <div className="flex items-center space-x-1">
+          <button
+            className="h-4 w-4 cursor-pointer focus:outline-none"
+            onClick={() =>
+              dispatch({
+                type: "DELETE_SELECTED_TRACKDAY",
+                trackday,
+              })
+            }
           >
-            <path
-              fillRule="evenodd"
-              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-              clipRule="evenodd"
-            />
-          </svg>
-        </button>
+            <svg
+              className="w-4 h-4 text-motorblue cursor-pointer"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fillRule="evenodd"
+                d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
+                clipRule="evenodd"
+              />
+            </svg>
+          </button>
+          <button
+            className="h-4 w-4 cursor-pointer focus:outline-none"
+            onClick={() => setOpen(!open)}
+          >
+            <svg
+              className={`w-4 h-4 text-motorblue transform transition duration-300 ${
+                open ? "rotate-90" : "rotate-0"
+              }`}
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fillRule="evenodd"
+                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                clipRule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
       </div>
       <div className={`${open ? "block" : "hidden"}`}>
         <div className="flex py-6 space-y-5 flex-col">
           <div>
             <p className="font-bold text-md md:text-xl">Choose your car:</p>
             <div className="space-y-2 pt-4 sm:flex sm:space-y-0 sm:space-x-2">
-              {cars.map((item, index) => (
-                <CarItem
-                  key={index}
-                  selectedIndex={selectedCarIndex}
-                  index={index}
-                  img={item.image}
-                  name={item.name}
-                  onClick={() => setSelectedCarIndex(index)}
-                />
-              ))}
+              {cars.map(
+                (item, index) =>
+                  item.show && (
+                    <CarItem
+                      key={index}
+                      selectedIndex={selectedCarIndex}
+                      index={index}
+                      img={item.image}
+                      name={item.name}
+                      onClick={() => setSelectedCarIndex(index)}
+                    />
+                  )
+              )}
             </div>
           </div>
           <div>
             <p className="font-bold text-md md:text-xl">Choose your plan:</p>
             <div className="pt-4 grid grid-cols-1 gap-2 sm:grid-cols-2">
-              {plans.map((item, index) => (
-                <TrackdaysStepPlanItem
-                  key={index}
-                  index={index}
-                  title={item}
-                  selectedIndex={selectedPlanIndex}
-                  onClick={() => setSelectedPlanIndex(index)}
-                />
-              ))}
+              {plans.map(
+                (item, index) =>
+                  item.show && (
+                    <TrackdaysStepPlanItem
+                      key={index}
+                      index={index}
+                      title={item.name}
+                      selectedIndex={selectedPlanIndex}
+                      onClick={() => setSelectedPlanIndex(index)}
+                    />
+                  )
+              )}
             </div>
           </div>
         </div>
-        <PrimaryButton label="Confirm" onClick={handleConfirmTrackday} />
+        <div className="flex items-center space-x-2">
+          <PrimaryButton label="Confirm" onClick={handleConfirmTrackday} />
+          {!areOptionsSelected && (
+            <p className="pl-5 text-red-500 text-xs">Select a car and a plan for this trackday!</p>
+          )}
+        </div>
       </div>
     </div>
   );
