@@ -1,29 +1,140 @@
-import React from "react";
+import React, { useState } from "react";
+import { useStateValue } from "../../context/StateProvider";
+import PrimaryButton from "../buttons/PrimaryButton";
 import TextInput from "../TextInput";
+import firebase from "../../context/firebase";
 
 export default function PersonalInformationStep() {
+  const [{ personalInformation, selectedTrackdays, drivers }, dispatch] = useStateValue();
+
+  const handleValidation = () => {
+    if (
+      personalInformation.firstName === "" ||
+      personalInformation.lastName === "" ||
+      personalInformation.email === "" ||
+      personalInformation.phone === ""
+    ) {
+      console.log("nie goe");
+    } else {
+      firebase
+        .firestore()
+        .collection("bookings")
+        .add({
+          ...personalInformation,
+          selectedTrackdays: [...selectedTrackdays],
+          drivers: [...drivers],
+        });
+    }
+  };
+
   return (
     <div className="w-full py-10 px-5 bg-gray-50">
-      <p className="max-w-screen-lg m-auto font-bold text-2xl pb-5 md:text-4xl">
-        Personal Information
-      </p>
-      <div className="max-w-screen-lg m-auto w-full py-4 space-y-4 flex flex-col sm:flex-row sm:space-y-0 sm:space-x-5">
-        <div className="space-y-4 sm:w-1/2">
-          <TextInput label="First Name" />
-          <TextInput label="Last Name" />
-          <TextInput label="Email" />
-          <TextInput label="Phone Number" />
-        </div>
-        <div className="space-y-4 w-full sm:w-1/2">
-          <TextInput label="Street" />
-          <TextInput label="City" />
-          <div className="flex gap-4 w-full">
-            <TextInput label="Number" />
-            <TextInput label="Appartment" />
+      <div className="max-w-screen-lg m-auto">
+        <p className="font-bold text-2xl pb-5 md:text-4xl">Personal Information</p>
+        <div className="flex flex-col">
+          <div className="w-full py-4 space-y-4 flex flex-col sm:flex-row sm:space-y-0 sm:space-x-5">
+            <div className="space-y-4 sm:w-1/2">
+              <TextInput
+                label="First Name *"
+                value={personalInformation.firstName}
+                onChange={(value) =>
+                  dispatch({ type: "UPDATE_PERSONAL_INFORMATION", prop: "firstName", value })
+                }
+                requirement={personalInformation.firstName === ""}
+                required
+                errorMessage={"First name is required!"}
+              />
+              <TextInput
+                label="Last Name *"
+                value={personalInformation.lastName}
+                onChange={(value) =>
+                  dispatch({ type: "UPDATE_PERSONAL_INFORMATION", prop: "lastName", value })
+                }
+                requirement={personalInformation.lastName === ""}
+                required
+                errorMessage={"Last name is required!"}
+              />
+              <TextInput
+                label="Email *"
+                value={personalInformation.email}
+                onChange={(value) =>
+                  dispatch({ type: "UPDATE_PERSONAL_INFORMATION", prop: "email", value })
+                }
+                requirement={
+                  personalInformation.email === "" ||
+                  !/\S+@\S+\.\S+/.test(personalInformation.email)
+                }
+                required
+                errorMessage={"Email should be the right format!"}
+              />
+              <TextInput
+                label="Phone Number *"
+                value={personalInformation.phone}
+                onChange={(value) =>
+                  dispatch({ type: "UPDATE_PERSONAL_INFORMATION", prop: "phone", value })
+                }
+                requirement={personalInformation.phone === ""}
+                required
+                errorMessage={"Phone number is required!"}
+              />
+            </div>
+            <div className="space-y-4 w-full sm:w-1/2">
+              <TextInput
+                label="Street"
+                value={personalInformation.street}
+                onChange={(value) =>
+                  dispatch({ type: "UPDATE_PERSONAL_INFORMATION", prop: "street", value })
+                }
+              />
+              <TextInput
+                label="City"
+                value={personalInformation.city}
+                onChange={(value) =>
+                  dispatch({ type: "UPDATE_PERSONAL_INFORMATION", prop: "city", value })
+                }
+              />
+              <div className="flex gap-4 w-full">
+                <TextInput
+                  label="Number"
+                  value={personalInformation.number}
+                  onChange={(value) =>
+                    dispatch({ type: "UPDATE_PERSONAL_INFORMATION", prop: "number", value })
+                  }
+                />
+                <TextInput
+                  label="Appartment"
+                  value={personalInformation.appartment}
+                  onChange={(value) =>
+                    dispatch({ type: "UPDATE_PERSONAL_INFORMATION", prop: "appartment", value })
+                  }
+                />
+              </div>
+              <div className="flex gap-4 w-full">
+                <TextInput
+                  label="Zip code"
+                  value={personalInformation.zip}
+                  onChange={(value) =>
+                    dispatch({ type: "UPDATE_PERSONAL_INFORMATION", prop: "zip", value })
+                  }
+                />
+                <TextInput
+                  label="Country"
+                  value={personalInformation.country}
+                  onChange={(value) =>
+                    dispatch({ type: "UPDATE_PERSONAL_INFORMATION", prop: "country", value })
+                  }
+                />
+              </div>
+            </div>
           </div>
-          <div className="flex gap-4 w-full">
-            <TextInput label="Zip code" />
-            <TextInput label="Country" />
+          <div className="ml-auto pt-8">
+            <button
+              className="px-6 py-3 bg-transparent focus:outline-none sm:px-16"
+              onClick={() => dispatch({ type: "SET_ACTIVE_STEP", activeStep: 1 })}
+            >
+              Back
+            </button>
+            <PrimaryButton label="Submit" onClick={handleValidation} />
           </div>
         </div>
       </div>

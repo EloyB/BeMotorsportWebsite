@@ -10,15 +10,15 @@ export default function ContentItem({ image, subTitle, title, body, extension, r
       >
         <img className="w-full max-w-sm md:w-1/3" src={image} alt="groepsfoto" />
         <div
-          className={` flex flex-col ${
+          className={`pt-5 flex flex-col ${
             reverse ? "md:text-right md:items-end lg:pr-12" : "md:text-left lg:pl-12"
           }  inline-block md:px-5`}
         >
-          <div className="pt-3 pb-1 md:pt-0">
+          <div className="pb-1 md:pt-0">
             <p className="text-motorblue font-medium">{subTitle}</p>
             <h1 className="text-4xl font-medium sm:text-5xl md:text-3xl lg:text-4xl">{title}</h1>
           </div>
-          <p className="text-base font-light lg:text-xl">{body}</p>
+          <p className="text-sm sm:text-base lg:text-lg">{body}</p>
           {extension}
         </div>
       </div>

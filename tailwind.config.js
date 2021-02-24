@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       colors: {
         motorblue: "#0076BD",
+        checkgreen: "#23AD31",
       },
       screens: {
         xs: "400px",
