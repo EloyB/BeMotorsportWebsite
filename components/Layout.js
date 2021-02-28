@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 
 export default function Layout({ children }) {
   return (
-    <div className="font-raleway box-border">
+    <div className="font-raleway box-border relative">
       <Navbar />
       {children}
       <Footer />

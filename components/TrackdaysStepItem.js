@@ -5,7 +5,8 @@ import TrackdaysStepPlanItem from "./TrackdaysStepPlanItem";
 import { useStateValue } from "../context/StateProvider";
 import CarItem from "./CarItem";
 
-export default function TrackdaysStepItem({ index, trackday }) {
+export default function TrackdaysStepItem({ trackday }) {
+  // Hardcoded plans and cars
   const plans = [
     { name: "Renting", value: "Renting", show: trackday.plans.renting },
     { name: "Share a ride", value: "Share", show: trackday.plans.share },
@@ -19,36 +20,18 @@ export default function TrackdaysStepItem({ index, trackday }) {
       image: "/porshe.jpg",
       show: trackday.cars.porsche,
     },
-    { name: "Peugeot 107", value: "Peugeot", image: "/peugeot.jpg", show: trackday.cars.peugeot },
+    { name: "Peugeot 206", value: "Peugeot", image: "/peugeot.jpg", show: trackday.cars.peugeot },
   ];
+
+  // State hooks
   const [{}, dispatch] = useStateValue();
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
   const [selectedPlanIndex, setSelectedPlanIndex] = useState(
     plans.findIndex((x) => x.value === trackday.selectedPlan)
   );
   const [selectedCarIndex, setSelectedCarIndex] = useState(
     cars.findIndex((x) => x.value === trackday.selectedCar)
   );
-  const [areOptionsSelected, setAreOptionsSelected] = useState(true);
-
-  const handleConfirmTrackday = () => {
-    if (selectedCarIndex === -1 || selectedPlanIndex === -1) {
-      setAreOptionsSelected(false);
-      return;
-    }
-
-    setAreOptionsSelected(true);
-    dispatch({
-      type: "UPDATE_SELECTED_TRACKDAY",
-      trackday: {
-        ...trackday,
-        selectedPlan: plans[selectedPlanIndex].value,
-        selectedCar: cars[selectedCarIndex].value,
-      },
-    });
-
-    setOpen(false);
-  };
 
   return (
     <div className={`p-5 sm:p-8 space-y-3 bg-white`}>
@@ -68,7 +51,7 @@ export default function TrackdaysStepItem({ index, trackday }) {
             </p>
           </div>
         </div>
-        <div className="flex items-center space-x-1">
+        <div className="flex items-center space-x-1 sm:space-x-3">
           <button
             className="h-4 w-4 cursor-pointer focus:outline-none"
             onClick={() =>
@@ -79,7 +62,7 @@ export default function TrackdaysStepItem({ index, trackday }) {
             }
           >
             <svg
-              className="w-4 h-4 text-motorblue cursor-pointer"
+              className="w-6 h-6 text-motorblue cursor-pointer"
               fill="currentColor"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
@@ -96,7 +79,7 @@ export default function TrackdaysStepItem({ index, trackday }) {
             onClick={() => setOpen(!open)}
           >
             <svg
-              className={`w-4 h-4 text-motorblue transform transition duration-300 ${
+              className={`w-6 h-6 text-motorblue transform transition duration-300 ${
                 open ? "rotate-90" : "rotate-0"
               }`}
               fill="currentColor"
@@ -126,7 +109,17 @@ export default function TrackdaysStepItem({ index, trackday }) {
                       index={index}
                       img={item.image}
                       name={item.name}
-                      onClick={() => setSelectedCarIndex(index)}
+                      onClick={() => {
+                        setSelectedCarIndex(index);
+                        dispatch({
+                          type: "UPDATE_SELECTED_TRACKDAY",
+                          trackday: {
+                            ...trackday,
+                            selectedPlan: trackday.selectedPlan,
+                            selectedCar: cars[index]?.value,
+                          },
+                        });
+                      }}
                     />
                   )
               )}
@@ -143,18 +136,22 @@ export default function TrackdaysStepItem({ index, trackday }) {
                       index={index}
                       title={item.name}
                       selectedIndex={selectedPlanIndex}
-                      onClick={() => setSelectedPlanIndex(index)}
+                      onClick={() => {
+                        setSelectedPlanIndex(index);
+                        dispatch({
+                          type: "UPDATE_SELECTED_TRACKDAY",
+                          trackday: {
+                            ...trackday,
+                            selectedPlan: plans[index]?.value,
+                            selectedCar: trackday.selectedCar,
+                          },
+                        });
+                      }}
                     />
                   )
               )}
             </div>
           </div>
-        </div>
-        <div className="flex items-center space-x-2">
-          <PrimaryButton label="Confirm" onClick={handleConfirmTrackday} />
-          {!areOptionsSelected && (
-            <p className="pl-5 text-red-500 text-xs">Select a car and a plan for this trackday!</p>
-          )}
         </div>
       </div>
     </div>

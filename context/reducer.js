@@ -1,3 +1,5 @@
+import moment from "moment";
+
 export const initialInformation = {
   firstName: "",
   lastName: "",
@@ -24,17 +26,29 @@ export const initialState = {
 
 const reducer = (state, action) => {
   switch (action.type) {
+    // Trackdays
     case "SET_TRACKDAYS":
       return { ...state, trackdays: action.list };
 
     case "FILTER_TRACKDAYS":
       return {
         ...state,
-        filteredTrackdays: state.trackdays.filter(
-          (trackday) => trackday.circuit.name === action.name
-        ),
+        filteredTrackdays: state.trackdays.filter((trackday) => {
+          var actionDate = new Date(action.date);
+          var trackdayDate = new Date(trackday.date);
+
+          if (action.name !== "" && action.date !== "") {
+            console.log(typeof trackday.date);
+            return trackday.circuit.name === action.name && trackdayDate >= actionDate;
+          } else if (action.date === "" && action.name !== "") {
+            return trackday.circuit.name === action.name;
+          } else if (action.date !== "" && action.name === "") {
+            return trackdayDate >= actionDate;
+          }
+        }),
       };
 
+    // Selected Trackdays
     case "ADD_SELECTED_TRACKDAY":
       const selectedTrackdays = state.selectedTrackdays;
       selectedTrackdays.push(action.trackday);
@@ -56,6 +70,7 @@ const reducer = (state, action) => {
         selectedTrackdays: updatedSelectedTrackdays,
       };
 
+    // Drivers
     case "ADD_DRIVER":
       return {
         ...state,
@@ -68,6 +83,7 @@ const reducer = (state, action) => {
       updatedDrivers.splice(index, 1);
       return { ...state, drivers: updatedDrivers };
 
+    // Personal information
     case "UPDATE_PERSONAL_INFORMATION":
       return {
         ...state,
@@ -80,6 +96,7 @@ const reducer = (state, action) => {
         planningInformation: { ...initialInformation },
       };
 
+    // Others
     case "SET_ACTIVE_STEP":
       return {
         ...state,

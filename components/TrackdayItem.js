@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import TrackdayAssetItem from "./TrackdayAssetItem";
 import { useStateValue } from "../context/StateProvider";
+import { useRouter } from "next/router";
+import moment from "moment";
 
 export default function TrackdayItem({ index, trackday }) {
+  const router = useRouter();
   const [{ selectedTrackdays }, dispatch] = useStateValue();
   const [open, setOpen] = useState(false);
 
@@ -23,8 +26,10 @@ export default function TrackdayItem({ index, trackday }) {
           <div className="ml-5">
             <p className="font-bold text-md md:text-xl">{trackday.circuit.name}</p>
             <p className="text-xs md:text-sm">
-              <span className="text-motorblue font-semibold">{trackday.date} </span>|{" "}
-              {trackday.circuit.country}
+              <span className="text-motorblue font-semibold">
+                {moment(trackday.date).format("DD-MM-YYYY")}{" "}
+              </span>
+              | {trackday.circuit.country}
             </p>
           </div>
         </div>
@@ -81,31 +86,19 @@ export default function TrackdayItem({ index, trackday }) {
           )}
         </div>
         <div className="flex space-x-3 pt-6 lg:flex-col lg:pt-0 lg:space-x-0 lg:space-y-2">
-          <div className="cursor-pointer w-10 h-10 bg-motorblue rounded-md flex items-center justify-center">
-            <svg
-              className="w-5 h-5 text-white"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fillRule="evenodd"
-                d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                clipRule="evenodd"
-              />
-            </svg>
-          </div>
           <div
             className={`cursor-pointer w-10 h-10 ${
               isTrackdaySelected() ? "bg-checkgreen" : "bg-motorblue"
             } rounded-md flex items-center justify-center`}
-            onClick={() =>
+            onClick={() => {
               !isTrackdaySelected() &&
-              dispatch({
-                type: "ADD_SELECTED_TRACKDAY",
-                trackday: trackday,
-              })
-            }
+                dispatch({
+                  type: "ADD_SELECTED_TRACKDAY",
+                  trackday: trackday,
+                });
+
+              router.push("/reservation");
+            }}
           >
             {isTrackdaySelected() ? (
               <svg

@@ -1,12 +1,18 @@
-import React, { useEffect, useState } from "react";
+import { clearStorage } from "mapbox-gl";
+import React, { useEffect, useRef, useState } from "react";
 import ReactMapGL, { Marker } from "react-map-gl";
+import { Datepicker } from "../components/Datepicker";
+import { Dropdown } from "../components/Dropdown";
 import TrackdayItem from "../components/TrackdayItem";
 import firebase from "../context/firebase";
 import { useStateValue } from "../context/StateProvider";
 
 export default function trackdays({ circuits }) {
+  const trackdaysRef = useRef();
   const [{ filteredTrackdays }, dispatch] = useStateValue();
   const [showCircuitPopup, setShowCircuitPopup] = useState({ show: false, circuit: {} });
+  const [selectedCircuit, setSelectedCircuit] = useState("");
+  const [selectedDate, setSelectedDate] = useState("");
   const [viewport, setViewPort] = useState({
     longitude: 5.97521,
     latitude: 50.43258,
@@ -40,10 +46,10 @@ export default function trackdays({ circuits }) {
         <div className="pt-32 pb-20 px-8 max-w-screen-xl m-auto lg:px-0">
           <h1 className="text-3xl font-medium text-center py-5 lg:text-5xl">Onze Trackdays</h1>
           <p className="text-center max-w-screen-md m-auto">
-            Onze sportauto's huren via BE motorsport is nog nooit zo makkelijk geweest! Kijk op de
+            Onze race auto's huren via BE motorsport is nog nooit zo makkelijk geweest! Kijk op de
             kaart waar je graag wilt rijden, klik in onderstaande agenda wanneer je beschikbaar
             bent, vul je gegevens in en wij regelen de rest! Aarzel niet om ons te contacteren als
-            de dag of auto van je keuze reeds geblokkeerd is. We zoeken samen naar een oplossing.
+            de dag of auto van je keuze reeds geblokkeerd is. We zoeken samen naar een oplossing!
           </p>
         </div>
         <div className="relative w-full h-96 max-w-screen-xl m-auto">
@@ -66,10 +72,13 @@ export default function trackdays({ circuits }) {
                 <div
                   className="cursor-pointer max-w-screen-xl mx-auto h-3 w-3 rounded-full bg-motorblue"
                   onClick={() => {
+                    setSelectedCircuit(item.name);
                     dispatch({
                       type: "FILTER_TRACKDAYS",
                       name: item.name,
+                      date: selectedDate,
                     });
+                    trackdaysRef.current.scrollIntoView({ behavior: "smooth" });
                   }}
                   onMouseEnter={() => setShowCircuitPopup({ show: true, circuit: item })}
                   onMouseLeave={() => setShowCircuitPopup({ show: false, circuit: {} })}
@@ -78,11 +87,37 @@ export default function trackdays({ circuits }) {
             ))}
           </ReactMapGL>
         </div>
-        <div className="max-w-screen-xl m-auto px-5 py-4 md:px-8 flex items-center justify-end space-x-2 xl:px-0">
-          <div className="bg-gray-200 h-8 w-32"></div>
-          <div className="bg-gray-200 h-8 w-10"></div>
+        <div className="max-w-screen-xl m-auto px-5 lg:px-0 py-5 flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-5 sm:justify-end">
+          <Dropdown
+            selectOptions={circuits}
+            targetField="name"
+            placeholder="Choose circuit"
+            value={selectedCircuit}
+            setSelectedOption={(item) => {
+              setSelectedCircuit(item.name);
+              dispatch({
+                type: "FILTER_TRACKDAYS",
+                name: item.name,
+                date: selectedDate,
+              });
+            }}
+          />
+          <Datepicker
+            onChange={(value) => {
+              setSelectedDate(value);
+              dispatch({
+                type: "FILTER_TRACKDAYS",
+                name: selectedCircuit,
+                date: value,
+              });
+            }}
+          />
         </div>
-        <div className="max-w-screen-xl m-auto px-5 pt-4 pb-12 lg:px-0">
+        <div className="max-w-screen-xl m-auto">
+          <hr />
+        </div>
+
+        <div ref={trackdaysRef} className="max-w-screen-xl m-auto px-5 pt-4 pb-12 lg:px-0">
           {filteredTrackdays.length > 0 ? (
             filteredTrackdays.map((item, index) => (
               <TrackdayItem key={index} index={index} trackday={item} />

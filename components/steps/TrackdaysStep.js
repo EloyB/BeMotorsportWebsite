@@ -30,9 +30,7 @@ export default function TrackdaysStep() {
       </div>
       <div className="max-w-screen-lg m-auto space-y-2 flex flex-col">
         {selectedTrackdays.length > 0 ? (
-          selectedTrackdays.map((item, index) => (
-            <TrackdaysStepItem key={index} index={index} trackday={item} />
-          ))
+          selectedTrackdays.map((item, index) => <TrackdaysStepItem key={index} trackday={item} />)
         ) : (
           <div className="bg-white px-4 py-7 text-left xs:text-center">
             <p

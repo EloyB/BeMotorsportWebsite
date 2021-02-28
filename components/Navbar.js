@@ -64,10 +64,10 @@ export default function Navbar() {
             <a className="text-lg hover:text-motorblue">Trackdays</a>
           </Link>
           <Link href="/reservation">
-            <a className="text-lg hover:text-motorblue">Offerte</a>
+            <a className="text-lg hover:text-motorblue">Plan je dag</a>
           </Link>
           <Link href="/contact">
-            <a className="text-lg hover:text-motorblue">Contact</a>
+            <a className="text-lg hover:text-motorblue">Over Ons</a>
           </Link>
         </div>
       </div>

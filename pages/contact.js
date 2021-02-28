@@ -100,7 +100,7 @@ export default function contact() {
           reverse
         />
         <ContentItem
-          image="/wie-zijn-wij.jpg"
+          image="/julie.jpg"
           subTitle="Creative Mind"
           title="Julie beyens"
           body="Wil je graag een creatief event organiseren voor je team? Of wil
