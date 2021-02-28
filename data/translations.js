@@ -99,6 +99,13 @@ export const enUS = {
   },
 };
 
+export const fr = {
+  footer: {
+    plans: "Plans",
+    pages: "Pages",
+  },
+};
+
 export const nl = {
   navbar: {
     planYourDay: "Plan je dag",
