@@ -4,6 +4,24 @@ const translationLanguage = {
     aboutUs: "",
   },
   home: {
+    planSection:{
+      renting: {
+        title: "",
+        hover: ""
+      },
+      shareARide:{
+        title: "",
+        hover: ""
+      },
+      VIP:{
+        title: "",
+        hover: ""
+      },
+      business:{
+        title: "",
+        hover: ""
+      }
+    },
     carDetails: {
       typeOfDrive: "",
       power: "",
@@ -22,7 +40,7 @@ const translationLanguage = {
       tank: "",
       safety: "",
     },
-    porscheData: {
+    peugotData: {
       typeOfDrive: "",
       power: "",
       transmission: "",
@@ -93,10 +111,115 @@ export const toggleLocale = (locale, router) => {
 };
 
 export const enUS = {
-  footer: {
-    plans: "Plans",
-    pages: "Pages",
+  navbar: {
+    planYourDay: "Plan your day",
+    aboutUs: "About us",
   },
+  home: {
+    planSection:{
+      renting: {
+        title: "Renting",
+        hover: "Rent our Porsche Cayman GT4 Clubsport or the Peugeot 206 GTi"
+      },
+      shareARide:{
+        title: "Share a ride",
+        hover: "Discover our 'Share your ride (&) Network' formula on an affordable budget"
+      },
+      VIP:{
+        title: "VIP",
+        hover: "BE motorsport arranges everything for you from A to Z with a VIP Experience"
+      },
+      business:{
+        title: "Business",
+        hover: "Boost your company to the next level together with BE motorsport"
+      }
+    },
+    carDetails: {
+      typeOfDrive: "Type of drive",
+      power: "Power",
+      transmission: "Transmission",
+      steering: "Steering",
+      topspeed:"Top speed",
+      engine: "Engine",
+      tank: "Tank",
+      safety: "Safety",
+    },
+    porscheData: {
+      typeOfDrive: "Rear wheel drive",
+      power: "283 kW (385 pk)",
+      transmission: "6-speed Porsche Doppelkupplung (PDK) with optimized shift application",
+      steering: "Elektromechanical power steering",
+      engine: "3.800 cc",
+      tank: "60 l-safety tank",
+      safety: "Original Porsche welded cage with racing kit and completely stripped interior",
+    },
+    peugeotData: {
+      typeOfDrive: "Type of Drive",
+      power: "Power",
+      transmission: "Transmission",
+      topspeed: "210 km/h",
+      engine: "Engine",
+      tank: "Tank",
+      safety: "Safety",
+    },
+    title: "Meet the team"
+  },
+  trackdaysPage: {
+    title: "Our Trackdays",
+    description: "TODO Translate to ENUS",
+    dropdownPlaceholder: "Choose circuit",
+    selectTrackdaysPlaceholder: "Select a circuit on the map to view the available trackdays.",
+  },
+  reservationPage: {
+    title: "Plan your trackday",
+    description: "Description TODO",
+    trackdaysStep: {
+      title: "Trackdays",
+      placeholder: "First select your trackdays from our list!",
+      chooseCarTitle: "Choose your car",
+      chooseYourPlanTitle: "Choose your plan",
+      searchTrackdaysButtonText: "Search trackdays",
+    },
+    driversStep: {
+      title: "Drivers",
+      placeholder: "Add some drivers with the form first!",
+      addButtonText: "Add driver",
+      age: "Age",
+      hasExperience: "Has experience",
+      noExperience: "Has no experience",
+    },
+    personalInformationStep: {
+      title: "Personal information",
+      submitButtonText: "Submit",
+    },
+    general: {
+      firstName: "First Name",
+      lastName: "Last Name",
+      phoneNumber: "Phone Number",
+      street: "Street",
+      city: "City",
+      number: "Number",
+      appartment: "Appartment",
+      zip: "Zip code",
+      country: "Country",
+      backButtonText: "Back",
+      nextButtonText: "Next",
+    },
+  },
+  contactPage: {
+    title: "Our team",
+    description: "BE motorsport is a family company with a great interest in motorsport. Racing is the metaphor that made us rethink this new project. Doing business has been a great part of our lives and we will therefore take the opportunity to grow this passion into your business experience.    BE motorsport is professionally engaged in customizing your event to your personal needs so that you and especially your participants are extremely satisfied with our service.    What do you have in mind? We will make it happen!",
+    didierDescription: "Do not hesitate to contact me if you have any questions about our packages. I am happy to help you!",
+    stephanDescription: "Do you have  any technical questions or would you like to brainstorm about how we can boost your company to the next level? Do not hesitate to contact me! Personal contact remains important in business, so: let's meet!",
+    julieDescription: "Would you like to organize a creative event for your team? Or would you like to organize a team building with inspiring workshops, but you are not sure where to start? Don't hesitate and give me a call! I am happy to help you!",
+    fullName: "Full name",
+    message: "Message",
+    sendMessageButtonText: "Send message",
+  },
+  footer: {
+    pages: "Pages",
+    plans: "Plans",
+  }
 };
 
 export const fr = {
@@ -112,6 +235,24 @@ export const nl = {
     aboutUs: "Over ons",
   },
   home: {
+    planSection:{
+      renting: {
+        title: "Renting",
+        hover: "Huur onze Porsche Cayman GT4 Clubsport of de Peugeot 206 GTi"
+      },
+      shareARide:{
+        title: "Share a ride",
+        hover: "Boost jouw bedrijf naar de next level samen met BE motorsport"
+      },
+      VIP:{
+        title: "VIP",
+        hover: "BE motorsport legt je in de watten van A tot Z met een VIP Experience"
+      },
+      business:{
+        title: "Business",
+        hover: "Ontdek onze 'Share your ride (&) Network' formule voor een aantrekkelijk budget."
+      }
+    },
     carDetails: {
       typeOfDrive: "Type aandrijving",
       power: "Vermogen",
@@ -141,11 +282,12 @@ export const nl = {
       tank: "50 liter",
       safety: "rolkooi met racing kit en volledig gestript interieur",
     },
+    title: "Ontdek het team"
   },
   trackdaysPage: {
     title: "Onze Trackdays",
     description:
-      "Onze race auto's huren via BE motorsport is nog nooit zo makkelijk geweest! Kijk op de kaart waar je graag wilt rijden, klik in onderstaande agenda wanneer je beschikbaar bent, vul je gegevens in en wij regelen de rest! Aarzel niet om ons te contacteren als de dag of auto van je keuze reeds geblokkeerd is. We zoeken samen naar een oplossing!",
+      "Onze raceauto's huren via BE motorsport is nog nooit zo makkelijk geweest! Kijk op de kaart waar je graag wilt rijden, klik in onderstaande agenda wanneer je beschikbaar bent, vul je gegevens in en wij regelen de rest! Aarzel niet om ons te contacteren als de dag of auto van je keuze reeds geblokkeerd is. We zoeken samen naar een oplossing!",
     dropdownPlaceholder: "Selecteer een circuit",
     selectTrackdaysPlaceholder:
       "Selecteer een circuit op de kaart of in de lijst om de trackdays te zien",

@@ -4,9 +4,14 @@ import PrimaryButton from "./buttons/PrimaryButton";
 import TrackdaysStepPlanItem from "./TrackdaysStepPlanItem";
 import { useStateValue } from "../context/StateProvider";
 import CarItem from "./CarItem";
+import { useRouter } from "next/router";
+import { activeLocale } from "../data/translations";
 
 export default function TrackdaysStepItem({ trackday }) {
   // Hardcoded plans and cars
+  const router = useRouter();
+  const { locale } = router;
+  const t = activeLocale(locale);
   const plans = [
     { name: "Renting", value: "Renting", show: trackday.plans.renting },
     { name: "Share a ride", value: "Share", show: trackday.plans.share },
@@ -98,7 +103,7 @@ export default function TrackdaysStepItem({ trackday }) {
       <div className={`${open ? "block" : "hidden"}`}>
         <div className="flex py-6 space-y-5 flex-col">
           <div>
-            <p className="font-bold text-md md:text-xl">Choose your car:</p>
+            <p className="font-bold text-md md:text-xl">{t.reservationPage.trackdaysStep.chooseCarTitle}:</p>
             <div className="space-y-2 pt-4 sm:flex sm:space-y-0 sm:space-x-2">
               {cars.map(
                 (item, index) =>
@@ -126,7 +131,7 @@ export default function TrackdaysStepItem({ trackday }) {
             </div>
           </div>
           <div>
-            <p className="font-bold text-md md:text-xl">Choose your plan:</p>
+            <p className="font-bold text-md md:text-xl">{t.reservationPage.trackdaysStep.chooseYourPlanTitle}:</p>
             <div className="pt-4 grid grid-cols-1 gap-2 sm:grid-cols-2">
               {plans.map(
                 (item, index) =>

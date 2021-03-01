@@ -3,11 +3,14 @@ import TrackdayAssetItem from "./TrackdayAssetItem";
 import { useStateValue } from "../context/StateProvider";
 import { useRouter } from "next/router";
 import moment from "moment";
+import { activeLocale } from "../data/translations";
 
 export default function TrackdayItem({ index, trackday }) {
   const router = useRouter();
   const [{ selectedTrackdays }, dispatch] = useStateValue();
   const [open, setOpen] = useState(false);
+  const { locale } = router;
+  const t = activeLocale(locale);
 
   const isTrackdaySelected = () => {
     return selectedTrackdays.findIndex((x) => x.id === trackday.id) > -1;

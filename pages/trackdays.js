@@ -1,4 +1,5 @@
 import { clearStorage } from "mapbox-gl";
+import { useRouter } from "next/router";
 import React, { useEffect, useRef, useState } from "react";
 import ReactMapGL, { Marker } from "react-map-gl";
 import { Datepicker } from "../components/Datepicker";
@@ -6,8 +7,10 @@ import { Dropdown } from "../components/Dropdown";
 import TrackdayItem from "../components/TrackdayItem";
 import firebase from "../context/firebase";
 import { useStateValue } from "../context/StateProvider";
+import { activeLocale } from "../data/translations";
 
 export default function trackdays({ circuits }) {
+  const router = useRouter();
   const trackdaysRef = useRef();
   const [{ filteredTrackdays }, dispatch] = useStateValue();
   const [showCircuitPopup, setShowCircuitPopup] = useState({ show: false, circuit: {} });
@@ -20,6 +23,8 @@ export default function trackdays({ circuits }) {
     height: "100%",
     zoom: 4,
   });
+  const { locale } = router;
+  const t = activeLocale(locale);
 
   const mbToken =
     "pk.eyJ1IjoicXdlYmRlc2lnbiIsImEiOiJja2tmbzV3ZWUwY2gzMndtcHJjYzd1NmZ2In0.39BM3JaR3bYywwvVHDzKCA";
@@ -44,12 +49,9 @@ export default function trackdays({ circuits }) {
     <div>
       <div>
         <div className="pt-32 pb-20 px-8 max-w-screen-xl m-auto lg:px-0">
-          <h1 className="text-3xl font-medium text-center py-5 lg:text-5xl">Onze Trackdays</h1>
+          <h1 className="text-3xl font-medium text-center py-5 lg:text-5xl">{t.trackdaysPage.title}</h1>
           <p className="text-center max-w-screen-md m-auto">
-            Onze race auto's huren via BE motorsport is nog nooit zo makkelijk geweest! Kijk op de
-            kaart waar je graag wilt rijden, klik in onderstaande agenda wanneer je beschikbaar
-            bent, vul je gegevens in en wij regelen de rest! Aarzel niet om ons te contacteren als
-            de dag of auto van je keuze reeds geblokkeerd is. We zoeken samen naar een oplossing!
+            {t.trackdaysPage.description}
           </p>
         </div>
         <div className="relative w-full h-96 max-w-screen-xl m-auto">
@@ -91,7 +93,7 @@ export default function trackdays({ circuits }) {
           <Dropdown
             selectOptions={circuits}
             targetField="name"
-            placeholder="Choose circuit"
+            placeholder={t.trackdaysPage.dropdownPlaceholder}
             value={selectedCircuit}
             setSelectedOption={(item) => {
               setSelectedCircuit(item.name);
@@ -125,7 +127,7 @@ export default function trackdays({ circuits }) {
           ) : (
             <div className="bg-gray-50 px-4 py-7 text-center">
               <p className="font-semibold text-motorblue">
-                Selecteer een circuit op de kaart om de beschikbare trackdays te zien
+                {t.trackdaysPage.selectTrackdaysPlaceholder}
               </p>
             </div>
           )}

@@ -1,5 +1,7 @@
+import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { useStateValue } from "../../context/StateProvider";
+import { activeLocale } from "../../data/translations";
 import PrimaryButton from "../buttons/PrimaryButton";
 import Checkbox from "../Checkbox";
 import DriverItem from "../DriverItem";
@@ -13,6 +15,10 @@ export default function DriversStep() {
     age: "",
     hasExperience: false,
   });
+  const router = useRouter();
+  const { locale } = router;
+  const t = activeLocale(locale);
+
 
   const handleOnNext = () => {
     if (drivers.length > 0) {
@@ -23,12 +29,12 @@ export default function DriversStep() {
   return (
     <div className="w-full py-10 px-5 bg-gray-50">
       <div className="max-w-screen-lg m-auto">
-        <p className="font-bold text-2xl pb-5 md:text-4xl">Drivers</p>
+        <p className="font-bold text-2xl pb-5 md:text-4xl">{t.reservationPage.driversStep.title}</p>
         <div className="flex flex-col">
           <div className="divide-y-2 lg:flex lg:divide-y-0 lg:divide-x-2">
             <div className="w-full space-y-4 pb-5 lg:pr-5">
               <TextInput
-                label="First Name"
+                label={t.reservationPage.general.firstName}
                 value={driver.firstName}
                 onChange={(value) => setDriver({ ...driver, firstName: value })}
                 requirement={driver.firstName === ""}
@@ -36,7 +42,7 @@ export default function DriversStep() {
                 errorMessage={"First name is required!"}
               />
               <TextInput
-                label="Last Name"
+                label={t.reservationPage.general.lastName}
                 value={driver.lastName}
                 onChange={(value) => setDriver({ ...driver, lastName: value })}
                 requirement={driver.lastName === ""}
@@ -44,7 +50,7 @@ export default function DriversStep() {
                 errorMessage={"Last name is required!"}
               />
               <TextInput
-                label="Age"
+                label={t.reservationPage.driversStep.age}
                 onChange={(value) => setDriver({ ...driver, age: value })}
                 value={driver.age}
                 requirement={driver.age === ""}
@@ -52,7 +58,7 @@ export default function DriversStep() {
                 errorMessage={"Age is required!"}
               />
               <Checkbox
-                label="Has experience"
+                label={t.reservationPage.driversStep.hasExperience}
                 onChange={(value) => setDriver({ ...driver, hasExperience: value })}
                 value={driver.hasExperience}
               />
@@ -77,10 +83,10 @@ export default function DriversStep() {
                     hasExperience: false,
                   });
                 }}
-                value="next"
+                value={t.reservationPage.general.nextButtonText}
                 disabled={driver.firstName === "" || driver.lastName === "" || driver.age === ""}
               >
-                Add driver
+                {t.reservationPage.driversStep.addButtonText}
               </button>
             </div>
             <div className="w-full pt-5 space-y-5 lg:pl-5">
@@ -89,7 +95,7 @@ export default function DriversStep() {
               ) : (
                 <div className="bg-white px-4 py-7 text-center">
                   <p className="text-motorblue cursor-pointer font-semibold">
-                    Add some drivers with the form first!
+                    {t.reservationPage.driversStep.placeholder}
                   </p>
                 </div>
               )}
@@ -102,7 +108,7 @@ export default function DriversStep() {
             >
               Back
             </button>
-            <PrimaryButton label="Next" onClick={handleOnNext} />
+            <PrimaryButton label={t.reservationPage.general.nextButtonText} onClick={handleOnNext} />
           </div>
         </div>
       </div>

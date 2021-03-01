@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { activeLocale } from "../data/translations";
 
 export default function Navbar() {
   const router = useRouter();
+  const { locale } = router;
+  const t = activeLocale(locale)
   const [openMenu, setOpenMenu] = useState(false);
   const [hitScrollPoint, setHitScrollPoint] = useState(false);
 
@@ -64,10 +67,10 @@ export default function Navbar() {
             <a className="text-lg hover:text-motorblue">Trackdays</a>
           </Link>
           <Link href="/reservation">
-            <a className="text-lg hover:text-motorblue">Plan je dag</a>
+            <a className="text-lg hover:text-motorblue">{t.navbar.planYourDay}</a>
           </Link>
           <Link href="/contact">
-            <a className="text-lg hover:text-motorblue">Over Ons</a>
+            <a className="text-lg hover:text-motorblue">{t.navbar.aboutUs}</a>
           </Link>
         </div>
       </div>

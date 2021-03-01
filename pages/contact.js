@@ -4,8 +4,13 @@ import ContentItem from "../components/ContentItem";
 import TextInput from "../components/TextInput";
 import PrimaryButton from "../components/buttons/PrimaryButton";
 import { RoundButton } from "../components/buttons/RoundButton";
+import { useRouter } from "next/router";
+import { activeLocale } from "../data/translations";
 
 export default function contact() {
+  const router = useRouter();
+  const { locale } = router;
+  const t = activeLocale(locale);
   return (
     <div>
       <div className="pt-32 pb-16">
@@ -13,13 +18,10 @@ export default function contact() {
           <img className="md:w-1/2" src="/wie-zijn-wij.jpg" alt="groepsfoto" />
           <div className="inline-block text-left md:px-5 lg:pr-16">
             <h1 className="text-4xl sm:text-5xl font-medium md:text-right py-5 lg:text-5xl">
-              Ons Team
+              {t.contactPage.title}
             </h1>
             <p className="text-sm sm:text-base lg:text-lg md:text-right max-w-screen-md m-auto">
-              BE motorsport is een familiebedrijf met een grote interesse voor de motorsport. Racing
-              is de metafoor die ons heeft doen nadenken over dit nieuwe project. Het zakendoen zit
-              bij de familie Beyens in hart en nieren, en van daaruit is de passie ontstaan om beide
-              te gaan combineren
+              {t.contactPage.description}
             </p>
           </div>
         </div>
@@ -28,8 +30,8 @@ export default function contact() {
         <ContentItem
           image="/didier.jpg"
           subTitle="Sales-Manager"
-          title="Didier beyens"
-          body="Heb je vragen over onze pakketten? Aarzel zeker niet om contact met mij op te nemen. Ik help je graag verder!"
+          title="Didier Beyens"
+          body={t.contactPage.didierDescription}
           extension={
             <div className="flex space-x-2">
               <RoundButton url="https://www.linkedin.com/in/didibeyens/">
@@ -63,11 +65,8 @@ export default function contact() {
         <ContentItem
           image="/stephan.jpg"
           subTitle="CEO"
-          title="Stephan beyens"
-          body="Heb je technische vragen of wil je graag brainstormen over hoe we
-          jullie bedrijf kunnen verder helpen? Aarzel dan zeker niet om
-          contact met mij op te nemen! Persoonlijk contact blijft belangrijk
-          in zaken doen, so, let's meet!"
+          title="Stephan Beyens"
+          body={t.contactPage.stephanDescription}
           extension={
             <div className="flex space-x-2">
               <RoundButton url="https://www.linkedin.com/in/stephan-beyens-1b011586/">
@@ -102,11 +101,8 @@ export default function contact() {
         <ContentItem
           image="/julie.jpg"
           subTitle="Creative Mind"
-          title="Julie beyens"
-          body="Wil je graag een creatief event organiseren voor je team? Of wil
-          je graag een teambuilding organiseren met leuke workshops? Weet je
-          niet goed waar te starten? Twijfel dan zeker niet en bel me op! Ik
-          help je graag verder!"
+          title="Julie Beyens"
+          body={t.contactPage.julieDescription}
           extension={
             <div className="flex space-x-2">
               <RoundButton url="https://www.linkedin.com/in/juliebeyens/">
@@ -152,18 +148,18 @@ export default function contact() {
           </div>
           <div className="bg-gray-50 rounded-md shadow-md p-6 space-y-3 sm:w-full lg:w-2/3">
             <TextInput placeholder="Email" />
-            <TextInput placeholder="Full Name" />
+            <TextInput placeholder={t.contactPage.fullName} />
             <div>
               <p className="text-sm sm:text-base font-bold py-1"></p>
               <textarea
                 className="w-full p-4 resize-none"
                 cols="30"
                 rows="10"
-                placeholder="Message"
+                placeholder={t.contactPage.message}
               ></textarea>
             </div>
             <PrimaryButton
-              label="Send Message"
+              label={t.contactPage.sendMessageButtonText}
               fullWidth
               onClick={() => console.log("send email")}
             />
