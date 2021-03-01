@@ -7,10 +7,7 @@ import { useRouter } from "next/router";
 import { activeLocale } from "../../data/translations";
 
 export default function PersonalInformationStep() {
-  const [
-    { personalInformation, selectedTrackdays, drivers },
-    dispatch,
-  ] = useStateValue();
+  const [{ personalInformation, selectedTrackdays, drivers }, dispatch] = useStateValue();
   const router = useRouter();
   const { locale } = router;
   const t = activeLocale(locale);
@@ -39,7 +36,8 @@ export default function PersonalInformationStep() {
     <div className="w-full py-10 px-5 bg-gray-50">
       <div className="max-w-screen-lg m-auto">
         <p className="font-bold text-2xl pb-5 md:text-4xl">
-         {t.reservationPage.personalInformationStep.title}
+          <span className="text-motorblue">#3 - </span>
+          {t.reservationPage.personalInformationStep.title}
         </p>
         <div className="flex flex-col">
           <div className="w-full py-4 space-y-4 flex flex-col sm:flex-row sm:space-y-0 sm:space-x-5">
@@ -180,13 +178,14 @@ export default function PersonalInformationStep() {
           <div className="ml-auto pt-8">
             <button
               className="px-6 py-3 bg-transparent focus:outline-none sm:px-16"
-              onClick={() =>
-                dispatch({ type: "SET_ACTIVE_STEP", activeStep: 1 })
-              }
+              onClick={() => dispatch({ type: "SET_ACTIVE_STEP", activeStep: 1 })}
             >
-              {t.reservationPage.personalInformationStep.submitButtonText}
+              {t.reservationPage.general.backButtonText}
             </button>
-            <PrimaryButton label="Submit" onClick={handleValidation} />
+            <PrimaryButton
+              label={t.reservationPage.personalInformationStep.submitButtonText}
+              onClick={handleValidation}
+            />
           </div>
         </div>
       </div>

@@ -26,7 +26,10 @@ export default function TrackdaysStep() {
   return (
     <div className="w-full py-10 px-5 bg-gray-50">
       <div className="max-w-screen-lg m-auto pb-5 flex flex-col justify-between xs:flex-row xs:items-center">
-        <p className="font-bold text-3xl pb-3 xs:pb-0 md:text-4xl">{t.reservationPage.trackdaysStep.title}</p>
+        <p className="font-bold text-3xl pb-3 xs:pb-0 md:text-4xl">
+          <span className="text-motorblue">#1 - </span>
+          {t.reservationPage.trackdaysStep.title}
+        </p>
         {selectedTrackdays.length > 0 && (
           <PrimaryButton
             label={t.reservationPage.trackdaysStep.searchTrackdaysButtonText}
@@ -36,9 +39,7 @@ export default function TrackdaysStep() {
       </div>
       <div className="max-w-screen-lg m-auto space-y-2 flex flex-col">
         {selectedTrackdays.length > 0 ? (
-          selectedTrackdays.map((item, index) => (
-            <TrackdaysStepItem key={index} trackday={item} />
-          ))
+          selectedTrackdays.map((item, index) => <TrackdaysStepItem key={index} trackday={item} />)
         ) : (
           <div className="bg-white px-4 py-7 text-left xs:text-center">
             <p
@@ -50,7 +51,7 @@ export default function TrackdaysStep() {
           </div>
         )}
         <div className="ml-auto pt-8">
-          <PrimaryButton label="Next" onClick={handleOnNext} />
+          <PrimaryButton label={t.reservationPage.general.nextButtonText} onClick={handleOnNext} />
         </div>
       </div>
     </div>

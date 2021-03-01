@@ -4,23 +4,23 @@ const translationLanguage = {
     aboutUs: "",
   },
   home: {
-    planSection:{
+    planSection: {
       renting: {
         title: "",
-        hover: ""
+        hover: "",
       },
-      shareARide:{
+      shareARide: {
         title: "",
-        hover: ""
+        hover: "",
       },
-      VIP:{
+      VIP: {
         title: "",
-        hover: ""
+        hover: "",
       },
-      business:{
+      business: {
         title: "",
-        hover: ""
-      }
+        hover: "",
+      },
     },
     carDetails: {
       typeOfDrive: "",
@@ -107,7 +107,7 @@ export const activeLocale = (locale) => {
 };
 
 export const toggleLocale = (locale, router) => {
-  router.push("/", "/", { locale });
+  router.push(router.pathname, router.pathname, { locale });
 };
 
 export const enUS = {
@@ -116,30 +116,30 @@ export const enUS = {
     aboutUs: "About us",
   },
   home: {
-    planSection:{
+    planSection: {
       renting: {
         title: "Renting",
-        hover: "Rent our Porsche Cayman GT4 Clubsport or the Peugeot 206 GTi"
+        hover: "Rent our Porsche Cayman GT4 Clubsport or the Peugeot 206 GTi",
       },
-      shareARide:{
+      shareARide: {
         title: "Share a ride",
-        hover: "Discover our 'Share your ride (&) Network' formula on an affordable budget"
+        hover: "Discover our 'Share your ride (&) Network' formula on an affordable budget",
       },
-      VIP:{
+      VIP: {
         title: "VIP",
-        hover: "BE motorsport arranges everything for you from A to Z with a VIP Experience"
+        hover: "BE motorsport arranges everything for you from A to Z with a VIP Experience",
       },
-      business:{
+      business: {
         title: "Business",
-        hover: "Boost your company to the next level together with BE motorsport"
-      }
+        hover: "Boost your company to the next level together with BE motorsport",
+      },
     },
     carDetails: {
       typeOfDrive: "Type of drive",
       power: "Power",
       transmission: "Transmission",
       steering: "Steering",
-      topspeed:"Top speed",
+      topspeed: "Top speed",
       engine: "Engine",
       tank: "Tank",
       safety: "Safety",
@@ -162,7 +162,7 @@ export const enUS = {
       tank: "Tank",
       safety: "Safety",
     },
-    title: "Meet the team"
+    title: "Meet the team",
   },
   trackdaysPage: {
     title: "Our Trackdays",
@@ -208,10 +208,14 @@ export const enUS = {
   },
   contactPage: {
     title: "Our team",
-    description: "BE motorsport is a family company with a great interest in motorsport. Racing is the metaphor that made us rethink this new project. Doing business has been a great part of our lives and we will therefore take the opportunity to grow this passion into your business experience.    BE motorsport is professionally engaged in customizing your event to your personal needs so that you and especially your participants are extremely satisfied with our service.    What do you have in mind? We will make it happen!",
-    didierDescription: "Do not hesitate to contact me if you have any questions about our packages. I am happy to help you!",
-    stephanDescription: "Do you have  any technical questions or would you like to brainstorm about how we can boost your company to the next level? Do not hesitate to contact me! Personal contact remains important in business, so: let's meet!",
-    julieDescription: "Would you like to organize a creative event for your team? Or would you like to organize a team building with inspiring workshops, but you are not sure where to start? Don't hesitate and give me a call! I am happy to help you!",
+    description:
+      "BE motorsport is a family company with a great interest in motorsport. Racing is the metaphor that made us rethink this new project. Doing business has been a great part of our lives and we will therefore take the opportunity to grow this passion into your business experience.    BE motorsport is professionally engaged in customizing your event to your personal needs so that you and especially your participants are extremely satisfied with our service.    What do you have in mind? We will make it happen!",
+    didierDescription:
+      "Do not hesitate to contact me if you have any questions about our packages. I am happy to help you!",
+    stephanDescription:
+      "Do you have  any technical questions or would you like to brainstorm about how we can boost your company to the next level? Do not hesitate to contact me! Personal contact remains important in business, so: let's meet!",
+    julieDescription:
+      "Would you like to organize a creative event for your team? Or would you like to organize a team building with inspiring workshops, but you are not sure where to start? Don't hesitate and give me a call! I am happy to help you!",
     fullName: "Full name",
     message: "Message",
     sendMessageButtonText: "Send message",
@@ -219,7 +223,7 @@ export const enUS = {
   footer: {
     pages: "Pages",
     plans: "Plans",
-  }
+  },
 };
 
 export const fr = {
@@ -235,23 +239,23 @@ export const nl = {
     aboutUs: "Over ons",
   },
   home: {
-    planSection:{
+    planSection: {
       renting: {
         title: "Renting",
-        hover: "Huur onze Porsche Cayman GT4 Clubsport of de Peugeot 206 GTi"
+        hover: "Huur onze Porsche Cayman GT4 Clubsport of de Peugeot 206 GTi",
       },
-      shareARide:{
+      shareARide: {
         title: "Share a ride",
-        hover: "Boost jouw bedrijf naar de next level samen met BE motorsport"
+        hover: "Boost jouw bedrijf naar de next level samen met BE motorsport",
       },
-      VIP:{
+      VIP: {
         title: "VIP",
-        hover: "BE motorsport legt je in de watten van A tot Z met een VIP Experience"
+        hover: "BE motorsport legt je in de watten van A tot Z met een VIP Experience",
       },
-      business:{
+      business: {
         title: "Business",
-        hover: "Ontdek onze 'Share your ride (&) Network' formule voor een aantrekkelijk budget."
-      }
+        hover: "Ontdek onze 'Share your ride (&) Network' formule voor een aantrekkelijk budget.",
+      },
     },
     carDetails: {
       typeOfDrive: "Type aandrijving",
@@ -282,7 +286,7 @@ export const nl = {
       tank: "50 liter",
       safety: "rolkooi met racing kit en volledig gestript interieur",
     },
-    title: "Ontdek het team"
+    title: "Ontdek het team",
   },
   trackdaysPage: {
     title: "Onze Trackdays",
@@ -296,8 +300,11 @@ export const nl = {
     title: "Plan je trackday",
     description: "Plan nu vrijblijvend je trackday en wij regelen de rest!",
     trackdaysStep: {
+      title: "Trackdays",
       placeholder: "Selecteer eerst een trackday",
       searchTrackdaysButtonText: "Trackdays zoeken",
+      chooseCarTitle: "Kies een auto",
+      chooseYourPlanTitle: "Kies een optie",
     },
     driversStep: {
       title: "Piloten",

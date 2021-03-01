@@ -33,15 +33,11 @@ export default function Home() {
         <div className="w-full md:h-screen">
           <img
             className="h-96 md:h-4/5 w-full object-cover lg:h-5/6"
-            src="/small-banner.jpg"
+            src="/small-banner 1.png"
             alt="small banner"
           />
           <div className="text-base font-medium text-left md:text-2xl lg:text-3xl px-5 xl:px-0 py-10 h-1/5 w-full max-w-screen-xl m-auto flex items-center bg-white lg:h-1/6">
-            <img
-              src="/donut.jpg"
-              alt="donut"
-              className="w-7 h-7 sm:w-14 sm:h-14 mr-3 sm:mr-5"
-            />
+            <img src="/donut.jpg" alt="donut" className="w-7 h-7 sm:w-14 sm:h-14 mr-3 sm:mr-5" />
             <Typical
               steps={[
                 "Create your Business Experience",
@@ -63,9 +59,7 @@ export default function Home() {
         <PlansSection />
         <div className="bg-white py-10 px-8 ">
           <div className="max-w-screen-xl m-auto ">
-            <p className="pb-8 text-center font-medium text-3xl lg:text-5xl">
-              {t.home.title}
-            </p>
+            <p className="pb-8 text-center font-medium text-3xl lg:text-5xl">{t.home.title}</p>
             <div className="space-y-20">
               <div className="bg-white w-full flex flex-col-reverse md:flex-row md:items-center">
                 <div className="px-4 divide-gray-50 divide-y-2">
@@ -73,10 +67,8 @@ export default function Home() {
                     Porsche Cayman GT4 Clubsport
                   </p>
                   {porscheData.map((item, index) => (
-                    <div key={index} className="py-5 text-sm grid grid-cols-2">
-                      <p className="font-semibold">
-                        {t.home.carDetails[item.title]}
-                      </p>
+                    <div key={index} className="py-2 text-sm grid grid-cols-2">
+                      <p className="font-semibold">{t.home.carDetails[item.title]}</p>
                       <p>{t.home.porscheData[item.title]}</p>
                     </div>
                   ))}
@@ -98,7 +90,7 @@ export default function Home() {
                     Peugeot 206 GTi
                   </p>
                   {peugeotData.map((item, index) => (
-                    <div key={index} className="py-5 text-sm grid grid-cols-2">
+                    <div key={index} className="py-2 text-sm grid grid-cols-2">
                       <p className="font-semibold">{t.home.carDetails[item.title]}</p>
                       <p>{t.home.peugeotData[item.title]}</p>
                     </div>

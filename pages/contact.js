@@ -33,7 +33,21 @@ export default function contact() {
           title="Didier Beyens"
           body={t.contactPage.didierDescription}
           extension={
-            <div className="flex space-x-2">
+            <div className="flex flex-col space-y-2 mt-4">
+              <RoundButton
+                url="mailto:didier.beyens@bemotorsport.com"
+                description="didier.beyens@bemotorsport.be"
+              >
+                <svg
+                  className="w-6 h-6 text-white"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                </svg>
+              </RoundButton>
               <RoundButton url="https://www.linkedin.com/in/didibeyens/">
                 <svg
                   width="24"
@@ -48,7 +62,21 @@ export default function contact() {
                   />
                 </svg>
               </RoundButton>
-              <RoundButton url="mailto:didier.beyens@bemotorsport.com">
+            </div>
+          }
+        />
+        <ContentItem
+          image="/stephan.jpg"
+          subTitle="CEO"
+          title="Stephan Beyens"
+          body={t.contactPage.stephanDescription}
+          extension={
+            <div className="flex flex-col space-y-2 mt-4">
+              <RoundButton
+                url="mailto:stephan.beyens@bemotorsport.com"
+                description="stephan.beyens@bemotorsport.be"
+                reverse
+              >
                 <svg
                   className="w-6 h-6 text-white"
                   fill="currentColor"
@@ -59,17 +87,7 @@ export default function contact() {
                   <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                 </svg>
               </RoundButton>
-            </div>
-          }
-        />
-        <ContentItem
-          image="/stephan.jpg"
-          subTitle="CEO"
-          title="Stephan Beyens"
-          body={t.contactPage.stephanDescription}
-          extension={
-            <div className="flex space-x-2">
-              <RoundButton url="https://www.linkedin.com/in/stephan-beyens-1b011586/">
+              <RoundButton url="https://www.linkedin.com/in/stephan-beyens-1b011586/" reverse>
                 <svg
                   width="24"
                   height="24"
@@ -81,17 +99,6 @@ export default function contact() {
                     d="M4.98292 7.1968c1.2084 0 2.188-.9796 2.188-2.188 0-1.2084-.9796-2.188-2.188-2.188-1.2084 0-2.188.9796-2.188 2.188 0 1.2084.9796 2.188 2.188 2.188zM9.23673 8.85518V20.9942h3.76897v-6.003c0-1.584.298-3.118 2.262-3.118 1.937 0 1.961 1.811 1.961 3.218v5.904h3.771v-6.657c0-3.27-.704-5.78302-4.526-5.78302-1.835 0-3.065 1.007-3.568 1.96002h-.051V8.85518H9.23673zm-6.142 0h3.775V20.9942h-3.775V8.85518z"
                     fill="#fff"
                   />
-                </svg>
-              </RoundButton>
-              <RoundButton url="mailto:stephan.beyens@bemotorsport.com">
-                <svg
-                  className="w-6 h-6 text-white"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                 </svg>
               </RoundButton>
             </div>
@@ -104,7 +111,21 @@ export default function contact() {
           title="Julie Beyens"
           body={t.contactPage.julieDescription}
           extension={
-            <div className="flex space-x-2">
+            <div className="flex flex-col space-y-2 mt-4">
+              <RoundButton
+                url="mailto:julie.beyens@bemotorsport.com"
+                description="julie.beyens@bemotorsport.be"
+              >
+                <svg
+                  className="w-6 h-6 text-white"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                </svg>
+              </RoundButton>
               <RoundButton url="https://www.linkedin.com/in/juliebeyens/">
                 <svg
                   width="24"
@@ -117,17 +138,6 @@ export default function contact() {
                     d="M4.98292 7.1968c1.2084 0 2.188-.9796 2.188-2.188 0-1.2084-.9796-2.188-2.188-2.188-1.2084 0-2.188.9796-2.188 2.188 0 1.2084.9796 2.188 2.188 2.188zM9.23673 8.85518V20.9942h3.76897v-6.003c0-1.584.298-3.118 2.262-3.118 1.937 0 1.961 1.811 1.961 3.218v5.904h3.771v-6.657c0-3.27-.704-5.78302-4.526-5.78302-1.835 0-3.065 1.007-3.568 1.96002h-.051V8.85518H9.23673zm-6.142 0h3.775V20.9942h-3.775V8.85518z"
                     fill="#fff"
                   />
-                </svg>
-              </RoundButton>
-              <RoundButton url="mailto:julie.beyens@bemotorsport.com">
-                <svg
-                  className="w-6 h-6 text-white"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                 </svg>
               </RoundButton>
             </div>

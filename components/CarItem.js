@@ -3,11 +3,11 @@ import React from "react";
 export default function CarItem({ img, name, index, selectedIndex, onClick }) {
   return (
     <div className="cursor-pointer" onClick={onClick}>
-      <img className="w-full xs:w-60 h-auto" src={img} alt={name} />
+      <img className="w-full xs:w-72 h-auto" src={img} alt={name} />
       <div
         className={`${
           index === selectedIndex ? "bg-motorblue text-white" : "bg-gray-50 text-black"
-        } flex justify-between items-center p-3 w-full xs:w-60`}
+        } flex justify-between items-center p-3 w-full xs:w-72`}
       >
         <p>{name}</p>
         {index === selectedIndex && (

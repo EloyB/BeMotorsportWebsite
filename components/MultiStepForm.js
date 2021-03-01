@@ -19,7 +19,7 @@ export default function MultiStepForm() {
 
   return (
     <div className="mb-10 flex flex-col items-center">
-      <div className="w-1/2">
+      <div className="w-full sm:w-1/2">
         <Stepper activeStep={activeStep} alternativeLabel>
           {steps.map((item) => (
             <Step key={item.name}>

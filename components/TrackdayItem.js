@@ -29,32 +29,70 @@ export default function TrackdayItem({ index, trackday }) {
           <div className="ml-5">
             <p className="font-bold text-md md:text-xl">{trackday.circuit.name}</p>
             <p className="text-xs md:text-sm">
-              <span className="text-motorblue font-semibold">
+              <span className="text-motorblue sm:text-lg font-semibold">
                 {moment(trackday.date).format("DD-MM-YYYY")}{" "}
               </span>
               | {trackday.circuit.country}
             </p>
           </div>
         </div>
-        <button
-          className="h-5 w-5 cursor-pointer focus:outline-none"
-          onClick={() => setOpen(!open)}
-        >
-          <svg
-            className="w-6 h-6 text-motorblue"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
+        <div className="flex items-center space-x-1 sm:space-x-5">
+          <div
+            onClick={() => {
+              !isTrackdaySelected() &&
+                dispatch({
+                  type: "ADD_SELECTED_TRACKDAY",
+                  trackday: trackday,
+                });
+
+              router.push("/reservation");
+            }}
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-            />
-          </svg>
-        </button>
+            {isTrackdaySelected() ? (
+              <svg
+                className="w-6 h-6 text-checkgreen"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            ) : (
+              <svg
+                className="w-6 h-6 text-motorblue"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            )}
+          </div>
+          <button className="cursor-pointer focus:outline-none" onClick={() => setOpen(!open)}>
+            <svg
+              className="w-6 h-6 text-motorblue"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+          </button>
+        </div>
       </div>
       <div
         className={`${
@@ -88,50 +126,7 @@ export default function TrackdayItem({ index, trackday }) {
             </div>
           )}
         </div>
-        <div className="flex space-x-3 pt-6 lg:flex-col lg:pt-0 lg:space-x-0 lg:space-y-2">
-          <div
-            className={`cursor-pointer w-10 h-10 ${
-              isTrackdaySelected() ? "bg-checkgreen" : "bg-motorblue"
-            } rounded-md flex items-center justify-center`}
-            onClick={() => {
-              !isTrackdaySelected() &&
-                dispatch({
-                  type: "ADD_SELECTED_TRACKDAY",
-                  trackday: trackday,
-                });
-
-              router.push("/reservation");
-            }}
-          >
-            {isTrackdaySelected() ? (
-              <svg
-                className="w-6 h-6 text-white"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            ) : (
-              <svg
-                className="w-6 h-6 text-white"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            )}
-          </div>
-        </div>
+        <div className="flex space-x-3 pt-6 lg:flex-col lg:pt-0 lg:space-x-0 lg:space-y-2"></div>
       </div>
     </div>
   );

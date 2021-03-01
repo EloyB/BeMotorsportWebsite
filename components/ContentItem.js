@@ -10,7 +10,7 @@ export default function ContentItem({ image, subTitle, title, body, extension, r
       >
         <img className="w-full max-w-sm md:w-1/3" src={image} alt="groepsfoto" />
         <div
-          className={`pt-5 flex flex-col ${
+          className={`pt-5 md:pt-0 flex flex-col ${
             reverse ? "md:text-right md:items-end lg:pr-12" : "md:text-left lg:pl-12"
           }  inline-block md:px-5`}
         >

@@ -19,7 +19,6 @@ export default function DriversStep() {
   const { locale } = router;
   const t = activeLocale(locale);
 
-
   const handleOnNext = () => {
     if (drivers.length > 0) {
       dispatch({ type: "SET_ACTIVE_STEP", activeStep: 2 });
@@ -29,7 +28,10 @@ export default function DriversStep() {
   return (
     <div className="w-full py-10 px-5 bg-gray-50">
       <div className="max-w-screen-lg m-auto">
-        <p className="font-bold text-2xl pb-5 md:text-4xl">{t.reservationPage.driversStep.title}</p>
+        <p className="font-bold text-2xl pb-5 md:text-4xl">
+          <span className="text-motorblue">#2 - </span>
+          {t.reservationPage.driversStep.title}
+        </p>
         <div className="flex flex-col">
           <div className="divide-y-2 lg:flex lg:divide-y-0 lg:divide-x-2">
             <div className="w-full space-y-4 pb-5 lg:pr-5">
@@ -106,9 +108,12 @@ export default function DriversStep() {
               className="px-6 py-3 bg-transparent focus:outline-none sm:px-16"
               onClick={() => dispatch({ type: "SET_ACTIVE_STEP", activeStep: 0 })}
             >
-              Back
+              {t.reservationPage.general.backButtonText}
             </button>
-            <PrimaryButton label={t.reservationPage.general.nextButtonText} onClick={handleOnNext} />
+            <PrimaryButton
+              label={t.reservationPage.general.nextButtonText}
+              onClick={handleOnNext}
+            />
           </div>
         </div>
       </div>

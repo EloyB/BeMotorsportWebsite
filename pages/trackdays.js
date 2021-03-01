@@ -35,9 +35,10 @@ export default function trackdays({ circuits }) {
       .collection("trackdays")
       .get()
       .then((res) => {
+        var sortedList = res.docs.sort((a, b) => new Date(a.data().date) - new Date(b.data().date));
         dispatch({
           type: "SET_TRACKDAYS",
-          list: res.docs.map((entry) => ({
+          list: sortedList.map((entry) => ({
             id: entry.id,
             ...entry.data(),
           })),
@@ -49,10 +50,10 @@ export default function trackdays({ circuits }) {
     <div>
       <div>
         <div className="pt-32 pb-20 px-8 max-w-screen-xl m-auto lg:px-0">
-          <h1 className="text-3xl font-medium text-center py-5 lg:text-5xl">{t.trackdaysPage.title}</h1>
-          <p className="text-center max-w-screen-md m-auto">
-            {t.trackdaysPage.description}
-          </p>
+          <h1 className="text-3xl font-medium text-center py-5 lg:text-5xl">
+            {t.trackdaysPage.title}
+          </h1>
+          <p className="text-center max-w-screen-md m-auto">{t.trackdaysPage.description}</p>
         </div>
         <div className="relative w-full h-96 max-w-screen-xl m-auto">
           <ReactMapGL

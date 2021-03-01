@@ -20,12 +20,17 @@ export default function TrackdaysStepItem({ trackday }) {
   ];
   const cars = [
     {
-      name: "Porsche Cayman GT4",
+      name: "Porsche Cayman GT4 Clubsport",
       value: "Porsche",
       image: "/porshe.jpg",
       show: trackday.cars.porsche,
     },
-    { name: "Peugeot 206", value: "Peugeot", image: "/peugeot.jpg", show: trackday.cars.peugeot },
+    {
+      name: "Peugeot 206 GTi",
+      value: "Peugeot",
+      image: "/peugeot.jpg",
+      show: trackday.cars.peugeot,
+    },
   ];
 
   // State hooks
@@ -103,7 +108,9 @@ export default function TrackdaysStepItem({ trackday }) {
       <div className={`${open ? "block" : "hidden"}`}>
         <div className="flex py-6 space-y-5 flex-col">
           <div>
-            <p className="font-bold text-md md:text-xl">{t.reservationPage.trackdaysStep.chooseCarTitle}:</p>
+            <p className="font-bold text-md md:text-xl">
+              {t.reservationPage.trackdaysStep.chooseCarTitle}:
+            </p>
             <div className="space-y-2 pt-4 sm:flex sm:space-y-0 sm:space-x-2">
               {cars.map(
                 (item, index) =>
@@ -131,7 +138,9 @@ export default function TrackdaysStepItem({ trackday }) {
             </div>
           </div>
           <div>
-            <p className="font-bold text-md md:text-xl">{t.reservationPage.trackdaysStep.chooseYourPlanTitle}:</p>
+            <p className="font-bold text-md md:text-xl">
+              {t.reservationPage.trackdaysStep.chooseYourPlanTitle}:
+            </p>
             <div className="pt-4 grid grid-cols-1 gap-2 sm:grid-cols-2">
               {plans.map(
                 (item, index) =>
