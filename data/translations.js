@@ -69,6 +69,9 @@ const translationLanguage = {
       addButtonText: "",
       age: "",
       hasExperience: "",
+      hasNoExperience: "",
+      instructorNeeded: "",
+      noInstructorNeeded: ""
     },
     personalInformationStep: {
       title: "",
@@ -186,7 +189,9 @@ export const enUS = {
       addButtonText: "Add driver",
       age: "Age",
       hasExperience: "Has experience",
-      noExperience: "Has no experience",
+      hasNoExperience: "Has no experience",
+      instructorNeeded: "Instructor needed",
+      noInstructorNeeded: "Instructor not needed"
     },
     personalInformationStep: {
       title: "Personal information",
@@ -312,6 +317,9 @@ export const nl = {
       addButtonText: "Voeg toe",
       age: "Leeftijd",
       hasExperience: "Heeft ervaring",
+      hasNoExperience: "Heeft geen ervaring",
+      instructorNeeded: "Instructeur nodig",
+      noInstructorNeeded: "Geen instructeur nodig"
     },
     personalInformationStep: {
       title: "Persoonlijke gegevens",

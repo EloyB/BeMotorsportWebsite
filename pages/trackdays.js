@@ -13,7 +13,10 @@ export default function trackdays({ circuits }) {
   const router = useRouter();
   const trackdaysRef = useRef();
   const [{ filteredTrackdays }, dispatch] = useStateValue();
-  const [showCircuitPopup, setShowCircuitPopup] = useState({ show: false, circuit: {} });
+  const [showCircuitPopup, setShowCircuitPopup] = useState({
+    show: false,
+    circuit: {},
+  });
   const [selectedCircuit, setSelectedCircuit] = useState("");
   const [selectedDate, setSelectedDate] = useState("");
   const [viewport, setViewPort] = useState({
@@ -35,7 +38,9 @@ export default function trackdays({ circuits }) {
       .collection("trackdays")
       .get()
       .then((res) => {
-        var sortedList = res.docs.sort((a, b) => new Date(a.data().date) - new Date(b.data().date));
+        var sortedList = res.docs.sort(
+          (a, b) => new Date(a.data().date) - new Date(b.data().date)
+        );
         dispatch({
           type: "SET_TRACKDAYS",
           list: sortedList.map((entry) => ({
@@ -53,7 +58,9 @@ export default function trackdays({ circuits }) {
           <h1 className="text-3xl font-medium text-center py-5 lg:text-5xl">
             {t.trackdaysPage.title}
           </h1>
-          <p className="text-center max-w-screen-md m-auto">{t.trackdaysPage.description}</p>
+          <p className="text-center max-w-screen-md m-auto">
+            {t.trackdaysPage.description}
+          </p>
         </div>
         <div className="relative w-full h-96 max-w-screen-xl m-auto">
           <ReactMapGL
@@ -71,7 +78,11 @@ export default function trackdays({ circuits }) {
               <p className="text-xs">{showCircuitPopup.circuit.country}</p>
             </div>
             {circuits.map((item, index) => (
-              <Marker key={index} longitude={item.coordinates.lng} latitude={item.coordinates.lat}>
+              <Marker
+                key={index}
+                longitude={item.coordinates.lng}
+                latitude={item.coordinates.lat}
+              >
                 <div
                   className="cursor-pointer max-w-screen-xl mx-auto h-3 w-3 rounded-full bg-motorblue"
                   onClick={() => {
@@ -83,14 +94,30 @@ export default function trackdays({ circuits }) {
                     });
                     trackdaysRef.current.scrollIntoView({ behavior: "smooth" });
                   }}
-                  onMouseEnter={() => setShowCircuitPopup({ show: true, circuit: item })}
-                  onMouseLeave={() => setShowCircuitPopup({ show: false, circuit: {} })}
+                  onMouseEnter={() =>
+                    setShowCircuitPopup({ show: true, circuit: item })
+                  }
+                  onMouseLeave={() =>
+                    setShowCircuitPopup({ show: false, circuit: {} })
+                  }
                 ></div>
               </Marker>
             ))}
           </ReactMapGL>
         </div>
-        <div className="max-w-screen-xl m-auto px-5 lg:px-0 py-5 flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-5 sm:justify-end">
+        <div className="max-w-screen-xl m-auto px-5 lg:px-0 py-5 flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-5 sm:justify-end sm:items-center">
+          <svg
+            class="w-6 h-6 text-motorblue hidden sm:block"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3 3a1 1 0 011-1h12a1 1 0 011 1v3a1 1 0 01-.293.707L12 11.414V15a1 1 0 01-.293.707l-2 2A1 1 0 018 17v-5.586L3.293 6.707A1 1 0 013 6V3z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
           <Dropdown
             selectOptions={circuits}
             targetField="name"
@@ -120,7 +147,10 @@ export default function trackdays({ circuits }) {
           <hr />
         </div>
 
-        <div ref={trackdaysRef} className="max-w-screen-xl m-auto px-5 pt-4 pb-12 lg:px-0">
+        <div
+          ref={trackdaysRef}
+          className="max-w-screen-xl m-auto px-5 pt-4 pb-12 lg:px-0"
+        >
           {filteredTrackdays.length > 0 ? (
             filteredTrackdays.map((item, index) => (
               <TrackdayItem key={index} index={index} trackday={item} />
