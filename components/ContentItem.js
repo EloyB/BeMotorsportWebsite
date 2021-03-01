@@ -15,8 +15,8 @@ export default function ContentItem({ image, subTitle, title, body, extension, r
           }  inline-block md:px-5`}
         >
           <div className="pb-1 md:pt-0">
-            <p className="text-motorblue font-medium">{subTitle}</p>
             <h1 className="text-4xl font-medium sm:text-5xl md:text-3xl lg:text-4xl">{title}</h1>
+            <p className="text-motorblue font-medium">{subTitle}</p>
           </div>
           <p className="text-sm sm:text-base lg:text-lg">{body}</p>
           {extension}

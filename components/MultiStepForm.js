@@ -12,9 +12,9 @@ export default function MultiStepForm() {
   const [{ activeStep }, dispatch] = useStateValue();
 
   const steps = [
-    { name: "trackdays", component: <TrackdaysStep /> },
-    { name: "drivers", component: <DriversStep /> },
-    { name: "personal information", component: <PersonalInformationStep /> },
+    { name: "Trackdays", component: <TrackdaysStep /> },
+    { name: "Drivers", component: <DriversStep /> },
+    { name: "Personal information", component: <PersonalInformationStep /> },
   ];
 
   return (
@@ -23,7 +23,13 @@ export default function MultiStepForm() {
         <Stepper activeStep={activeStep} alternativeLabel>
           {steps.map((item) => (
             <Step key={item.name}>
-              <StepLabel>{item.name}</StepLabel>
+              <StepLabel
+                StepIconProps={{
+                  classes: { root: { color: "pink" } },
+                }}
+              >
+                {item.name}
+              </StepLabel>
             </Step>
           ))}
         </Stepper>

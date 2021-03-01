@@ -38,17 +38,17 @@ export default function TrackdayItem({ index, trackday }) {
           onClick={() => setOpen(!open)}
         >
           <svg
-            className={`w-6 h-6 text-motorblue transform transition duration-300 ${
-              open ? "rotate-90" : "rotate-0"
-            }`}
-            fill="currentColor"
-            viewBox="0 0 20 20"
+            className="w-6 h-6 text-motorblue"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              fillRule="evenodd"
-              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-              clipRule="evenodd"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
             />
           </svg>
         </button>

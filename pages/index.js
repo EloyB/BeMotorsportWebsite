@@ -44,7 +44,8 @@ export default function Home() {
             src="/small-banner.jpg"
             alt="small banner"
           />
-          <div className="text-lg font-medium text-center sm:text-left md:text-2xl lg:text-3xl px-8 xl:px-0 py-10 h-1/5 w-full max-w-screen-xl m-auto flex items-center bg-white lg:h-1/6">
+          <div className="text-base font-medium text-left md:text-2xl lg:text-3xl px-5 xl:px-0 py-10 h-1/5 w-full max-w-screen-xl m-auto flex items-center bg-white lg:h-1/6">
+            <img src="/donut.jpg" alt="donut" className="w-7 h-7 sm:w-14 sm:h-14 mr-3 sm:mr-5" />
             <Typical
               steps={[
                 "Create your Business Experience",
@@ -68,12 +69,7 @@ export default function Home() {
           <div className="max-w-screen-xl m-auto ">
             <p className="pb-8 text-center font-medium text-3xl lg:text-5xl">Meet the team</p>
             <div className="space-y-20">
-              <div className="bg-white w-full flex flex-col md:flex-row md:items-start">
-                <img
-                  src="/porshe.jpg"
-                  alt="Porsche"
-                  className="w-full md:w-2/5 lg:w-1/2 md:pt-10 object-contain"
-                />
+              <div className="bg-white w-full flex flex-col-reverse md:flex-row md:items-center">
                 <div className="px-4 divide-gray-50 divide-y-2">
                   <p className="text-motorblue font-semibold py-6 text-xl sm:text-2xl lg:text-3xl">
                     Porsche Cayman GT4 Clubsport
@@ -85,8 +81,18 @@ export default function Home() {
                     </div>
                   ))}
                 </div>
+                <img
+                  src="/porshe.jpg"
+                  alt="Porsche"
+                  className="w-full md:w-2/5 lg:w-1/2 md:pt-10 object-contain"
+                />
               </div>
-              <div className="bg-white w-full flex flex-col-reverse md:flex-row md:items-start">
+              <div className="bg-white w-full flex flex-col md:flex-row md:items-center">
+                <img
+                  src="/peugeot.jpg"
+                  alt="Peugeot 206 GTi"
+                  className="w-full md:w-2/5 lg:w-1/2 md:pt-10 object-contain"
+                />
                 <div className="px-4 divide-gray-50 divide-y-2">
                   <p className="text-motorblue font-semibold py-6 text-xl sm:text-2xl lg:text-3xl">
                     Peugeot 206 GTi
@@ -98,11 +104,6 @@ export default function Home() {
                     </div>
                   ))}
                 </div>
-                <img
-                  src="/peugeot.jpg"
-                  alt="Peugeot 206 GTi"
-                  className="w-full md:w-2/5 lg:w-1/2 md:pt-10 object-contain"
-                />
               </div>
             </div>
           </div>
