@@ -23,13 +23,7 @@ export default function MultiStepForm() {
         <Stepper activeStep={activeStep} alternativeLabel>
           {steps.map((item) => (
             <Step key={item.name}>
-              <StepLabel
-                StepIconProps={{
-                  classes: { root: { color: "pink" } },
-                }}
-              >
-                {item.name}
-              </StepLabel>
+              <StepLabel>{item.name}</StepLabel>
             </Step>
           ))}
         </Stepper>

@@ -71,7 +71,7 @@ const translationLanguage = {
       hasExperience: "",
       hasNoExperience: "",
       instructorNeeded: "",
-      noInstructorNeeded: ""
+      noInstructorNeeded: "",
     },
     personalInformationStep: {
       title: "",
@@ -157,13 +157,13 @@ export const enUS = {
       safety: "Original Porsche welded cage with racing kit and completely stripped interior",
     },
     peugeotData: {
-      typeOfDrive: "Type of Drive",
-      power: "Power",
-      transmission: "Transmission",
+      typeOfDrive: "Front-wheel drive",
+      power: "283 kW (385 hp)",
+      transmission: "5 gear manual gear box",
       topspeed: "210 km/h",
-      engine: "Engine",
-      tank: "Tank",
-      safety: "Safety",
+      engine: "1997 m3",
+      tank: "50 Liter",
+      safety: "Welded cage with racing kit and fully stripped interior",
     },
     title: "Meet the team",
   },
@@ -191,7 +191,7 @@ export const enUS = {
       hasExperience: "Has experience",
       hasNoExperience: "Has no experience",
       instructorNeeded: "Instructor needed",
-      noInstructorNeeded: "Instructor not needed"
+      noInstructorNeeded: "Instructor not needed",
     },
     personalInformationStep: {
       title: "Personal information",
@@ -319,7 +319,7 @@ export const nl = {
       hasExperience: "Heeft ervaring",
       hasNoExperience: "Heeft geen ervaring",
       instructorNeeded: "Instructeur nodig",
-      noInstructorNeeded: "Geen instructeur nodig"
+      noInstructorNeeded: "Geen instructeur nodig",
     },
     personalInformationStep: {
       title: "Persoonlijke gegevens",

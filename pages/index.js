@@ -30,14 +30,13 @@ export default function Home() {
   return (
     <div>
       <div className="w-full">
-        <div className="w-full md:h-screen">
+        <div className="relative w-full md:h-screen">
           <img
-            className="h-96 md:h-4/5 w-full object-cover lg:h-5/6"
+            className="relative z-10 h-96 md:h-4/5 w-full object-cover lg:h-5/6"
             src="/small-banner 1.png"
             alt="small banner"
           />
-          <div className="text-base font-medium text-left md:text-2xl lg:text-3xl px-5 xl:px-0 py-10 h-1/5 w-full max-w-screen-xl m-auto flex items-center bg-white lg:h-1/6">
-            <img src="/donut.jpg" alt="donut" className="w-7 h-7 sm:w-14 sm:h-14 mr-3 sm:mr-5" />
+          <div className="relative text-base font-semibold text-left md:text-2xl lg:text-3xl px-5 xl:px-0 py-10 h-1/5 w-full max-w-screen-xl m-auto flex items-center bg-white lg:h-1/6">
             <Typical
               steps={[
                 "Create your Business Experience",
@@ -53,6 +52,11 @@ export default function Home() {
               ]}
               loop={Infinity}
               wrapper="h1"
+            />
+            <img
+              src="/donut.jpg"
+              alt="donut"
+              className="absolute w opacity-20 -top-20 -left-40 sm:-left-96"
             />
           </div>
         </div>

@@ -15,7 +15,7 @@ export default function DriversStep() {
     lastName: "",
     age: "",
     hasExperience: false,
-    instuctorNeeded: false,
+    instuctorNeeded: true,
   });
   const router = useRouter();
   const { locale } = router;
@@ -36,7 +36,7 @@ export default function DriversStep() {
   const setInstructor = (value) => {
     setDriver({
       ...driver,
-      instuctorNeeded:value
+      instuctorNeeded: value,
     });
   };
 
@@ -81,11 +81,7 @@ export default function DriversStep() {
                   } col-span-1 px-5 flex items-center justify-between`}
                   onClick={() => setExperience(true)}
                 >
-                  <p
-                    className={`${
-                      driver.hasExperience ? "text-white" : "text-black"
-                    }`}
-                  >
+                  <p className={`${driver.hasExperience ? "text-white" : "text-black"}`}>
                     {t.reservationPage.driversStep.hasExperience}
                   </p>
                   {driver.hasExperience && (
@@ -111,11 +107,7 @@ export default function DriversStep() {
                   } col-span-1 px-5 flex items-center justify-between`}
                   onClick={() => setExperience(false)}
                 >
-                  <p
-                    className={`${
-                      !driver.hasExperience ? "text-white" : "text-black"
-                    }`}
-                  >
+                  <p className={`${!driver.hasExperience ? "text-white" : "text-black"}`}>
                     {t.reservationPage.driversStep.hasNoExperience}
                   </p>
                   {!driver.hasExperience && (
@@ -144,11 +136,7 @@ export default function DriversStep() {
                   } col-span-1 px-5 flex items-center justify-between`}
                   onClick={() => setInstructor(false)}
                 >
-                  <p
-                    className={`${
-                      !driver.instuctorNeeded ? "text-white" : "text-black"
-                    }`}
-                  >
+                  <p className={`${!driver.instuctorNeeded ? "text-white" : "text-black"}`}>
                     {t.reservationPage.driversStep.noInstructorNeeded}
                   </p>
                   {!driver.instuctorNeeded && (
@@ -174,11 +162,7 @@ export default function DriversStep() {
                   } col-span-1 px-5 flex items-center justify-between`}
                   onClick={() => setInstructor(true)}
                 >
-                  <p
-                    className={`${
-                      driver.instuctorNeeded ? "text-white" : "text-black"
-                    }`}
-                  >
+                  <p className={`${driver.instuctorNeeded ? "text-white" : "text-black"}`}>
                     {t.reservationPage.driversStep.instructorNeeded}
                   </p>
                   {driver.instuctorNeeded && (
@@ -202,9 +186,7 @@ export default function DriversStep() {
 
               <button
                 className={`px-6 py-3 w-full bg-motorblue text-white focus:outline-none sm:px-16 sm:w-auto ${
-                  driver.firstName !== "" &&
-                  driver.lastName !== "" &&
-                  driver.age !== ""
+                  driver.firstName !== "" && driver.lastName !== "" && driver.age !== ""
                     ? "opacity-100"
                     : "opacity-75"
                 }`}
@@ -224,20 +206,14 @@ export default function DriversStep() {
                   });
                 }}
                 value={t.reservationPage.general.nextButtonText}
-                disabled={
-                  driver.firstName === "" ||
-                  driver.lastName === "" ||
-                  driver.age === ""
-                }
+                disabled={driver.firstName === "" || driver.lastName === "" || driver.age === ""}
               >
                 {t.reservationPage.driversStep.addButtonText}
               </button>
             </div>
             <div className="w-full pt-5 space-y-5 lg:pl-5">
               {drivers.length > 0 ? (
-                drivers.map((item, index) => (
-                  <DriverItem key={index} driver={item} index={index} />
-                ))
+                drivers.map((item, index) => <DriverItem key={index} driver={item} index={index} />)
               ) : (
                 <div className="bg-white px-4 py-7 text-center">
                   <p className="text-motorblue cursor-pointer font-semibold">
@@ -250,9 +226,7 @@ export default function DriversStep() {
           <div className="ml-auto pt-8">
             <button
               className="px-6 py-3 bg-transparent focus:outline-none sm:px-16"
-              onClick={() =>
-                dispatch({ type: "SET_ACTIVE_STEP", activeStep: 0 })
-              }
+              onClick={() => dispatch({ type: "SET_ACTIVE_STEP", activeStep: 0 })}
             >
               {t.reservationPage.general.backButtonText}
             </button>
