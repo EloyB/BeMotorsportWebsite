@@ -81,14 +81,14 @@ export const Footer = () => {
               >
                 NL
               </p>
-              <p
+              {/* <p
                 className={`text-sm pl-2 cursor-pointer ${
                   locale === "fr" ? "text-motorblue" : "text-white"
                 }`}
                 onClick={() => toggleLocale("fr", router)}
               >
                 FR
-              </p>
+              </p> */}
             </div>
           </div>
         </div>
