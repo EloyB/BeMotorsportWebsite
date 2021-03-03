@@ -16,6 +16,32 @@ export default function TrackdayItem({ index, trackday }) {
     return selectedTrackdays.findIndex((x) => x.id === trackday.id) > -1;
   };
 
+  const trackdayImage = (name) => {
+    switch (name) {
+      case "Spa-Francorchamps":
+        return "/circuits/spa-francorchamps.png";
+        break;
+      case "TT assen":
+        return "/circuits/TT-assen.png";
+        break;
+      case "Circuit Zandvoort":
+        return "/circuits/zandvoort.png";
+        break;
+      case "Hockenheimring":
+        return "/circuits/hockenheimring.png";
+        break;
+      case "Circuit Zolder":
+        return "/circuits/zolder.png";
+        break;
+      case "Nürburgring Grand Prix track":
+        return "/circuits/nurburgring.png";
+        break;
+      default:
+        return "/circuits/spa-francorchamps.png";
+        break;
+    }
+  };
+
   return (
     <div className={`p-8 space-y-3 ${index % 2 === 0 ? "bg-gray-50" : "bg-white"}`}>
       <div
@@ -24,7 +50,11 @@ export default function TrackdayItem({ index, trackday }) {
       >
         <div className="flex items-center">
           <div>
-            <img className="w-10 h-auto lg:w-14" src="/track-icon.png" alt="track icon" />
+            <img
+              className="w-10 h-auto lg:w-14"
+              src={trackdayImage(trackday.circuit.name)}
+              alt="track icon"
+            />
           </div>
           <div className="ml-5">
             <p className="font-bold text-md md:text-xl">{trackday.circuit.name}</p>

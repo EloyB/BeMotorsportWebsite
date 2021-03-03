@@ -7,6 +7,7 @@ import TrackdaysStep from "./steps/TrackdaysStep";
 import Stepper from "@material-ui/core/Stepper";
 import Step from "@material-ui/core/Step";
 import StepLabel from "@material-ui/core/StepLabel";
+import ConfirmationStep from "./steps/ConfirmationStep";
 
 export default function MultiStepForm() {
   const [{ activeStep }, dispatch] = useStateValue();
@@ -15,6 +16,7 @@ export default function MultiStepForm() {
     { name: "Trackdays", component: <TrackdaysStep /> },
     { name: "Drivers", component: <DriversStep /> },
     { name: "Personal information", component: <PersonalInformationStep /> },
+    { name: "Confirmation", component: <ConfirmationStep /> },
   ];
 
   return (

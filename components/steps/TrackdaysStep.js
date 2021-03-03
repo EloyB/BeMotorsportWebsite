@@ -27,7 +27,7 @@ export default function TrackdaysStep() {
     <div className="w-full py-10 px-5 bg-gray-50">
       <div className="max-w-screen-lg m-auto pb-5 flex flex-col justify-between xs:flex-row xs:items-center">
         <p className="font-bold text-3xl pb-3 xs:pb-0 md:text-4xl">
-          <span className="text-motorblue">#1 - </span>
+          <span className="text-motorblue">Stap 1 - </span>
           {t.reservationPage.trackdaysStep.title}
         </p>
         {selectedTrackdays.length > 0 && (

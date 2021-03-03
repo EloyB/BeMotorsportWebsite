@@ -44,7 +44,7 @@ export default function DriversStep() {
     <div className="w-full py-10 px-5 bg-gray-50">
       <div className="max-w-screen-lg m-auto">
         <p className="font-bold text-2xl pb-5 md:text-4xl">
-          <span className="text-motorblue">#2 - </span>
+          <span className="text-motorblue">Stap 2 - </span>
           {t.reservationPage.driversStep.title}
         </p>
         <div className="flex flex-col">

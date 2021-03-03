@@ -9,12 +9,16 @@ export const Footer = () => {
   const t = activeLocale(locale);
 
   return (
-    <div className="bg-gray-600 text-white">
+    <div className="bg-gray-600 text-white mt-16">
       <div className="max-w-screen-xl m-auto px-8 py-10 xl:px-0 flex flex-col items-center">
         <div className="w-full flex flex-col">
           <div className="flex flex-col items-center justify-between sm:flex-row">
             <div className="flex flex-col items-center justify-center">
-              <img className="w-3/4 max-w-xs sm:w-60 cursor-pointer" src="/logo.svg" alt="logo" />
+              <img
+                className="w-3/4 max-w-xs sm:w-60 cursor-pointer"
+                src="/logo-wit.png"
+                alt="logo"
+              />
               <div className="flex mt-2 space-x-2">
                 <div className="w-8 h-8 rounded-full cursor-pointer bg-motorblue"></div>
                 <div className="w-8 h-8 rounded-full cursor-pointer bg-motorblue"></div>

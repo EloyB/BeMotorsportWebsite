@@ -21,14 +21,15 @@ export default function PersonalInformationStep() {
     ) {
       console.log("nie goe");
     } else {
-      firebase
-        .firestore()
-        .collection("bookings")
-        .add({
-          ...personalInformation,
-          selectedTrackdays: [...selectedTrackdays],
-          drivers: [...drivers],
-        });
+      dispatch({ type: "SET_ACTIVE_STEP", activeStep: 3 });
+      // firebase
+      //   .firestore()
+      //   .collection("bookings")
+      //   .add({
+      //     ...personalInformation,
+      //     selectedTrackdays: [...selectedTrackdays],
+      //     drivers: [...drivers],
+      //   });
     }
   };
 
@@ -36,7 +37,7 @@ export default function PersonalInformationStep() {
     <div className="w-full py-10 px-5 bg-gray-50">
       <div className="max-w-screen-lg m-auto">
         <p className="font-bold text-2xl pb-5 md:text-4xl">
-          <span className="text-motorblue">#3 - </span>
+          <span className="text-motorblue">Stap 3 - </span>
           {t.reservationPage.personalInformationStep.title}
         </p>
         <div className="flex flex-col">

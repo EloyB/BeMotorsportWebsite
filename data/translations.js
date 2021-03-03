@@ -225,16 +225,14 @@ export const enUS = {
     message: "Message",
     sendMessageButtonText: "Send message",
   },
-  footer: {
-    pages: "Pages",
-    plans: "Plans",
+  rentingPage: {
+    title: "Renting",
+    description:
+      "BE motorsport rents out the Porsche Cayman GT4 Clubsport & the Peugeot 206 GTi to enjoy the most beautiful and challenging circuits in Belgium and abroad. This race car is ready to go out with you for half a day, a full day or several days. Book now and we'll take care of the rest! Ready? Set? Go!",
   },
-};
-
-export const fr = {
   footer: {
-    plans: "Plans",
     pages: "Pages",
+    plans: "Plans",
   },
 };
 
@@ -251,7 +249,7 @@ export const nl = {
       },
       shareARide: {
         title: "Share a ride",
-        hover: "Boost jouw bedrijf naar de next level samen met BE motorsport",
+        hover: "Ontdek onze 'Share your ride (&) Network' formule voor een aantrekkelijk budget.",
       },
       VIP: {
         title: "VIP",
@@ -259,7 +257,7 @@ export const nl = {
       },
       business: {
         title: "Business",
-        hover: "Ontdek onze 'Share your ride (&) Network' formule voor een aantrekkelijk budget.",
+        hover: "Boost jouw bedrijf naar de next level samen met BE motorsport",
       },
     },
     carDetails: {
@@ -291,7 +289,7 @@ export const nl = {
       tank: "50 liter",
       safety: "rolkooi met racing kit en volledig gestript interieur",
     },
-    title: "Ontdek het team",
+    title: "Meet the team",
   },
   trackdaysPage: {
     title: "Onze Trackdays",
@@ -351,8 +349,20 @@ export const nl = {
       "Wil je graag een creatief event organiseren voor je team? Of wil je graag een teambuilding organiseren met leuke workshops? Weet je niet goed waar te starten? Twijfel dan zeker niet en bel me op! Ik help je graag verder!",
     sendMessageButtonText: "Verstuur bericht",
   },
+  rentingPage: {
+    title: "Renting",
+    description:
+      "BE motorsport verhuurt de Porsche Cayman GT4 Clubsport & de Peugeot 206 GTi om te vertoeven op de mooiste en meest uitdagende circuits in binnen -en buitenland. Deze raceauto is klaar om met jou op stap te gaan voor een halve dag, hele dag of meerdere dagen. Boek nu en de rest verzorgen wij! Ready? Set? Go!",
+  },
   footer: {
     pages: "Pagina's",
     plans: "Opties",
+  },
+};
+
+export const fr = {
+  footer: {
+    plans: "Plans",
+    pages: "Pages",
   },
 };
