@@ -39,7 +39,7 @@ export default function Home() {
           <div className="relative text-base font-semibold text-left md:text-2xl lg:text-3xl px-5 xl:px-0 py-10 h-1/5 w-full max-w-screen-xl m-auto flex items-center bg-white lg:h-1/6">
             <Typical
               steps={[
-                "Create your Business Experience",
+                "Create your business experience",
                 1000,
                 "Live your VIP trip",
                 1000,

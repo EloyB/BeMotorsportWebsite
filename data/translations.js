@@ -130,11 +130,11 @@ export const enUS = {
       },
       VIP: {
         title: "VIP",
-        hover: "BE motorsport arranges everything for you from A to Z with a VIP Experience",
+        hover: "BE\xa0motorsport arranges everything for you from A\xa0to\xa0Z with a VIP Experience",
       },
       business: {
         title: "Business",
-        hover: "Boost your company to the next level together with BE motorsport",
+        hover: "Boost your company to the next level together with BE\xa0motorsport",
       },
     },
     carDetails: {
@@ -158,10 +158,10 @@ export const enUS = {
     },
     peugeotData: {
       typeOfDrive: "Front-wheel drive",
-      power: "283 kW (385 hp)",
+      power: "100 kW (139 hp)",
       transmission: "5 gear manual gear box",
       topspeed: "210 km/h",
-      engine: "1997 m3",
+      engine: "1997 cc",
       tank: "50 Liter",
       safety: "Welded cage with racing kit and fully stripped interior",
     },
@@ -214,7 +214,7 @@ export const enUS = {
   contactPage: {
     title: "Our team",
     description:
-      "BE motorsport is a family company with a great interest in motorsport. Racing is the metaphor that made us rethink this new project. Doing business has been a great part of our lives and we will therefore take the opportunity to grow this passion into your business experience.    BE motorsport is professionally engaged in customizing your event to your personal needs so that you and especially your participants are extremely satisfied with our service.    What do you have in mind? We will make it happen!",
+      "BE\xa0motorsport is a family company with a great interest in motorsport. Racing is the metaphor that made us rethink this new project. Doing business has been a great part of our lives and we will therefore take the opportunity to grow this passion into your business experience.    BE\xa0motorsport is professionally engaged in customizing your event to your personal needs so that you and especially your participants are extremely satisfied with our service.    What do you have in mind? We will make it happen!",
     didierDescription:
       "Do not hesitate to contact me if you have any questions about our packages. I am happy to help you!",
     stephanDescription:
@@ -228,7 +228,7 @@ export const enUS = {
   rentingPage: {
     title: "Renting",
     description:
-      "BE motorsport rents out the Porsche Cayman GT4 Clubsport & the Peugeot 206 GTi to enjoy the most beautiful and challenging circuits in Belgium and abroad. This race car is ready to go out with you for half a day, a full day or several days. Book now and we'll take care of the rest! Ready? Set? Go!",
+      "BE\xa0motorsport rents out the Porsche Cayman GT4 Clubsport & the Peugeot 206 GTi to enjoy the most beautiful and challenging circuits in Belgium and abroad. This race car is ready to go out with you for half a day, a full day or several days. Book now and we'll take care of the rest! Ready? Set? Go!",
   },
   footer: {
     pages: "Pages",
@@ -253,11 +253,11 @@ export const nl = {
       },
       VIP: {
         title: "VIP",
-        hover: "BE motorsport legt je in de watten van A tot Z met een VIP Experience",
+        hover: "BE\xa0motorsport legt je in de watten van A\xa0tot\xa0Z met een VIP Experience",
       },
       business: {
         title: "Business",
-        hover: "Boost jouw bedrijf naar de next level samen met BE motorsport",
+        hover: "Boost jouw bedrijf naar de next level samen met BE\xa0motorsport",
       },
     },
     carDetails: {
@@ -282,28 +282,28 @@ export const nl = {
     },
     peugeotData: {
       typeOfDrive: "Voorwielaandrijving",
-      power: "100 kW (138 pk)",
+      power: "100 kW (139 pk)",
       transmission: "5 versnellingen, handgeschakeld",
       topspeed: "210 km/h",
-      engine: "1997 cm3",
+      engine: "1997 cc",
       tank: "50 liter",
-      safety: "rolkooi met racing kit en volledig gestript interieur",
+      safety: "Rolkooi met racing kit en volledig gestript interieur",
     },
     title: "Meet the team",
   },
   trackdaysPage: {
     title: "Onze Trackdays",
     description:
-      "Onze raceauto's huren via BE motorsport is nog nooit zo makkelijk geweest! Kijk op de kaart waar je graag wilt rijden, klik in onderstaande agenda wanneer je beschikbaar bent, vul je gegevens in en wij regelen de rest! Aarzel niet om ons te contacteren als de dag of auto van je keuze reeds geblokkeerd is. We zoeken samen naar een oplossing!",
+      "Onze raceauto's huren via BE\xa0motorsport is nog nooit zo makkelijk geweest! Kijk op de kaart waar je graag wilt rijden, klik in onderstaande agenda wanneer je beschikbaar bent, vul je gegevens in en wij bezorgen je een vrijblijvende offerte! Aarzel niet om ons te contacteren als de dag of auto van je keuze reeds geblokkeerd is. We zoeken samen naar een oplossing!",
     dropdownPlaceholder: "Selecteer een circuit",
     selectTrackdaysPlaceholder:
       "Selecteer een circuit op de kaart of in de lijst om de trackdays te zien",
   },
   reservationPage: {
     title: "Plan je trackday",
-    description: "Plan nu vrijblijvend je trackday en wij regelen de rest!",
+    description: "Plan nu je trackday en wij bezorgen je een vrijblijvende offerte!",
     trackdaysStep: {
-      title: "Trackdays",
+      title: "Kies je circuit",
       placeholder: "Selecteer eerst een trackday",
       searchTrackdaysButtonText: "Trackdays zoeken",
       chooseCarTitle: "Kies een auto",
@@ -321,7 +321,7 @@ export const nl = {
     },
     personalInformationStep: {
       title: "Persoonlijke gegevens",
-      submitButtonText: "Boek",
+      submitButtonText: "Offerte aanvragen",
     },
     general: {
       firstName: "Voornaam",
@@ -340,7 +340,7 @@ export const nl = {
   contactPage: {
     title: "Ons Team",
     description:
-      "BE motorsport is een familiebedrijf met een grote interesse voor de motorsport. Racing is de metafoor die ons heeft doen nadenken over dit nieuwe project. Het zakendoen zit bij de familie Beyens in hart en nieren, en van daaruit is de passie ontstaan om beide te gaan combineren",
+      "BE\xa0motorsport is een familiebedrijf met een grote interesse voor de motorsport. Racing is de metafoor die ons heeft doen nadenken over dit nieuwe project. Het zakendoen zit bij de familie Beyens in hart en nieren, en van daaruit is de passie ontstaan om beide te gaan combineren",
     didierDescription:
       "Heb je vragen over onze pakketten? Aarzel zeker niet om contact met mij op te nemen. Ik help je graag verder!",
     stephanDescription:
@@ -352,7 +352,7 @@ export const nl = {
   rentingPage: {
     title: "Renting",
     description:
-      "BE motorsport verhuurt de Porsche Cayman GT4 Clubsport & de Peugeot 206 GTi om te vertoeven op de mooiste en meest uitdagende circuits in binnen -en buitenland. Deze raceauto is klaar om met jou op stap te gaan voor een halve dag, hele dag of meerdere dagen. Boek nu en de rest verzorgen wij! Ready? Set? Go!",
+      "BE\xa0motorsport verhuurt de Porsche Cayman GT4 Clubsport & de Peugeot 206 GTi om te vertoeven op de mooiste en meest uitdagende circuits in binnen -en buitenland. Deze raceauto is klaar om met jou op stap te gaan voor een halve dag, hele dag of meerdere dagen. Boek nu en de rest verzorgen wij! Ready? Set? Go!",
   },
   footer: {
     pages: "Pagina's",

@@ -9,7 +9,7 @@ export const Footer = () => {
   const t = activeLocale(locale);
 
   return (
-    <div className="bg-gray-600 text-white mt-16">
+    <div className="bg-gray-500 text-white mt-16">
       <div className="max-w-screen-xl m-auto px-8 py-10 xl:px-0 flex flex-col items-center">
         <div className="w-full flex flex-col">
           <div className="flex flex-col items-center justify-between sm:flex-row">
