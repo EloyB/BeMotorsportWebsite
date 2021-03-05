@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import ContentItem from "../components/ContentItem";
 import TextInput from "../components/TextInput";
 import PrimaryButton from "../components/buttons/PrimaryButton";
@@ -11,6 +11,8 @@ export default function contact() {
   const router = useRouter();
   const { locale } = router;
   const t = activeLocale(locale);
+  const [mail, setMail] = useState();
+
   return (
     <div>
       <div className="pt-32 pb-16">
@@ -48,10 +50,7 @@ export default function contact() {
                   <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                 </svg>
               </RoundButton>
-              <RoundButton
-                url="tel:+32478729287"
-                description="+32 (0)478 72 92 87"
-              >
+              <RoundButton url="tel:+32478729287" description="+32 (0)478 72 92 87">
                 <svg
                   class="w-6 h-6 text-white"
                   fill="none"
@@ -106,11 +105,7 @@ export default function contact() {
                   <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                 </svg>
               </RoundButton>
-              <RoundButton
-                url="tel:+32475920172"
-                description="+ 32 (0)475 92 01 72"
-                reverse
-              >
+              <RoundButton url="tel:+32475920172" description="+ 32 (0)475 92 01 72" reverse>
                 <svg
                   class="w-6 h-6 text-white"
                   fill="none"
@@ -126,10 +121,7 @@ export default function contact() {
                   ></path>
                 </svg>
               </RoundButton>
-              <RoundButton
-                url="https://www.linkedin.com/in/stephan-beyens-1b011586/"
-                reverse
-              >
+              <RoundButton url="https://www.linkedin.com/in/stephan-beyens-1b011586/" reverse>
                 <svg
                   width="24"
                   height="24"
@@ -168,10 +160,7 @@ export default function contact() {
                   <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                 </svg>
               </RoundButton>
-              <RoundButton
-                url="tel:+32478710676"
-                description="+ 32 (0)478 71 06 76"
-              >
+              <RoundButton url="tel:+32478710676" description="+ 32 (0)478 71 06 76">
                 <svg
                   class="w-6 h-6 text-white"
                   fill="none"

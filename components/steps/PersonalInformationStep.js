@@ -5,6 +5,7 @@ import TextInput from "../TextInput";
 import firebase from "../../context/firebase";
 import { useRouter } from "next/router";
 import { activeLocale } from "../../data/translations";
+import MailTemplate from "../MailTemplate";
 
 export default function PersonalInformationStep() {
   const [{ personalInformation, selectedTrackdays, drivers }, dispatch] = useStateValue();
@@ -22,6 +23,7 @@ export default function PersonalInformationStep() {
       console.log("nie goe");
     } else {
       dispatch({ type: "SET_ACTIVE_STEP", activeStep: 3 });
+      dispatch({ type: "SET_BOOKING" });
       // firebase
       //   .firestore()
       //   .collection("bookings")
@@ -29,6 +31,33 @@ export default function PersonalInformationStep() {
       //     ...personalInformation,
       //     selectedTrackdays: [...selectedTrackdays],
       //     drivers: [...drivers],
+      //   });
+
+      firebase
+        .firestore()
+        .collection("mail")
+        .add({
+          to: personalInformation.email,
+          template: {
+            name: "nl",
+            data: {
+              firstName: personalInformation.firstName,
+              lastName: personalInformation.lastName,
+            },
+          },
+        });
+
+      // firebase
+      //   .firestore()
+      //   .collection("mail")
+      //   .add({
+      //     to: "didier.beyens@bemotorsport.be",
+      //     message: {
+      //       subject: "Offerte aanvraag",
+      //       html:
+      //         `Thanks ${personalInformation.firstName} ${personalInformation.lastName}! </br>` +
+      //         ` You can find the pricing under the following link <a href="https://vercel.com/docs/custom-domains">Click</a>`,
+      //     },
       //   });
     }
   };

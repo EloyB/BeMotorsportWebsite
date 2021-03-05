@@ -6,6 +6,7 @@ import { useStateValue } from "../context/StateProvider";
 import CarItem from "./CarItem";
 import { useRouter } from "next/router";
 import { activeLocale } from "../data/translations";
+import moment from "moment";
 
 export default function TrackdaysStepItem({ trackday }) {
   // Hardcoded plans and cars
@@ -28,7 +29,7 @@ export default function TrackdaysStepItem({ trackday }) {
     {
       name: "Peugeot 206 GTi",
       value: "Peugeot",
-      image: "/peugeot.jpg",
+      image: "/peugeot-links.jpg",
       show: trackday.cars.peugeot,
     },
   ];
@@ -56,8 +57,10 @@ export default function TrackdaysStepItem({ trackday }) {
           <div className="ml-5">
             <p className="font-bold text-md md:text-xl">{trackday.circuit.name}</p>
             <p className="text-xs md:text-sm">
-              <span className="text-motorblue font-semibold">{trackday.date} </span>|{" "}
-              {trackday.circuit.country}
+              <span className="text-motorblue font-semibold">
+                {moment(trackday.date).format("DD-MM-YYYY")}{" "}
+              </span>
+              | {trackday.circuit.country}
             </p>
           </div>
         </div>

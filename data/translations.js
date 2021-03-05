@@ -130,7 +130,8 @@ export const enUS = {
       },
       VIP: {
         title: "VIP",
-        hover: "BE\xa0motorsport arranges everything for you from A\xa0to\xa0Z with a VIP Experience",
+        hover:
+          "BE\xa0motorsport arranges everything for you from A\xa0to\xa0Z with a VIP Experience",
       },
       business: {
         title: "Business",
@@ -196,6 +197,9 @@ export const enUS = {
     personalInformationStep: {
       title: "Personal information",
       submitButtonText: "Submit",
+    },
+    confirmationStep: {
+      title: "Thank you!",
     },
     general: {
       firstName: "First Name",
@@ -322,6 +326,9 @@ export const nl = {
     personalInformationStep: {
       title: "Persoonlijke gegevens",
       submitButtonText: "Offerte aanvragen",
+    },
+    confirmationStep: {
+      title: "Bedankt!",
     },
     general: {
       firstName: "Voornaam",

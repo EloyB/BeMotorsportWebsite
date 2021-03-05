@@ -49,7 +49,7 @@ export default function PlansSection() {
       <div
         className="group relative bg-cover bg-center w-full h-72 bg-gray-200 flex items-center justify-center lg:h-96 lg:col-span-2"
         style={{
-          backgroundImage: "url(/wie-zijn-wij.jpg)",
+          backgroundImage: "url(/vip.jpg)",
         }}
       >
         <div className="absolute inset-0 bg-black transition-opacity opacity-30 duration-500 group-hover:bg-motorblue group-hover:opacity-80"></div>

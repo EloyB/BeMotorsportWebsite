@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { activeLocale } from "../data/translations";
+import { activeLocale, toggleLocale } from "../data/translations";
 
 export default function Navbar() {
   const router = useRouter();
   const { locale } = router;
-  const t = activeLocale(locale)
+  const t = activeLocale(locale);
   const [openMenu, setOpenMenu] = useState(false);
   const [hitScrollPoint, setHitScrollPoint] = useState(false);
 
@@ -58,20 +58,44 @@ export default function Navbar() {
         </div>
         <div
           className={`${
-            !hitScrollPoint ? "hidden" : openMenu ? "block" : "hidden"
+            !hitScrollPoint ? "hidden" : openMenu ? "flex" : "hidden"
           } flex flex-col bg-white pt-4 space-y-3 text-right ${
-            hitScrollPoint ? "md:block" : "md:hidden"
-          } md:flex-row md:space-x-8 md:pt-0`}
+            hitScrollPoint ? "md:flex" : "md:hidden"
+          } md:flex-row md:items-center md:space-y-0 md:space-x-8 md:pt-0`}
         >
-          <Link href="/trackdays">
-            <a className="text-lg hover:text-motorblue">Trackdays</a>
-          </Link>
-          <Link href="/reservation">
-            <a className="text-lg hover:text-motorblue">{t.navbar.planYourDay}</a>
-          </Link>
-          <Link href="/contact">
-            <a className="text-lg hover:text-motorblue">{t.navbar.aboutUs}</a>
-          </Link>
+          <div>
+            <Link href="/trackdays">
+              <a className="text-lg hover:text-motorblue">Trackdays</a>
+            </Link>
+          </div>
+          <div>
+            <Link href="/reservation">
+              <a className="text-lg hover:text-motorblue">{t.navbar.planYourDay}</a>
+            </Link>
+          </div>
+          <div>
+            <Link href="/contact">
+              <a className="text-lg hover:text-motorblue">{t.navbar.aboutUs}</a>
+            </Link>
+          </div>
+          <div className="flex divide-x-2 items-center justify-end self-end space-x-2 bg-gray-50 px-4 py-2">
+            <p
+              className={`text-lg cursor-pointer ${
+                locale === "en-US" ? "text-motorblue" : "text-gray-500"
+              }`}
+              onClick={() => toggleLocale("en-US", router)}
+            >
+              ENG
+            </p>
+            <p
+              className={`text-lg pl-2 cursor-pointer ${
+                locale === "nl" ? "text-motorblue" : "text-gray-500"
+              }`}
+              onClick={() => toggleLocale("nl", router)}
+            >
+              NL
+            </p>
+          </div>
         </div>
       </div>
     </div>

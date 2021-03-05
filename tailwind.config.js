@@ -15,12 +15,14 @@ module.exports = {
       },
       transitionProperty: {
         height: "height",
+        width: "width",
       },
     },
   },
   variants: {
     extend: {
       height: ["group-hover"],
+      width: ["group-hover"],
       display: ["responsive", "group-hover"],
       transitionProperty: ["hover"],
     },

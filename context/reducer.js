@@ -96,6 +96,17 @@ const reducer = (state, action) => {
         planningInformation: { ...initialInformation },
       };
 
+    // Booking
+    case "SET_BOOKING":
+      return {
+        ...state,
+        booking: {
+          ...state.personalInformation,
+          selectedTrackdays: [...state.selectedTrackdays],
+          drivers: [...state.drivers],
+        },
+      };
+
     // Others
     case "SET_ACTIVE_STEP":
       return {
