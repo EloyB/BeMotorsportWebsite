@@ -9,10 +9,12 @@ import { activeLocale } from "../data/translations";
 import moment from "moment";
 
 export default function TrackdaysStepItem({ trackday }) {
-  // Hardcoded plans and cars
+  // Translation
   const router = useRouter();
   const { locale } = router;
   const t = activeLocale(locale);
+
+  // Hardcoded plans and cars
   const plans = [
     { name: "Renting", value: "Renting", show: trackday.plans.renting },
     { name: "Share a ride", value: "Share", show: trackday.plans.share },

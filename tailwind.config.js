@@ -17,6 +17,9 @@ module.exports = {
         height: "height",
         width: "width",
       },
+      spacing: {
+        100: "30rem",
+      },
     },
   },
   variants: {

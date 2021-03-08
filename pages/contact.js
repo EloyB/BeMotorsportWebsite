@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Head from "next/head";
 import React, { useState } from "react";
 import ContentItem from "../components/ContentItem";
 import TextInput from "../components/TextInput";
@@ -15,6 +15,10 @@ export default function contact() {
 
   return (
     <div>
+      <Head>
+        <title>BE Motorsport | Contact</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <div className="pt-32 pb-16">
         <div className="px-8 md:px-0 md:flex md:flex-row-reverse md:items-center lg:max-w-screen-xl lg:m-auto">
           <img className="md:w-1/2" src="/wie-zijn-wij.jpg" alt="groepsfoto" />
@@ -38,7 +42,7 @@ export default function contact() {
             <div className="flex flex-col space-y-2 mt-4">
               <RoundButton
                 url="mailto:didier.beyens@bemotorsport.com"
-                description="didier.beyens@bemotorsport.be"
+                description="didier.beyens@bemotorsport.com"
               >
                 <svg
                   className="w-6 h-6 text-white"
@@ -85,14 +89,14 @@ export default function contact() {
         />
         <ContentItem
           image="/stephan.jpg"
-          subTitle="CEO"
+          subTitle="Getting things done!"
           title="Stephan Beyens"
           body={t.contactPage.stephanDescription}
           extension={
             <div className="flex flex-col space-y-2 mt-4">
               <RoundButton
                 url="mailto:stephan.beyens@bemotorsport.com"
-                description="stephan.beyens@bemotorsport.be"
+                description="stephan.beyens@bemotorsport.com"
                 reverse
               >
                 <svg
@@ -148,7 +152,7 @@ export default function contact() {
             <div className="flex flex-col space-y-2 mt-4">
               <RoundButton
                 url="mailto:julie.beyens@bemotorsport.com"
-                description="julie.beyens@bemotorsport.be"
+                description="julie.beyens@bemotorsport.com"
               >
                 <svg
                   className="w-6 h-6 text-white"

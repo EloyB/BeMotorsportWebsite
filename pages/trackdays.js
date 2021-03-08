@@ -8,6 +8,7 @@ import TrackdayItem from "../components/TrackdayItem";
 import firebase from "../context/firebase";
 import { useStateValue } from "../context/StateProvider";
 import { activeLocale } from "../data/translations";
+import Head from "next/head";
 
 export default function trackdays({ circuits }) {
   const router = useRouter();
@@ -33,6 +34,10 @@ export default function trackdays({ circuits }) {
     "pk.eyJ1IjoicXdlYmRlc2lnbiIsImEiOiJja2tmbzV3ZWUwY2gzMndtcHJjYzd1NmZ2In0.39BM3JaR3bYywwvVHDzKCA";
 
   useEffect(() => {
+    dispatch({
+      type: "SET_CIRCUITS",
+      circuits,
+    });
     firebase
       .firestore()
       .collection("trackdays")
@@ -51,6 +56,10 @@ export default function trackdays({ circuits }) {
 
   return (
     <div>
+      <Head>
+        <title>BE Motorsport | Trackdays</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <div>
         <div className="pt-32 pb-20 px-8 max-w-screen-xl m-auto lg:px-0">
           <h1 className="text-3xl font-medium text-center py-5 lg:text-5xl">

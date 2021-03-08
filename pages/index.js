@@ -2,6 +2,7 @@ import PlansSection from "../components/PlansSection";
 import Typical from "react-typical";
 import { useRouter } from "next/router";
 import { activeLocale } from "../data/translations";
+import Head from "next/head";
 
 const porscheData = [
   { title: "typeOfDrive" },
@@ -29,6 +30,10 @@ export default function Home() {
   const t = activeLocale(locale);
   return (
     <div>
+      <Head>
+        <title>BE Motorsport | Home</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <div className="w-full">
         <div className="relative w-full md:h-screen">
           <img
@@ -56,7 +61,7 @@ export default function Home() {
             <img
               src="/donut.jpg"
               alt="donut"
-              className="absolute w opacity-20 -top-20 -left-40 sm:-left-96"
+              className="absolute opacity-20 -top-20 -left-40 sm:-left-96"
             />
           </div>
         </div>

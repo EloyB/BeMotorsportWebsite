@@ -18,7 +18,7 @@ export default function ConfirmationStep() {
         </p>
       </div>
       <div className="max-w-screen-lg m-auto space-y-2 flex flex-col">
-        <p>{t.reservationPage.confirmationStep.title}</p>
+        <p>{t.reservationPage.confirmationStep.description}</p>
       </div>
     </div>
   );

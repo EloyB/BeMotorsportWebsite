@@ -170,24 +170,25 @@ export const enUS = {
   },
   trackdaysPage: {
     title: "Our Trackdays",
-    description: "TODO Translate to ENUS",
+    description:
+      "Renting our race cars through BE motorsport has never been easier! Look on the map where you would like to drive, click in the agenda below when you are available, fill in your details and we will send you a free quotation! Do not hesitate to contact us if the day or car of your choice has already been taken. We will look for a solution together!",
     dropdownPlaceholder: "Choose circuit",
     selectTrackdaysPlaceholder: "Select a circuit on the map to view the available trackdays.",
   },
   reservationPage: {
     title: "Plan your trackday",
-    description: "Description TODO",
+    description: "Plan your trackday now and we will send you a free quotation!",
     trackdaysStep: {
-      title: "Trackdays",
+      title: "Design your trackday",
       placeholder: "First select your trackdays from our list!",
       chooseCarTitle: "Choose your car",
-      chooseYourPlanTitle: "Choose your plan",
+      chooseYourPlanTitle: "Choose your formula",
       searchTrackdaysButtonText: "Search trackdays",
     },
     driversStep: {
-      title: "Drivers",
-      placeholder: "Add some drivers with the form first!",
-      addButtonText: "Add driver",
+      title: "Choose your pilots",
+      placeholder: "Add some pilots with the form first!",
+      addButtonText: "Add pilot",
       age: "Age",
       hasExperience: "Has experience",
       hasNoExperience: "Has no experience",
@@ -195,11 +196,12 @@ export const enUS = {
       noInstructorNeeded: "Instructor not needed",
     },
     personalInformationStep: {
-      title: "Personal information",
+      title: "Fill in your personal details",
       submitButtonText: "Submit",
     },
     confirmationStep: {
-      title: "Thank you!",
+      title: "Thanks for your inquiry",
+      description: "We will shortly send you an email with a free quotation.",
     },
     general: {
       firstName: "First Name",
@@ -307,14 +309,14 @@ export const nl = {
     title: "Plan je trackday",
     description: "Plan nu je trackday en wij bezorgen je een vrijblijvende offerte!",
     trackdaysStep: {
-      title: "Kies je circuit",
+      title: "Design je trackday",
       placeholder: "Selecteer eerst een trackday",
       searchTrackdaysButtonText: "Trackdays zoeken",
-      chooseCarTitle: "Kies een auto",
-      chooseYourPlanTitle: "Kies een optie",
+      chooseCarTitle: "Kies je auto",
+      chooseYourPlanTitle: "Kies je formule",
     },
     driversStep: {
-      title: "Piloten",
+      title: "Kies je piloten",
       placeholder: "Voeg eerst piloten toe via het formulier",
       addButtonText: "Voeg toe",
       age: "Leeftijd",
@@ -324,11 +326,12 @@ export const nl = {
       noInstructorNeeded: "Geen instructeur nodig",
     },
     personalInformationStep: {
-      title: "Persoonlijke gegevens",
+      title: "Vul je persoonlijke gegevens in",
       submitButtonText: "Offerte aanvragen",
     },
     confirmationStep: {
-      title: "Bedankt!",
+      title: "Bedankt voor je aanvraag!",
+      description: "We sturen je zo dadelijk een mailtje met jouw vrijblijvende offerte.",
     },
     general: {
       firstName: "Voornaam",
@@ -351,7 +354,7 @@ export const nl = {
     didierDescription:
       "Heb je vragen over onze pakketten? Aarzel zeker niet om contact met mij op te nemen. Ik help je graag verder!",
     stephanDescription:
-      "Heb je technische vragen of wil je graag brainstormen over hoe we jullie bedrijf kunnen verder helpen? Aarzel dan zeker niet om contact met mij op te nemen! Persoonlijk contact blijft belangrijk in zaken doen, so, let's meet!",
+      "Heb je technische vragen of wil je graag brainstormen over hoe we “jullie bedrijf kunnen boosten”? Aarzel dan zeker niet om contact met mij op te nemen! Persoonlijk contact blijft belangrijk in zaken doen, so, let's meet!",
     julieDescription:
       "Wil je graag een creatief event organiseren voor je team? Of wil je graag een teambuilding organiseren met leuke workshops? Weet je niet goed waar te starten? Twijfel dan zeker niet en bel me op! Ik help je graag verder!",
     sendMessageButtonText: "Verstuur bericht",

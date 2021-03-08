@@ -107,6 +107,13 @@ const reducer = (state, action) => {
         },
       };
 
+    // Circuits
+    case "SET_CIRCUITS":
+      return {
+        ...state,
+        circuits: action.circuits,
+      };
+
     // Others
     case "SET_ACTIVE_STEP":
       return {

@@ -81,19 +81,19 @@ export default function Navbar() {
           <div className="flex divide-x-2 items-center justify-end self-end space-x-2 bg-gray-50 px-4 py-2">
             <p
               className={`text-lg cursor-pointer ${
-                locale === "en-US" ? "text-motorblue" : "text-gray-500"
-              }`}
-              onClick={() => toggleLocale("en-US", router)}
-            >
-              ENG
-            </p>
-            <p
-              className={`text-lg pl-2 cursor-pointer ${
                 locale === "nl" ? "text-motorblue" : "text-gray-500"
               }`}
               onClick={() => toggleLocale("nl", router)}
             >
               NL
+            </p>
+            <p
+              className={`text-lg pl-2 cursor-pointer ${
+                locale === "en-US" ? "text-motorblue" : "text-gray-500"
+              }`}
+              onClick={() => toggleLocale("en-US", router)}
+            >
+              ENG
             </p>
           </div>
         </div>

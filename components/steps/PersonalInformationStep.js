@@ -8,10 +8,23 @@ import { activeLocale } from "../../data/translations";
 import MailTemplate from "../MailTemplate";
 
 export default function PersonalInformationStep() {
-  const [{ personalInformation, selectedTrackdays, drivers }, dispatch] = useStateValue();
+  const [{ personalInformation, selectedTrackdays, drivers, circuits }, dispatch] = useStateValue();
   const router = useRouter();
   const { locale } = router;
   const t = activeLocale(locale);
+
+  const getCircuitDocs = () => {
+    var attachmentsList = selectedTrackdays.map((item) => {
+      var circuitIndex = circuits.findIndex((x) => x.id === item.circuit.id);
+      var files = circuits[circuitIndex].files;
+      var fileIndex = files.findIndex(
+        (x) => x.car === item.selectedCar && x.plan === item.selectedPlan && x.language === locale
+      );
+
+      return { path: files[fileIndex].downloadURL, contentType: "application/pdf" };
+    });
+    return attachmentsList;
+  };
 
   const handleValidation = () => {
     if (
@@ -24,6 +37,9 @@ export default function PersonalInformationStep() {
     } else {
       dispatch({ type: "SET_ACTIVE_STEP", activeStep: 3 });
       dispatch({ type: "SET_BOOKING" });
+
+      getCircuitDocs();
+
       // firebase
       //   .firestore()
       //   .collection("bookings")
@@ -39,11 +55,14 @@ export default function PersonalInformationStep() {
         .add({
           to: personalInformation.email,
           template: {
-            name: "nl",
+            name: locale,
             data: {
               firstName: personalInformation.firstName,
               lastName: personalInformation.lastName,
             },
+          },
+          message: {
+            attachments: getCircuitDocs(),
           },
         });
 

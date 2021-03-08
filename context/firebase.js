@@ -9,6 +9,15 @@ const firebaseConfig = {
   measurementId: "G-3NTC5PVQFP",
 };
 
+// var firebaseConfig = {
+//   apiKey: "AIzaSyAQa46l-hQd3jtHgI3QhYjNvNgoQX7JSMQ",
+//   authDomain: "bemotorsport-test.firebaseapp.com",
+//   projectId: "bemotorsport-test",
+//   storageBucket: "bemotorsport-test.appspot.com",
+//   messagingSenderId: "559580747783",
+//   appId: "1:559580747783:web:1be3a9a7a5af44ad57f2a2",
+// };
+
 export const firebase = !fb.apps.length ? fb.initializeApp(firebaseConfig) : fb.app();
 
 export default firebase;
