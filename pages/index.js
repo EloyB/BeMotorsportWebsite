@@ -33,6 +33,10 @@ export default function Home() {
       <Head>
         <title>BE Motorsport | Home</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          name="description"
+          content="BE motorsport verhuurt de Porsche Cayman GT4 Clubsport om te vertoeven op de mooiste en meest uitdagende circuits in binnen -en buitenland. Ready? Set? Go!"
+        />
       </Head>
       <div className="w-full">
         <div className="relative w-full md:h-screen">
