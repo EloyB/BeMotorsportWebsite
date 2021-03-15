@@ -1563,6 +1563,11 @@
   dependencies:
     "safe-buffer" "~5.1.1"
 
+"cookie-cutter@^0.2.0":
+  "integrity" "sha1-WYj1mLaMBgoA7IUkrW5qoZPnIkQ="
+  "resolved" "https://registry.npmjs.org/cookie-cutter/-/cookie-cutter-0.2.0.tgz"
+  "version" "0.2.0"
+
 "copy-concurrently@^1.0.0":
   "integrity" "sha512-f2domd9fsVDFtaFcbaRZuYXwtdmnzqbADSwhSWYxYB/Q8zsdUUFMXVRwXGDMWmbEzAn1kdRrtI1T/KTFOL4X2A=="
   "resolved" "https://registry.npmjs.org/copy-concurrently/-/copy-concurrently-1.0.5.tgz"

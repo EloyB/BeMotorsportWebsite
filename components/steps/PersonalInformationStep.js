@@ -8,7 +8,10 @@ import { activeLocale } from "../../data/translations";
 import MailTemplate from "../MailTemplate";
 
 export default function PersonalInformationStep() {
-  const [{ personalInformation, selectedTrackdays, drivers, circuits }, dispatch] = useStateValue();
+  const [
+    { personalInformation, selectedTrackdays, drivers, circuits },
+    dispatch,
+  ] = useStateValue();
   const router = useRouter();
   const { locale } = router;
   const t = activeLocale(locale);
@@ -18,10 +21,16 @@ export default function PersonalInformationStep() {
       var circuitIndex = circuits.findIndex((x) => x.id === item.circuit.id);
       var files = circuits[circuitIndex].files;
       var fileIndex = files.findIndex(
-        (x) => x.car === item.selectedCar && x.plan === item.selectedPlan && x.language === locale
+        (x) =>
+          x.car === item.selectedCar &&
+          x.plan === item.selectedPlan &&
+          x.language === locale
       );
 
-      return { path: files[fileIndex].downloadURL, contentType: "application/pdf" };
+      return {
+        path: files[fileIndex].downloadURL,
+        contentType: "application/pdf",
+      };
     });
     return attachmentsList;
   };
@@ -162,21 +171,10 @@ export default function PersonalInformationStep() {
                     value,
                   })
                 }
-              />
-              <TextInput
-                label={t.reservationPage.general.city}
-                value={personalInformation.city}
-                onChange={(value) =>
-                  dispatch({
-                    type: "UPDATE_PERSONAL_INFORMATION",
-                    prop: "city",
-                    value,
-                  })
-                }
-              />
+              />  
               <div className="flex gap-4 w-full">
                 <TextInput
-                  label="Number"
+                  label={t.reservationPage.general.number}
                   value={personalInformation.number}
                   onChange={(value) =>
                     dispatch({
@@ -198,6 +196,17 @@ export default function PersonalInformationStep() {
                   }
                 />
               </div>
+              <TextInput
+                label={t.reservationPage.general.city}
+                value={personalInformation.city}
+                onChange={(value) =>
+                  dispatch({
+                    type: "UPDATE_PERSONAL_INFORMATION",
+                    prop: "city",
+                    value,
+                  })
+                }
+              />
               <div className="flex gap-4 w-full">
                 <TextInput
                   label={t.reservationPage.general.zip}
@@ -227,7 +236,9 @@ export default function PersonalInformationStep() {
           <div className="ml-auto pt-8">
             <button
               className="px-6 py-3 bg-transparent focus:outline-none sm:px-16"
-              onClick={() => dispatch({ type: "SET_ACTIVE_STEP", activeStep: 1 })}
+              onClick={() =>
+                dispatch({ type: "SET_ACTIVE_STEP", activeStep: 1 })
+              }
             >
               {t.reservationPage.general.backButtonText}
             </button>
