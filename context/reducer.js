@@ -121,6 +121,14 @@ const reducer = (state, action) => {
         activeStep: action.activeStep,
       };
 
+    case "RESET_FORM":
+      return {
+        ...state,
+        selectedTrackdays: [],
+        drivers: [],
+        booking: {},
+      };
+
     default:
       return { ...state };
   }

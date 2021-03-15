@@ -38,33 +38,31 @@ export default function PersonalInformationStep() {
       dispatch({ type: "SET_ACTIVE_STEP", activeStep: 3 });
       dispatch({ type: "SET_BOOKING" });
 
-      getCircuitDocs();
+      firebase
+        .firestore()
+        .collection("bookings")
+        .add({
+          ...personalInformation,
+          selectedTrackdays: [...selectedTrackdays],
+          drivers: [...drivers],
+        });
 
       // firebase
       //   .firestore()
-      //   .collection("bookings")
+      //   .collection("mail")
       //   .add({
-      //     ...personalInformation,
-      //     selectedTrackdays: [...selectedTrackdays],
-      //     drivers: [...drivers],
+      //     to: personalInformation.email,
+      //     template: {
+      //       name: locale,
+      //       data: {
+      //         firstName: personalInformation.firstName,
+      //         lastName: personalInformation.lastName,
+      //       },
+      //     },
+      //     message: {
+      //       attachments: getCircuitDocs(),
+      //     },
       //   });
-
-      firebase
-        .firestore()
-        .collection("mail")
-        .add({
-          to: personalInformation.email,
-          template: {
-            name: locale,
-            data: {
-              firstName: personalInformation.firstName,
-              lastName: personalInformation.lastName,
-            },
-          },
-          message: {
-            attachments: getCircuitDocs(),
-          },
-        });
 
       // firebase
       //   .firestore()
@@ -78,6 +76,8 @@ export default function PersonalInformationStep() {
       //         ` You can find the pricing under the following link <a href="https://vercel.com/docs/custom-domains">Click</a>`,
       //     },
       //   });
+
+      dispatch({ type: "RESET_FORM" });
     }
   };
 
