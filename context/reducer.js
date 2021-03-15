@@ -15,7 +15,7 @@ export const initialInformation = {
 
 export const initialState = {
   trackdays: [],
-  filteredTrackdays: [],
+  filteredTrackdays: null,
   selectedTrackdays: [],
   drivers: [],
   circuits: [],

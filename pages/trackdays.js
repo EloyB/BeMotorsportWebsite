@@ -1,4 +1,3 @@
-import { clearStorage } from "mapbox-gl";
 import { useRouter } from "next/router";
 import React, { useEffect, useRef, useState } from "react";
 import ReactMapGL, { Marker } from "react-map-gl";
@@ -145,14 +144,20 @@ export default function trackdays({ circuits }) {
         </div>
 
         <div ref={trackdaysRef} className="max-w-screen-xl m-auto px-5 pt-4 pb-12 lg:px-0">
-          {filteredTrackdays.length > 0 ? (
+          {filteredTrackdays === null ? (
+            <div className="bg-gray-50 px-4 py-7 text-center">
+              <p className="font-semibold text-motorblue">
+                {t.trackdaysPage.selectTrackdaysPlaceholder}
+              </p>
+            </div>
+          ) : filteredTrackdays.length > 0 ? (
             filteredTrackdays.map((item, index) => (
               <TrackdayItem key={index} index={index} trackday={item} />
             ))
           ) : (
             <div className="bg-gray-50 px-4 py-7 text-center">
               <p className="font-semibold text-motorblue">
-                {t.trackdaysPage.selectTrackdaysPlaceholder}
+                {t.trackdaysPage.noTrackdaysFoundPlaceholder}
               </p>
             </div>
           )}

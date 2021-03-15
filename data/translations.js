@@ -126,8 +126,7 @@ export const enUS = {
       },
       shareARide: {
         title: "Share a ride",
-        hover:
-          "Discover our 'Share your ride (&) Network' formula on an affordable budget",
+        hover: "Discover our 'Share your ride (&) Network' formula on an affordable budget",
       },
       VIP: {
         title: "VIP",
@@ -136,8 +135,7 @@ export const enUS = {
       },
       business: {
         title: "Business",
-        hover:
-          "Boost your company to the next level together with BE\xa0motorsport",
+        hover: "Boost your company to the next level together with BE\xa0motorsport",
       },
     },
     carDetails: {
@@ -153,13 +151,11 @@ export const enUS = {
     porscheData: {
       typeOfDrive: "Rear wheel drive",
       power: "283 kW (385 pk)",
-      transmission:
-        "6-speed Porsche Doppelkupplung (PDK) with optimized shift application",
+      transmission: "6-speed Porsche Doppelkupplung (PDK) with optimized shift application",
       steering: "Elektromechanical power steering",
       engine: "3.800 cc",
       tank: "60 l-safety tank",
-      safety:
-        "Original Porsche welded cage with racing kit and completely stripped interior",
+      safety: "Original Porsche welded cage with racing kit and completely stripped interior",
     },
     peugeotData: {
       typeOfDrive: "Front-wheel drive",
@@ -177,13 +173,12 @@ export const enUS = {
     description:
       "Renting our race cars through BE motorsport has never been easier! Look on the map where you would like to drive, click in the agenda below when you are available, fill in your details and we will send you a free quotation! Do not hesitate to contact us if the day or car of your choice has already been taken. We will look for a solution together!",
     dropdownPlaceholder: "Choose circuit",
-    selectTrackdaysPlaceholder:
-      "Select a circuit on the map to view the available trackdays.",
+    selectTrackdaysPlaceholder: "Select a circuit on the map to view the available trackdays.",
+    noTrackdaysFoundPlaceholder: "No trackdays found for the selected circuit",
   },
   reservationPage: {
     title: "Plan your trackday",
-    description:
-      "Plan your trackday now and we will send you a free quotation!",
+    description: "Plan your trackday now and we will send you a free quotation!",
     trackdaysStep: {
       title: "Design your trackday",
       placeholder: "First select your trackdays from our list!",
@@ -246,8 +241,7 @@ export const enUS = {
     quote:
       "Bij BE motorsport wordt de totaal service hoog in het vaandel gedragen. Het is fantastisch dat je warm ontvangen wordt, dat alles tot in de puntjes is georganiseerd en dat je altijd een veilig gevoel hebt!",
     section1: {
-      title:
-        '"I am an experienced driver and want to rent a racing car"',
+      title: '"I am an experienced driver and want to rent a racing car"',
       bullet1: "Porsche Cayman GT4 Clubsport (incl. 1 full fuel tank)",
       bullet2: "3 sets of rims (slicks and / or rain tires)",
       bullet3: "Insurance",
@@ -264,8 +258,7 @@ export const enUS = {
       bullet6: "Instructor*",
     },
     section3: {
-      title:
-        '"I am a driver with no experience and wish to follow a training course"',
+      title: '"I am a driver with no experience and wish to follow a training course"',
       bullet1: "Theory training",
       bullet2: "1 Hour behind the pace car",
       bullet3: "2 Hours free driving with an instructor",
@@ -290,18 +283,15 @@ export const nl = {
       },
       shareARide: {
         title: "Share a ride",
-        hover:
-          "Ontdek onze 'Share your ride (&) Network' formule voor een aantrekkelijk budget.",
+        hover: "Ontdek onze 'Share your ride (&) Network' formule voor een aantrekkelijk budget.",
       },
       VIP: {
         title: "VIP",
-        hover:
-          "BE\xa0motorsport legt je in de watten van A\xa0tot\xa0Z met een VIP Experience",
+        hover: "BE\xa0motorsport legt je in de watten van A\xa0tot\xa0Z met een VIP Experience",
       },
       business: {
         title: "Business",
-        hover:
-          "Boost jouw bedrijf naar de next level samen met BE\xa0motorsport",
+        hover: "Boost jouw bedrijf naar de next level samen met BE\xa0motorsport",
       },
     },
     carDetails: {
@@ -322,8 +312,7 @@ export const nl = {
       steering: "Elektromechanische stuurbekrachtiging",
       engine: "3.800 cc",
       tank: "60 l-veiligheidstank",
-      safety:
-        "Originele Porsche rolkooi met racing kit en volledig gestript interieur",
+      safety: "Originele Porsche rolkooi met racing kit en volledig gestript interieur",
     },
     peugeotData: {
       typeOfDrive: "Voorwielaandrijving",
@@ -343,11 +332,11 @@ export const nl = {
     dropdownPlaceholder: "Selecteer een circuit",
     selectTrackdaysPlaceholder:
       "Selecteer een circuit op de kaart of in de lijst om de trackdays te zien",
+    noTrackdaysFoundPlaceholder: "Geen trackdays gevonden voor dit circuit",
   },
   reservationPage: {
     title: "Plan je trackday",
-    description:
-      "Plan nu je trackday en wij bezorgen je een vrijblijvende offerte!",
+    description: "Plan nu je trackday en wij bezorgen je een vrijblijvende offerte!",
     trackdaysStep: {
       title: "Design je trackday",
       placeholder: "Selecteer eerst een trackday",
@@ -371,8 +360,7 @@ export const nl = {
     },
     confirmationStep: {
       title: "Bedankt voor je aanvraag!",
-      description:
-        "We sturen je zo dadelijk een mailtje met jouw vrijblijvende offerte.",
+      description: "We sturen je zo dadelijk een mailtje met jouw vrijblijvende offerte.",
     },
     general: {
       firstName: "Voornaam",
@@ -409,8 +397,7 @@ export const nl = {
     quote:
       "Bij BE motorsport wordt de totaal service hoog in het vaandel gedragen. Het is fantastisch dat je warm ontvangen wordt, dat alles tot in de puntjes is georganiseerd en dat je altijd een veilig gevoel hebt!",
     section1: {
-      title:
-        '"Ik ben een ervaren piloot en wil de Porsche Cayman GT4 Clubsport huren"',
+      title: '"Ik ben een ervaren piloot en wil de Porsche Cayman GT4 Clubsport huren"',
       bullet1: "Porsche Cayman GT4 Clubsport (incl. 1 volle bezinetank)",
       bullet2: "3 Sets velgen (slicks en/of regenbanden)",
       bullet3: "Verzekering",

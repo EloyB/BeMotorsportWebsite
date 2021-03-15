@@ -5,13 +5,9 @@ import TextInput from "../TextInput";
 import firebase from "../../context/firebase";
 import { useRouter } from "next/router";
 import { activeLocale } from "../../data/translations";
-import MailTemplate from "../MailTemplate";
 
 export default function PersonalInformationStep() {
-  const [
-    { personalInformation, selectedTrackdays, drivers, circuits },
-    dispatch,
-  ] = useStateValue();
+  const [{ personalInformation, selectedTrackdays, drivers, circuits }, dispatch] = useStateValue();
   const router = useRouter();
   const { locale } = router;
   const t = activeLocale(locale);
@@ -21,10 +17,7 @@ export default function PersonalInformationStep() {
       var circuitIndex = circuits.findIndex((x) => x.id === item.circuit.id);
       var files = circuits[circuitIndex].files;
       var fileIndex = files.findIndex(
-        (x) =>
-          x.car === item.selectedCar &&
-          x.plan === item.selectedPlan &&
-          x.language === locale
+        (x) => x.car === item.selectedCar && x.plan === item.selectedPlan && x.language === locale
       );
 
       return {
@@ -56,35 +49,34 @@ export default function PersonalInformationStep() {
           drivers: [...drivers],
         });
 
-      // firebase
-      //   .firestore()
-      //   .collection("mail")
-      //   .add({
-      //     to: personalInformation.email,
-      //     template: {
-      //       name: locale,
-      //       data: {
-      //         firstName: personalInformation.firstName,
-      //         lastName: personalInformation.lastName,
-      //       },
-      //     },
-      //     message: {
-      //       attachments: getCircuitDocs(),
-      //     },
-      //   });
+      firebase
+        .firestore()
+        .collection("mail")
+        .add({
+          to: personalInformation.email,
+          template: {
+            name: locale,
+            data: {
+              firstName: personalInformation.firstName,
+              lastName: personalInformation.lastName,
+              circuitName: selectedTrackdays[0].circuit.name,
+            },
+          },
+          message: {
+            attachments: getCircuitDocs(),
+          },
+        });
 
-      // firebase
-      //   .firestore()
-      //   .collection("mail")
-      //   .add({
-      //     to: "didier.beyens@bemotorsport.be",
-      //     message: {
-      //       subject: "Offerte aanvraag",
-      //       html:
-      //         `Thanks ${personalInformation.firstName} ${personalInformation.lastName}! </br>` +
-      //         ` You can find the pricing under the following link <a href="https://vercel.com/docs/custom-domains">Click</a>`,
-      //     },
-      //   });
+      firebase
+        .firestore()
+        .collection("mail")
+        .add({
+          to: "didier.beyens@bemotorsport.be",
+          message: {
+            subject: "Offerte aanvraag",
+            text: `Nieuwe aanvraag van ${personalInformation.firstName} ${personalInformation.lastName}! Check de backoffice voor meer info!`,
+          },
+        });
 
       dispatch({ type: "RESET_FORM" });
     }
@@ -171,7 +163,7 @@ export default function PersonalInformationStep() {
                     value,
                   })
                 }
-              />  
+              />
               <div className="flex gap-4 w-full">
                 <TextInput
                   label={t.reservationPage.general.number}
@@ -236,9 +228,7 @@ export default function PersonalInformationStep() {
           <div className="ml-auto pt-8">
             <button
               className="px-6 py-3 bg-transparent focus:outline-none sm:px-16"
-              onClick={() =>
-                dispatch({ type: "SET_ACTIVE_STEP", activeStep: 1 })
-              }
+              onClick={() => dispatch({ type: "SET_ACTIVE_STEP", activeStep: 1 })}
             >
               {t.reservationPage.general.backButtonText}
             </button>
