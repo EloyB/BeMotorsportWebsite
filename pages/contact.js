@@ -6,12 +6,35 @@ import PrimaryButton from "../components/buttons/PrimaryButton";
 import { RoundButton } from "../components/buttons/RoundButton";
 import { useRouter } from "next/router";
 import { activeLocale } from "../data/translations";
+import firebase from "../context/firebase";
 
 export default function contact() {
   const router = useRouter();
   const { locale } = router;
   const t = activeLocale(locale);
-  const [mail, setMail] = useState();
+  const [mail, setMail] = useState({
+    email: "",
+    fullName: "",
+    message: "",
+  });
+
+  const sendMail = () => {
+    if (mail.email === "" || mail.fullName === "" || mail.message === "") {
+      return;
+    }
+
+    firebase
+      .firestore()
+      .collection("mail")
+      .add({
+        to: "didier.beyens@bemotorsport.com",
+        message: {
+          subject: "Nieuw bericht via de website",
+          html: `Van: ${mail.email} | (${mail.fullName}) </br> Message: ${mail.message} `,
+        },
+      });
+    setMail({ email: "", fullName: "", message: "" });
+  };
 
   return (
     <div>
@@ -56,16 +79,16 @@ export default function contact() {
               </RoundButton>
               <RoundButton url="tel:+32478729287" description="+32 (0)478 72 92 87">
                 <svg
-                  class="w-6 h-6 text-white"
+                  className="w-6 h-6 text-white"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                   ></path>
                 </svg>
@@ -111,16 +134,16 @@ export default function contact() {
               </RoundButton>
               <RoundButton url="tel:+32475920172" description="+ 32 (0)475 92 01 72" reverse>
                 <svg
-                  class="w-6 h-6 text-white"
+                  className="w-6 h-6 text-white"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                   ></path>
                 </svg>
@@ -166,16 +189,16 @@ export default function contact() {
               </RoundButton>
               <RoundButton url="tel:+32478710676" description="+ 32 (0)478 71 06 76">
                 <svg
-                  class="w-6 h-6 text-white"
+                  className="w-6 h-6 text-white"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                   ></path>
                 </svg>
@@ -211,21 +234,46 @@ export default function contact() {
             </h1>
           </div>
           <div className="bg-gray-50 rounded-md shadow-md p-6 space-y-3 sm:w-full lg:w-2/3">
-            <TextInput placeholder="Email" />
-            <TextInput placeholder={t.contactPage.fullName} />
+            <TextInput
+              placeholder="Email"
+              value={mail.email}
+              onChange={(value) => setMail({ ...mail, email: value })}
+              requirement={mail.email === "" || !/\S+@\S+\.\S+/.test(mail.email)}
+              required
+            />
+            <TextInput
+              placeholder={t.contactPage.fullName}
+              value={mail.fullName}
+              onChange={(value) => setMail({ ...mail, fullName: value })}
+              requirement={mail.fullName === ""}
+              required
+            />
             <div>
               <p className="text-sm sm:text-base font-bold py-1"></p>
               <textarea
-                className="w-full p-4 resize-none"
+                className="w-full p-4 resize-none focus:outline-none"
                 cols="30"
                 rows="10"
                 placeholder={t.contactPage.message}
+                onChange={(e) => setMail({ ...mail, message: e.target.value })}
               ></textarea>
             </div>
             <PrimaryButton
               label={t.contactPage.sendMessageButtonText}
               fullWidth
-              onClick={() => console.log("send email")}
+              onClick={() => {
+                firebase
+                  .firestore()
+                  .collection("mail")
+                  .add({
+                    to: "eloyboone@hotmail.com",
+                    message: {
+                      subject: "Nieuw bericht via de website",
+                      html: `Van: ${mail.email} | (${mail.fullName}) </br> Message: ${mail.message} `,
+                    },
+                  });
+                setMail({ email: "", fullName: "", message: "" });
+              }}
             />
           </div>
         </div>

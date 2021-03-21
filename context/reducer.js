@@ -36,14 +36,17 @@ const reducer = (state, action) => {
         filteredTrackdays: state.trackdays.filter((trackday) => {
           var actionDate = new Date(action.date);
           var trackdayDate = new Date(trackday.date);
-
+          var today = new Date();
           if (action.name !== "" && action.date !== "") {
-            console.log(typeof trackday.date);
-            return trackday.circuit.name === action.name && trackdayDate >= actionDate;
+            return (
+              trackday.circuit.name === action.name &&
+              trackdayDate >= actionDate &&
+              trackdayDate >= today
+            );
           } else if (action.date === "" && action.name !== "") {
-            return trackday.circuit.name === action.name;
+            return trackday.circuit.name === action.name && trackdayDate >= today;
           } else if (action.date !== "" && action.name === "") {
-            return trackdayDate >= actionDate;
+            return trackdayDate >= actionDate && trackdayDate >= today;
           }
         }),
       };

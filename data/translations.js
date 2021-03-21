@@ -387,6 +387,8 @@ export const nl = {
     julieDescription:
       "Wil je graag een creatief event organiseren voor je team? Of wil je graag een teambuilding organiseren met leuke workshops? Weet je niet goed waar te starten? Twijfel dan zeker niet en bel me op! Ik help je graag verder!",
     sendMessageButtonText: "Verstuur bericht",
+    fullName: "Voor- en achternaam",
+    message: "Bericht",
   },
   rentingPage: {
     title: "Renting",
