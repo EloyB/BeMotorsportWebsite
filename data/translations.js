@@ -263,6 +263,8 @@ export const enUS = {
       bullet2: "1 Hour behind the pace car",
       bullet3: "2 Hours free driving with an instructor",
     },
+    testimonial:
+      "At BE motorsport, delivering outstanding service is their highest priority. I was warmly welcomed by smiling support staff, refreshing drinks and snacks. Everything was organised down to the last detail. I felt safe from beginning til the end!",
   },
   footer: {
     pages: "Pages",
@@ -422,6 +424,8 @@ export const nl = {
       bullet2: "1 uur achter pace wagen",
       bullet3: "2 uur vrij rijden met instructeur",
     },
+    testimonial:
+      "Bij BE motorsport wordt de totaal service hoog in het vaandel gedragen. Het is fantastisch dat je warm ontvangen wordt, dat alles tot in de puntjes is georganiseerd en dat je altijd een veilig gevoel hebt!",
   },
   footer: {
     pages: "Pagina's",

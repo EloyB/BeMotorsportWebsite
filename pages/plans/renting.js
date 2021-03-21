@@ -10,31 +10,15 @@ export default function renting() {
   return (
     <div>
       <div className="pt-32 pb-10 md:pb-20 px-8 max-w-screen-xl m-auto lg:px-0">
-        <h1 className="text-3xl font-medium text-center py-5 lg:text-5xl">
-          {t.rentingPage.title}
-        </h1>
-        <p className="text-center max-w-screen-md m-auto">
-          {t.rentingPage.description}
-        </p>
+        <h1 className="text-3xl font-medium text-center py-5 lg:text-5xl">{t.rentingPage.title}</h1>
+        <p className="text-center max-w-screen-md m-auto">{t.rentingPage.description}</p>
       </div>
       <div className="hidden md:px-0 md:flex md:flex-row md:items-center lg:max-w-screen-xl lg:m-auto">
-        <img
-          className="md:w-1/2"
-          src="/porsche-front.jpg"
-          alt="Porsche Cayman GT4 Clubsport"
-        />
-        <img
-          className="md:w-1/2"
-          src="/peugeot-side.jpg"
-          alt="Peugeot 206 GTi"
-        />
+        <img className="md:w-1/2" src="/porsche-front.jpg" alt="Porsche Cayman GT4 Clubsport" />
+        <img className="md:w-1/2" src="/peugeot-side.jpg" alt="Peugeot 206 GTi" />
       </div>
       <div className="md:px-0 md:flex md:flex-row-reverse md:items-center lg:max-w-screen-xl lg:m-auto py-8 md:py-12">
-        <img
-          className="md:w-1/2"
-          src="/porsche-side.jpg"
-          alt="Porsche Cayman GT4 Clubsport"
-        />
+        <img className="md:w-1/2" src="/porsche-side.jpg" alt="Porsche Cayman GT4 Clubsport" />
         <div className="inline-block text-left px-8 py-5 md:px-5 lg:pr-16">
           <p className="text-sm sm:text-base lg:text-lg md:text-left max-w-screen-md m-auto font-bold pb-5">
             {t.rentingPage.section1.title}
@@ -53,11 +37,7 @@ export default function renting() {
       </div>
       <div className="bg-gray-50 w-full">
         <div className="md:px-0 md:flex md:flex-row md:items-center lg:max-w-screen-xl lg:m-auto py-8 md:py-12">
-          <img
-            className="md:w-1/2"
-            src="/peugeot-front.jpg"
-            alt="Peugeot 206 GTi"
-          />
+          <img className="md:w-1/2" src="/peugeot-front.jpg" alt="Peugeot 206 GTi" />
           <div className="inline-block text-left px-8 py-5 md:px-5 lg:pl-16">
             <p className="text-sm sm:text-base lg:text-lg md:text-left max-w-screen-md m-auto font-bold pb-5">
               {t.rentingPage.section2.title}
@@ -77,11 +57,7 @@ export default function renting() {
         </div>
       </div>
       <div className="md:px-0 md:flex md:flex-row-reverse md:items-center lg:max-w-screen-xl lg:m-auto py-8 md:py-12">
-        <img
-          className="md:w-1/2"
-          src="/renting-section-3.jpeg"
-          alt="Peugeot 206 GTi"
-        />
+        <img className="md:w-1/2" src="/renting-section-3.jpeg" alt="Peugeot 206 GTi" />
         <div className="inline-block text-left px-8 py-5 md:px-5 lg:pr-16">
           <p className="text-sm sm:text-base lg:text-lg md:text-left max-w-screen-md m-auto font-bold pb-5">
             {t.rentingPage.section3.title}
@@ -97,10 +73,10 @@ export default function renting() {
           <div className="text-sm sm:text-base lg:text-lg md:text-left max-w-screen-md m-auto pt-7">
             <p>{t.rentingPage.extra}</p>
             <ul className="list-disc list-inside pt-2">
-            <li>{t.rentingPage.section2.bullet1}</li>
-                <li>{t.rentingPage.section2.bullet2}</li>
-                <li>{t.rentingPage.section2.bullet3}</li>
-                <li>{t.rentingPage.section2.bullet4}</li>
+              <li>{t.rentingPage.section2.bullet1}</li>
+              <li>{t.rentingPage.section2.bullet2}</li>
+              <li>{t.rentingPage.section2.bullet3}</li>
+              <li>{t.rentingPage.section2.bullet4}</li>
             </ul>
           </div>
         </div>
@@ -111,10 +87,7 @@ export default function renting() {
           <div className="inline-block text-left px-8 py-5 md:px-5 lg:pl-16">
             <p className="text-7xl text-gray-200">“</p>
             <p className="text-sm sm:text-base lg:text-lg md:text-left max-w-screen-md m-auto pb-5">
-              Bij BE motorsport wordt de totaal service hoog in het vaandel
-              gedragen. Het is fantastisch dat je warm ontvangen wordt, dat
-              alles tot in de puntjes is georganiseerd en dat je altijd een
-              veilig gevoel hebt!”
+              {t.rentingPage.testimonial}”
             </p>
           </div>
         </div>
