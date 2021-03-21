@@ -130,6 +130,7 @@ const reducer = (state, action) => {
         selectedTrackdays: [],
         drivers: [],
         booking: {},
+        activeStep: 0,
       };
 
     default:

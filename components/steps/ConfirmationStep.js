@@ -2,6 +2,7 @@ import React from "react";
 import { useStateValue } from "../../context/StateProvider";
 import { useRouter } from "next/router";
 import { activeLocale } from "../../data/translations";
+import PrimaryButton from "../buttons/PrimaryButton";
 
 export default function ConfirmationStep() {
   const router = useRouter();
@@ -19,6 +20,9 @@ export default function ConfirmationStep() {
       </div>
       <div className="max-w-screen-lg m-auto space-y-2 flex flex-col">
         <p>{t.reservationPage.confirmationStep.description}</p>
+      </div>
+      <div className="max-w-screen-lg m-auto pt-10">
+        <PrimaryButton label="Nieuwe boeking" onClick={() => dispatch({ type: "RESET_FORM" })} />
       </div>
     </div>
   );

@@ -203,6 +203,7 @@ export const enUS = {
     confirmationStep: {
       title: "Thanks for your inquiry",
       description: "We will shortly send you an email with a free quotation.",
+      buttonText: "Plan a new trackday",
     },
     general: {
       firstName: "First Name",
@@ -363,6 +364,7 @@ export const nl = {
     confirmationStep: {
       title: "Bedankt voor je aanvraag!",
       description: "We sturen je zo dadelijk een mailtje met jouw vrijblijvende offerte.",
+      buttonText: "Nieuwe trackday plannen",
     },
     general: {
       firstName: "Voornaam",

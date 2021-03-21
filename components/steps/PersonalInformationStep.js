@@ -77,8 +77,6 @@ export default function PersonalInformationStep() {
             text: `Nieuwe aanvraag van ${personalInformation.firstName} ${personalInformation.lastName}! Check de backoffice voor meer info!`,
           },
         });
-
-      dispatch({ type: "RESET_FORM" });
     }
   };
 
