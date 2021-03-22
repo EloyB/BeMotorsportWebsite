@@ -238,6 +238,7 @@ export const enUS = {
     description:
       "BE\xa0motorsport rents out the Porsche Cayman GT4 Clubsport & the Peugeot 206 GTi to enjoy the most beautiful and challenging circuits in Belgium and abroad. This race car is ready to go out with you for half a day, a full day or several days. Book now and we'll take care of the rest! Ready? Set? Go!",
     receive: "Then you choose this package:",
+    callToAction: "Plan a trackday",
     extra: "What else is included?",
     quote:
       "Bij BE motorsport wordt de totaal service hoog in het vaandel gedragen. Het is fantastisch dat je warm ontvangen wordt, dat alles tot in de puntjes is georganiseerd en dat je altijd een veilig gevoel hebt!",
@@ -399,6 +400,7 @@ export const nl = {
     description:
       "BE\xa0motorsport verhuurt de Porsche Cayman GT4 Clubsport & de Peugeot 206 GTi om te vertoeven op de mooiste en meest uitdagende circuits in binnen -en buitenland. Onze auto’s staan klaar om met jou op stap te gaan voor een halve dag, hele dag of meerdere dagen. Boek nu en de rest verzorgen wij! Ready? Set? Go!",
     receive: "Dan ontvang je dit pakket:",
+    callToAction: "Plan een trackday",
     extra: "Wat is er verder inbegrepen in dit pakket:",
     quote:
       "Bij BE motorsport wordt de totaal service hoog in het vaandel gedragen. Het is fantastisch dat je warm ontvangen wordt, dat alles tot in de puntjes is georganiseerd en dat je altijd een veilig gevoel hebt!",

@@ -65,17 +65,23 @@ export default function Navbar() {
         >
           <div>
             <Link href="/trackdays">
-              <a className="text-lg hover:text-motorblue">Trackdays</a>
+              <a className="text-lg hover:text-motorblue" onClick={() => setOpenMenu(false)}>
+                Trackdays
+              </a>
             </Link>
           </div>
           <div>
             <Link href="/reservation">
-              <a className="text-lg hover:text-motorblue">{t.navbar.planYourDay}</a>
+              <a className="text-lg hover:text-motorblue" onClick={() => setOpenMenu(false)}>
+                {t.navbar.planYourDay}
+              </a>
             </Link>
           </div>
           <div>
             <Link href="/contact">
-              <a className="text-lg hover:text-motorblue">{t.navbar.aboutUs}</a>
+              <a className="text-lg hover:text-motorblue" onClick={() => setOpenMenu(false)}>
+                {t.navbar.aboutUs}
+              </a>
             </Link>
           </div>
           <div className="flex divide-x-2 items-center justify-end self-end space-x-2 bg-gray-50 px-4 py-2">
@@ -83,7 +89,10 @@ export default function Navbar() {
               className={`text-lg cursor-pointer ${
                 locale === "nl" ? "text-motorblue" : "text-gray-500"
               }`}
-              onClick={() => toggleLocale("nl", router)}
+              onClick={() => {
+                toggleLocale("nl", router);
+                setOpenMenu(false);
+              }}
             >
               NL
             </p>
@@ -91,7 +100,10 @@ export default function Navbar() {
               className={`text-lg pl-2 cursor-pointer ${
                 locale === "en-US" ? "text-motorblue" : "text-gray-500"
               }`}
-              onClick={() => toggleLocale("en-US", router)}
+              onClick={() => {
+                toggleLocale("en-US", router);
+                setOpenMenu(false);
+              }}
             >
               ENG
             </p>

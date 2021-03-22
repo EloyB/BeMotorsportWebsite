@@ -1,6 +1,7 @@
 import React from "react";
 import { useRouter } from "next/router";
 import { activeLocale } from "../../data/translations";
+import PrimaryButton from "../../components/buttons/PrimaryButton";
 
 export default function renting() {
   const router = useRouter();
@@ -33,6 +34,12 @@ export default function renting() {
               <li>{t.rentingPage.section1.bullet5}</li>
             </ul>
           </div>
+          <div className="mt-10">
+            <PrimaryButton
+              label={t.rentingPage.callToAction}
+              onClick={() => router.push("/reservation")}
+            />
+          </div>
         </div>
       </div>
       <div className="bg-gray-50 w-full">
@@ -52,6 +59,12 @@ export default function renting() {
                 <li>{t.rentingPage.section2.bullet5}</li>
                 <li>{t.rentingPage.section2.bullet6}</li>
               </ul>
+            </div>
+            <div className="mt-10">
+              <PrimaryButton
+                label={t.rentingPage.callToAction}
+                onClick={() => router.push("/reservation")}
+              />
             </div>
           </div>
         </div>
@@ -79,11 +92,17 @@ export default function renting() {
               <li>{t.rentingPage.section2.bullet4}</li>
             </ul>
           </div>
+          <div className="mt-10">
+            <PrimaryButton
+              label={t.rentingPage.callToAction}
+              onClick={() => router.push("/reservation")}
+            />
+          </div>
         </div>
       </div>
       <div className="bg-gray-50 w-full">
         <div className="md:px-0 md:flex md:flex-row md:items-center lg:max-w-screen-xl lg:m-auto py-8 md:py-12">
-          <img className="md:h-60" src="/dieter.jpeg" alt="Dieter Coppens" />
+          <img className="px-8 xl:px-0 md:h-60" src="/dieter.jpeg" alt="Dieter Coppens" />
           <div className="inline-block text-left px-8 py-5 md:px-5 lg:pl-16">
             <p className="text-7xl text-gray-200">“</p>
             <p className="text-sm sm:text-base lg:text-lg md:text-left max-w-screen-md m-auto pb-5">
