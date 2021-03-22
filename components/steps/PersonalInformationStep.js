@@ -71,7 +71,7 @@ export default function PersonalInformationStep() {
         .firestore()
         .collection("mail")
         .add({
-          to: "didier.beyens@bemotorsport.be",
+          to: "didier.beyens@bemotorsport.com",
           message: {
             subject: "Offerte aanvraag",
             text: `Nieuwe aanvraag van ${personalInformation.firstName} ${personalInformation.lastName}! Check de backoffice voor meer info!`,

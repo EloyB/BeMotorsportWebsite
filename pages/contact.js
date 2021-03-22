@@ -266,7 +266,7 @@ export default function contact() {
                   .firestore()
                   .collection("mail")
                   .add({
-                    to: "eloyboone@hotmail.com",
+                    to: "didier.beyens@bemotorsport.com",
                     message: {
                       subject: "Nieuw bericht via de website",
                       html: `Van: ${mail.email} | (${mail.fullName}) </br> Message: ${mail.message} `,
