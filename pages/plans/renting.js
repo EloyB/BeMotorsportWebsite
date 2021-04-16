@@ -2,11 +2,13 @@ import React from "react";
 import { useRouter } from "next/router";
 import { activeLocale } from "../../data/translations";
 import PrimaryButton from "../../components/buttons/PrimaryButton";
+import { useStateValue } from "../../context/StateProvider";
 
 export default function renting() {
   const router = useRouter();
   const { locale } = router;
   const t = activeLocale(locale);
+  const [{}, dispatch] = useStateValue();
 
   return (
     <div>
@@ -37,7 +39,13 @@ export default function renting() {
           <div className="mt-10">
             <PrimaryButton
               label={t.rentingPage.callToAction}
-              onClick={() => router.push("/reservation")}
+              onClick={() => {
+                dispatch({
+                  type: "FILTER_TRACKDAYS",
+                  name: "Circuit Zolder",
+                });
+                router.push("/trackdays");
+              }}
             />
           </div>
         </div>
@@ -63,7 +71,13 @@ export default function renting() {
             <div className="mt-10">
               <PrimaryButton
                 label={t.rentingPage.callToAction}
-                onClick={() => router.push("/reservation")}
+                onClick={() => {
+                  dispatch({
+                    type: "FILTER_TRACKDAYS",
+                    name: "Circuit Zolder",
+                  });
+                  router.push("/trackdays");
+                }}
               />
             </div>
           </div>
@@ -95,7 +109,13 @@ export default function renting() {
           <div className="mt-10">
             <PrimaryButton
               label={t.rentingPage.callToAction}
-              onClick={() => router.push("/reservation")}
+              onClick={() => {
+                dispatch({
+                  type: "FILTER_TRACKDAYS",
+                  name: "Circuit Zolder",
+                });
+                router.push("/trackdays");
+              }}
             />
           </div>
         </div>

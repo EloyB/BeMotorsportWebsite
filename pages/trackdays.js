@@ -12,7 +12,7 @@ import Head from "next/head";
 export default function trackdays({ circuits }) {
   const router = useRouter();
   const trackdaysRef = useRef();
-  const [{ filteredTrackdays }, dispatch] = useStateValue();
+  const [{ filteredTrackdays, trackdays }, dispatch] = useStateValue();
   const [showCircuitPopup, setShowCircuitPopup] = useState({
     show: false,
     circuit: {},
@@ -144,14 +144,12 @@ export default function trackdays({ circuits }) {
         </div>
 
         <div ref={trackdaysRef} className="max-w-screen-xl m-auto px-5 pt-4 pb-12 lg:px-0">
-          {filteredTrackdays === null ? (
-            <div className="bg-gray-50 px-4 py-7 text-center">
-              <p className="font-semibold text-motorblue">
-                {t.trackdaysPage.selectTrackdaysPlaceholder}
-              </p>
-            </div>
-          ) : filteredTrackdays.length > 0 ? (
+          {filteredTrackdays !== null ? (
             filteredTrackdays.map((item, index) => (
+              <TrackdayItem key={index} index={index} trackday={item} />
+            ))
+          ) : trackdays.length > 0 ? (
+            trackdays.map((item, index) => (
               <TrackdayItem key={index} index={index} trackday={item} />
             ))
           ) : (

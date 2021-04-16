@@ -422,8 +422,7 @@ export const nl = {
       bullet6: "Instructeur*",
     },
     section3: {
-      title:
-        '"Ik ben een piloot zonder ervaring en wens een opleidingstraject van één dag te volgen"',
+      title: '"Ik ben een piloot zonder ervaring en wens een opleidingstraject te volgen"',
       bullet1: "Theorie training",
       bullet2: "1 uur achter pace wagen",
       bullet3: "2 uur vrij rijden met instructeur",

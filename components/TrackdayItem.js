@@ -67,8 +67,8 @@ export default function TrackdayItem({ index, trackday }) {
             </p>
           </div>
         </div>
-        <div className="flex items-center space-x-1 sm:space-x-5">
-          <button className="cursor-pointer focus:outline-none" onClick={() => setOpen(!open)}>
+        <div className="flex flex-col items-end space-y-2">
+          <button className="py-2 cursor-pointer focus:outline-none" onClick={() => setOpen(!open)}>
             <svg
               className="w-6 h-6 text-motorblue"
               fill="none"
@@ -96,32 +96,36 @@ export default function TrackdayItem({ index, trackday }) {
             }}
           >
             {isTrackdaySelected() ? (
-              <svg
-                className="w-6 h-6 text-checkgreen"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            ) : (
-              <div className="group relative">
+              <div className="py-2">
                 <svg
-                  className="w-6 h-6 text-motorblue block group-hover:hidden"
+                  className="w-6 h-6 text-checkgreen"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     fillRule="evenodd"
-                    d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                     clipRule="evenodd"
                   />
                 </svg>
+              </div>
+            ) : (
+              <div className="group relative">
+                <div className="py-2 group-hover:hidden">
+                  <svg
+                    className="w-6 h-6 text-motorblue block"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </div>
                 <div className="px-3 py-2 bg-motorblue hidden transition-width group-hover:block">
                   <p className="text-white">{"Add\xa0Trackday"}</p>
                 </div>

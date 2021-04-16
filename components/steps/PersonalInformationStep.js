@@ -47,6 +47,7 @@ export default function PersonalInformationStep() {
           ...personalInformation,
           selectedTrackdays: [...selectedTrackdays],
           drivers: [...drivers],
+          creationDate: new Date(),
         });
 
       firebase
