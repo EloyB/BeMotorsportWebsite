@@ -40,12 +40,18 @@ export default function trackdays({ circuits }) {
     firebase
       .firestore()
       .collection("trackdays")
+      .where("available", "==", true)
       .get()
       .then((res) => {
         var sortedList = res.docs.sort((a, b) => new Date(a.data().date) - new Date(b.data().date));
+        var filterOutExpired = sortedList.filter((x) => {
+          var today = new Date();
+          var trackdayDate = new Date(x.data().date);
+          return trackdayDate >= today;
+        });
         dispatch({
           type: "SET_TRACKDAYS",
-          list: sortedList.map((entry) => ({
+          list: filterOutExpired.map((entry) => ({
             id: entry.id,
             ...entry.data(),
           })),
