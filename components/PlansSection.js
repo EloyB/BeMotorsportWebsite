@@ -16,9 +16,9 @@ export default function PlansSection() {
           backgroundImage: "url(/renting.jpg)",
         }}
       >
-        <div className="absolute inset-0 bg-black transition-opacity opacity-30 duration-500 group-hover:bg-motorblue group-hover:opacity-80"></div>
+        <div className="absolute inset-0 bg-black transition-opacity opacity-30 duration-500 group-hover:bg-motorblue group-hover:opacity-95"></div>
         <div className="relative h-full w-full p-10 flex flex-col items-start justify-end">
-          <h1 className="text-3xl font-medium text-white lg:text-5xl">
+          <h1 className="text-3xl font-bold text-white lg:text-5xl">
             {t.home.planSection.renting.title}
           </h1>
           <p className="pt-1 text-white w-full lg:w-1/2 text-sm lg:text-base xl:text-lg transition-height duration-300 h-0 overflow-hidden group-hover:h-16 xl:group-hover:h-16">
@@ -35,9 +35,9 @@ export default function PlansSection() {
           backgroundImage: "url(/share.jpg)",
         }}
       >
-        <div className="absolute inset-0 bg-black transition-opacity opacity-30 duration-500 group-hover:bg-motorblue group-hover:opacity-80"></div>
+        <div className="absolute inset-0 bg-black transition-opacity opacity-30 duration-500 group-hover:bg-motorblue group-hover:opacity-95"></div>
         <div className="relative h-full w-full p-10 flex flex-col items-start justify-end">
-          <h1 className="text-3xl font-medium text-white lg:text-5xl">
+          <h1 className="text-3xl font-bold text-white lg:text-5xl">
             {t.home.planSection.shareARide.title}
           </h1>
           <p className="pt-1 text-white w-full text-sm lg:text-base xl:text-lg transition-height duration-300 h-0 overflow-hidden group-hover:h-20 md:group-hover:h-16">
@@ -52,9 +52,9 @@ export default function PlansSection() {
           backgroundImage: "url(/vip.jpg)",
         }}
       >
-        <div className="absolute inset-0 bg-black transition-opacity opacity-30 duration-500 group-hover:bg-motorblue group-hover:opacity-80"></div>
+        <div className="absolute inset-0 bg-black transition-opacity opacity-30 duration-500 group-hover:bg-motorblue group-hover:opacity-95"></div>
         <div className="relative h-full w-full p-10 flex flex-col items-start justify-end">
-          <h1 className="text-3xl font-medium text-white lg:text-5xl">
+          <h1 className="text-3xl font-bold text-white lg:text-5xl">
             {t.home.planSection.VIP.title}
           </h1>
           <p className="pt-1 text-white w-full text-sm lg:text-base xl:text-lg transition-height duration-300 h-0 overflow-hidden group-hover:h-20 md:group-hover:h-16">
@@ -69,9 +69,9 @@ export default function PlansSection() {
           backgroundImage: "url(/business-copy.jpg)",
         }}
       >
-        <div className="absolute inset-0 bg-black transition-opacity opacity-30 duration-500 group-hover:bg-motorblue group-hover:opacity-80"></div>
+        <div className="absolute inset-0 bg-black transition-opacity opacity-30 duration-500 group-hover:bg-motorblue group-hover:opacity-95"></div>
         <div className="relative h-full w-full p-10 flex flex-col items-start justify-end">
-          <h1 className="text-3xl font-medium text-white lg:text-5xl">
+          <h1 className="text-3xl font-bold text-white lg:text-5xl">
             {t.home.planSection.business.title}
           </h1>
           <p className="pt-1 text-white w-full text-sm lg:text-base xl:text-lg transition-height duration-300 h-0 overflow-hidden group-hover:h-20 md:group-hover:h-16 lg:group-hover:h-11">

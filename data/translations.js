@@ -166,7 +166,7 @@ export const enUS = {
       tank: "50 Liter",
       safety: "Welded cage with racing kit and fully stripped interior",
     },
-    title: "Meet the team",
+    title: "Meet the fleet",
   },
   trackdaysPage: {
     title: "Our Trackdays",
@@ -327,7 +327,7 @@ export const nl = {
       tank: "50 liter",
       safety: "Rolkooi met racing kit en volledig gestript interieur",
     },
-    title: "Meet the team",
+    title: "Meet the fleet",
   },
   trackdaysPage: {
     title: "Onze Trackdays",

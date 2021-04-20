@@ -1,4 +1,5 @@
 import fb from "firebase";
+
 const firebaseConfig = {
   apiKey: "AIzaSyAcs3M7FKlfUHyQuRXCnp_HMJtCEVfvEbY",
   authDomain: "bemotorsport-9b713.firebaseapp.com",

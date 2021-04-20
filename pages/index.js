@@ -3,6 +3,7 @@ import Typical from "react-typical";
 import { useRouter } from "next/router";
 import { activeLocale } from "../data/translations";
 import Head from "next/head";
+import Image from "next/image";
 
 const porscheData = [
   { title: "typeOfDrive" },
@@ -40,11 +41,9 @@ export default function Home() {
       </Head>
       <div className="w-full">
         <div className="relative w-full md:h-screen">
-          <img
-            className="relative z-10 h-96 md:h-4/5 w-full object-cover lg:h-5/6"
-            src="/small-banner 1.png"
-            alt="small banner"
-          />
+          <div className="relative z-10 h-96 md:h-4/5 w-full object-cover lg:h-5/6">
+            <Image src="/small-banner 1.png" layout="fill" objectFit="cover" />
+          </div>
           <div className="relative text-base font-semibold text-left md:text-2xl lg:text-3xl px-5 xl:px-0 py-10 h-1/5 w-full max-w-screen-xl m-auto flex items-center bg-white lg:h-1/6">
             <Typical
               steps={[
