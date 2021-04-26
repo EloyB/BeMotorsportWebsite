@@ -16,6 +16,7 @@ export default function contact() {
     email: "",
     fullName: "",
     message: "",
+    phone: "",
   });
 
   const sendMail = () => {
@@ -93,7 +94,10 @@ export default function contact() {
                   ></path>
                 </svg>
               </RoundButton>
-              <RoundButton url="https://www.linkedin.com/in/didibeyens/">
+              <RoundButton
+                url="https://www.linkedin.com/in/didibeyens/"
+                description="Didier Beyens"
+              >
                 <svg
                   width="24"
                   height="24"
@@ -148,7 +152,11 @@ export default function contact() {
                   ></path>
                 </svg>
               </RoundButton>
-              <RoundButton url="https://www.linkedin.com/in/stephan-beyens-1b011586/" reverse>
+              <RoundButton
+                url="https://www.linkedin.com/in/stephan-beyens-1b011586/"
+                description="Stephan Beyens"
+                reverse
+              >
                 <svg
                   width="24"
                   height="24"
@@ -203,7 +211,10 @@ export default function contact() {
                   ></path>
                 </svg>
               </RoundButton>
-              <RoundButton url="https://www.linkedin.com/in/juliebeyens/">
+              <RoundButton
+                url="https://www.linkedin.com/in/juliebeyens/"
+                description="Julie Beyens"
+              >
                 <svg
                   width="24"
                   height="24"
@@ -248,6 +259,13 @@ export default function contact() {
               requirement={mail.fullName === ""}
               required
             />
+            <TextInput
+              placeholder={t.contactPage.fullName}
+              value={mail.phone}
+              onChange={(value) => setMail({ ...mail, phone: value })}
+              requirement={mail.phone === ""}
+              required
+            />
             <div>
               <p className="text-sm sm:text-base font-bold py-1"></p>
               <textarea
@@ -272,7 +290,7 @@ export default function contact() {
                       html: `Van: ${mail.email} | (${mail.fullName}) </br> Message: ${mail.message} `,
                     },
                   });
-                setMail({ email: "", fullName: "", message: "" });
+                setMail({ email: "", fullName: "", message: "", phone: "" });
               }}
             />
           </div>

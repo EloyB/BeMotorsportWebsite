@@ -5,7 +5,7 @@ export default function PrimaryButton({ onClick, label, disabled, fullWidth }) {
     <button
       className={`${
         fullWidth ? "w-full" : ""
-      } px-6 py-4 bg-motorblue text-white focus:outline-none sm:px-16`}
+      } px-6 py-4 bg-motorblue text-white focus:outline-none sm:px-16 ring-2 ring-motorblue`}
       onClick={(e) => onClick(e.target.value)}
       value={label}
       disabled={disabled}

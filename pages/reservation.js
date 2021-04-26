@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { activeLocale } from "../data/translations";
 import MultiStepForm from "../components/MultiStepForm";
 import { useRouter } from "next/router";
@@ -8,6 +8,13 @@ export default function reservation() {
   const router = useRouter();
   const { locale } = router;
   const t = activeLocale(locale);
+
+  useEffect(() => {
+    window.onbeforeunload = function (event) {
+      return confirm("Confirm refresh");
+    };
+  }, []);
+
   return (
     <div className="pt-20">
       <Head>

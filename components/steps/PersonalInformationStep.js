@@ -224,9 +224,9 @@ export default function PersonalInformationStep() {
               </div>
             </div>
           </div>
-          <div className="ml-auto pt-8">
+          <div className="ml-auto pt-8 space-x-3">
             <button
-              className="px-6 py-3 bg-transparent focus:outline-none sm:px-16"
+              className="px-6 py-4 bg-transparent text-motorblue focus:outline-none sm:px-16 ring-2 ring-motorblue"
               onClick={() => dispatch({ type: "SET_ACTIVE_STEP", activeStep: 1 })}
             >
               {t.reservationPage.general.backButtonText}

@@ -38,14 +38,17 @@ const reducer = (state, action) => {
           var trackdayDate = new Date(trackday.date);
           var today = new Date();
           if (action.name !== "" && action.date !== "") {
+            console.log("1", action.date);
             return (
               trackday.circuit.name === action.name &&
               trackdayDate >= actionDate &&
               trackdayDate >= today
             );
           } else if (action.date === "" && action.name !== "") {
+            console.log("2");
             return trackday.circuit.name === action.name && trackdayDate >= today;
           } else if (action.date !== "" && action.name === "") {
+            console.log("3");
             return trackdayDate >= actionDate && trackdayDate >= today;
           }
         }),

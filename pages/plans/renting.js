@@ -43,6 +43,7 @@ export default function renting() {
                 dispatch({
                   type: "FILTER_TRACKDAYS",
                   name: "Circuit Zolder",
+                  date: "",
                 });
                 router.push("/trackdays");
               }}
@@ -75,6 +76,7 @@ export default function renting() {
                   dispatch({
                     type: "FILTER_TRACKDAYS",
                     name: "Circuit Zolder",
+                    date: "",
                   });
                   router.push("/trackdays");
                 }}
@@ -113,6 +115,7 @@ export default function renting() {
                 dispatch({
                   type: "FILTER_TRACKDAYS",
                   name: "Circuit Zolder",
+                  date: "",
                 });
                 router.push("/trackdays");
               }}
