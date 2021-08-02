@@ -20,7 +20,7 @@ export default function TrackdaysStepItem({ trackday }) {
     { name: "Share a ride", value: "Share", show: trackday.plans.share },
     { name: "VIP", value: "Vip", show: trackday.plans.vip },
     { name: "Business", value: "Business", show: trackday.plans.business },
-    { name: "Training", value: "Business", show: trackday.plans.training },
+    { name: "Training", value: "Training", show: trackday.plans.training },
   ];
   const cars = [
     {

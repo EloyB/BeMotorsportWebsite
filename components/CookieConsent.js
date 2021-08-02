@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
 import cookieCutter from "cookie-cutter";
-import { activeLocale } from "../../data/translations";
+import { activeLocale } from "../data/translations";
+import { useRouter } from "next/router";
 
 export default function CookieConsent() {
   const [consent, setConsent] = useState(false);
+  const router = useRouter();
+  const { locale } = router;
   const t = activeLocale(locale);
   useEffect(() => {
     setConsent(cookieCutter.get("CONSENT"));
