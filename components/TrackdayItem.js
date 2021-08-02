@@ -153,6 +153,7 @@ export default function TrackdayItem({ index, trackday }) {
             {trackday.plans.business && (
               <TrackdayAssetItem checked description="Business Experience" />
             )}
+            {trackday.plans.training && <TrackdayAssetItem checked description="Training" />}
           </div>
           {trackday.requirements.raceLicense && trackday.requirements.experience && (
             <div>

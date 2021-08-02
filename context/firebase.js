@@ -10,7 +10,7 @@ const firebaseConfig = {
   measurementId: "G-3NTC5PVQFP",
 };
 
-// var firebaseConfig = {
+// const firebaseConfig = {
 //   apiKey: "AIzaSyAQa46l-hQd3jtHgI3QhYjNvNgoQX7JSMQ",
 //   authDomain: "bemotorsport-test.firebaseapp.com",
 //   projectId: "bemotorsport-test",

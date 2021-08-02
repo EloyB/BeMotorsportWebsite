@@ -64,7 +64,7 @@ export default function PlansSection() {
         </div>
       </div>
       <div
-        className="group relative bg-cover bg-center w-full h-72 bg-gray-200 flex items-center justify-center lg:h-96 lg:col-span-3"
+        className="group relative bg-cover bg-center cursor-pointer w-full h-72 bg-gray-200 flex items-center justify-center lg:h-96 lg:col-span-3"
         style={{
           backgroundImage: "url(/business-copy.jpg)",
         }}
@@ -77,7 +77,9 @@ export default function PlansSection() {
           <p className="pt-1 text-white w-full text-sm lg:text-base xl:text-lg transition-height duration-300 h-0 overflow-hidden group-hover:h-20 md:group-hover:h-16 lg:group-hover:h-11">
             {t.home.planSection.business.hover}
           </p>
-          <SecondaryButton label="Coming soon" />
+          <div onClick={() => router.push("/business")}>
+            <SecondaryButton label="Learn More" />
+          </div>
         </div>
       </div>
     </div>
