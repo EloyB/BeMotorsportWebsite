@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import cookieCutter from "cookie-cutter";
+import { activeLocale } from "../../data/translations";
 
 export default function CookieConsent() {
   const [consent, setConsent] = useState(false);
+  const t = activeLocale(locale);
   useEffect(() => {
     setConsent(cookieCutter.get("CONSENT"));
   }, []);
@@ -12,8 +14,7 @@ export default function CookieConsent() {
     >
       <div className="max-w-screen-xl m-auto w-full p-4 flex flex-col items-center sm:flex-row sm:justify-between xl:px-0">
         <p className="text-white text-xs text-center font-medium sm:text-left md:w-3/4">
-          Deze website maakt gebruik van cookies om je een betere service te kunnen verzekeren. Door
-          verder te gaan op deze site, ga je akkoord met dit gebruik.
+          {t.cookie.description}
         </p>
         <div className="flex space-x-4 sm:items-center">
           <div
@@ -26,7 +27,7 @@ export default function CookieConsent() {
             <p className="text-xs text-center">Ok!</p>
           </div>
           <div className="p-4 bg-white mt-5 cursor-pointer sm:mt-0">
-            <p className="text-xs text-center">Meer info</p>
+            <p className="text-xs text-center">{t.cookie.moreInfo}</p>
           </div>
         </div>
       </div>
