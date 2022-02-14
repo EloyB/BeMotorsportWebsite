@@ -235,6 +235,8 @@ export default {
           },
         ],
       },
+      paragraph1: "Schedule an introductory meeting where we'll look together at what your business needs. Schedule a 30-minute no-obligation meeting now and we'll show you how to take your business to the next level!",
+      paragraph2: "Ask us now. An initial consultation is free of charge!"
     },
   },
   sharePage: {
@@ -308,4 +310,12 @@ export default {
       "This website uses cookies to provide you with a better service. By continuing on this site, you agree to this use.",
     moreInfo: "More info",
   },
+  common: {
+    or : "Or",
+    clickHere: "Click here",
+    availableCars: "Available cars",
+    availableFormulas: "Available Formulas",
+    requirements: "Requirements",
+    addTrackDay: "Add\xa0Trackday"
+  }
 };

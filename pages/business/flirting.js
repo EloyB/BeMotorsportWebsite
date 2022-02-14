@@ -87,11 +87,9 @@ export default function flirting() {
       <div className="bg-motorblue py-20">
         <div className="max-w-screen-xl mx-auto px-5 xl:px-0 text-center text-white text-sm space-y-5">
           <p>
-            Plan een kennismakend gesprek in waar we samen met jou gaan kijken wat jouw bedrijf
-            nodig heeft. Plan nu een vrijblijvend gesprek in van 30-minuten en we tonen je graag hoe
-            je jouw business tot de next level brengt!
+            {t.businessPage.flirtingPage.paragraph1}
           </p>
-          <p className="font-bold text-base">Vraag het ons nu. Een eerste gesprek is kosteloos!</p>
+          <p className="font-bold text-base">{t.businessPage.flirtingPage.paragraph2}</p>
         </div>
       </div>
     </div>

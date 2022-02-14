@@ -13,9 +13,9 @@ export default function share() {
   return (
     <div>
       <div className="pt-32 pb-10 md:pb-20 px-8 max-w-screen-xl m-auto lg:px-0">
-        <h1 className="text-3xl font-medium text-center py-5 lg:text-5xl">Share a ride</h1>
+        <h1 className="text-3xl font-medium text-center py-5 lg:text-5xl">{t.sharePage.title}</h1>
         <p className="text-center max-w-screen-md m-auto">
-          Ontdek onze 'Share your ride’ formule voor een zeer aantrekkelijk budget!
+          {t.sharePage.description}
         </p>
       </div>
       <div className="hidden md:px-0 md:flex md:flex-row md:items-center lg:max-w-screen-xl lg:m-auto">
@@ -26,19 +26,14 @@ export default function share() {
         <img className="md:w-1/2" src="/porsche-side.jpg" alt="Porsche Cayman GT4 Clubsport" />
         <div className="inline-block text-left px-8 py-5 md:px-5 lg:pr-16">
           <p className="text-sm sm:text-base lg:text-lg md:text-left max-w-screen-md m-auto font-bold pb-5">
-            Heb je altijd al op circuit willen rijden maar …
+            {t.sharePage.block1.title}
           </p>
           <div className="text-sm space-y-5 sm:text-base lg:text-lg md:text-left max-w-screen-md m-auto">
             <ul className="list-disc list-inside pt-5">
-              <li> Liet het budget dit niet toe?</li>
-              <li>Niet alleen een auto wenste te huren?</li>
-              <li>Je ook graag andere mensen leerde kennen?</li>
-              <li>Vul zelf maar aan!</li>
+              {t.sharePage.block1.pointers.map((item, index) => <li>{item}</li>)}
             </ul>
-            <p className="font-semibold">We got you!</p>
             <p>
-              Via ons Share a Ride concept, zijn bovenstaande punten verleden tijd! We organiseren
-              heel de dag voor je en dat met een zeer aantrekkelijk budget tot leven komt.
+              {t.sharePage.block1.paragraph}
             </p>
           </div>
           <div className="mt-10">
@@ -61,19 +56,14 @@ export default function share() {
           <img className="md:w-1/2" src="/peugeot-front.jpg" alt="Peugeot 206 GTi" />
           <div className="inline-block text-left px-8 py-5 md:px-5 lg:pl-16">
             <p className="text-sm sm:text-base lg:text-lg md:text-left max-w-screen-md m-auto font-bold pb-5">
-              Hoe gaat het precies in zijn werk?
+              {t.sharePage.block2.title}
             </p>
             <div className="text-sm space-y-3 sm:text-base lg:text-lg md:text-left max-w-screen-md m-auto">
               <p>
-                Je informeert ons naar welke auto je voorkeur gaat, wanneer je beschikbaar bent & op
-                welk circuit je graag wenst te rijden of op onze website vind je verschillende dagen
-                terug waar we dit concept organiseren.
+                {t.sharePage.block2.paragraph1}
               </p>
               <p>
-                Met deze informatie gaan we meteen aan de slag en zoeken we de perfecte combinatie
-                voor je. We combineren verschillende personen die graag op samen op het circuit
-                willen rijden voor een aanvaardbaar budget & leer je andere mensen kennen met
-                dezelfde interesse.
+                {t.sharePage.block2.paragraph2}
               </p>
             </div>
             <div className="mt-10">
@@ -96,19 +86,16 @@ export default function share() {
         <img className="md:w-1/2" src="/renting-section-3.jpeg" alt="Peugeot 206 GTi" />
         <div className="inline-block text-left px-8 py-5 md:px-5 lg:pr-16">
           <p className="text-sm sm:text-base lg:text-lg md:text-left max-w-screen-md m-auto font-bold pb-5">
-            Concreet voorbeeld:
+            {t.sharePage.block3.title}
           </p>
           <div className="text-sm space-y-3 sm:text-base lg:text-lg md:text-left max-w-screen-md m-auto">
             <p>
-              Op een Porsche-dag hebben we 5 verschillende piloten onze Porsche Cayman GT4 clubsport
-              bestuurd. In plaats van dat 1 piloot het volledige bedrag betaald voor een dag, hebben
-              we de kost kunnen verdelen over de 5 verschillende piloten. Geweldig idee toch?{" "}
+              {t.sharePage.block3.paragraph1}
             </p>
             <p>
-              Een dag vol fun, waar je nieuwe mensen leert kennen, en waar krijgt voor je geld ? Dan
-              is Share a ride iets voor jou !
+              {t.sharePage.block3.paragraph2}
             </p>
-            <p>Klik hier om onze share a ride formule te vinden</p>
+            <p>{t.sharePage.block3.click}</p>
           </div>
           <div className="mt-10">
             <PrimaryButton

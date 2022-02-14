@@ -127,7 +127,7 @@ export default function TrackdayItem({ index, trackday }) {
                   </svg>
                 </div>
                 <div className="px-3 py-2 bg-motorblue hidden transition-width group-hover:block">
-                  <p className="text-white">{"Add\xa0Trackday"}</p>
+                  <p className="text-white">{t.common.addTrackDay}</p>
                 </div>
               </div>
             )}
@@ -141,12 +141,12 @@ export default function TrackdayItem({ index, trackday }) {
       >
         <div className="space-y-5 flex flex-col sm:flex-row sm:space-y-0 sm:space-x-10 lg:w-2/3 xl:w-1/2">
           <div>
-            <p className="text-gray-600 text-md font-semibold">Available cars</p>
+            <p className="text-gray-600 text-md font-semibold">{t.common.availableCars}</p>
             {trackday.cars.porsche && <TrackdayAssetItem checked description="Porsche" />}
             {trackday.cars.peugeot && <TrackdayAssetItem checked description="Peugeot" />}
           </div>
           <div>
-            <p className="text-gray-600 text-md font-semibold">Available formulas</p>
+            <p className="text-gray-600 text-md font-semibold">{t.common.availableFormulas}</p>
             {trackday.plans.renting && <TrackdayAssetItem checked description="Renting" />}
             {trackday.plans.share && <TrackdayAssetItem checked description="Share a ride" />}
             {trackday.plans.vip && <TrackdayAssetItem checked description="VIP" />}
@@ -157,7 +157,7 @@ export default function TrackdayItem({ index, trackday }) {
           </div>
           {trackday.requirements.raceLicense && trackday.requirements.experience && (
             <div>
-              <p className="text-gray-600 text-md font-semibold">Requirements</p>
+              <p className="text-gray-600 text-md font-semibold">{t.common.requirements}</p>
               {trackday.requirements.raceLicense && (
                 <TrackdayAssetItem description="Racelicense required" checked />
               )}

@@ -237,6 +237,8 @@ export default {
           },
         ],
       },
+      paragraph1: "Plan een kennismakend gesprek in waar we samen met jou gaan kijken wat jouw bedrijf nodig heeft. Plan nu een vrijblijvend gesprek in van 30-minuten en we tonen je graag hoe je jouw business tot de next level brengt!",
+      paragraph2: "Vraag het ons nu. Een eerste gesprek is kosteloos!"
     },
   },
   sharePage: {
@@ -310,4 +312,12 @@ export default {
       "Deze website maakt gebruik van cookies om je een betere service te kunnen verzekeren. Door verder te gaan op deze site, ga je akkoord met dit gebruik.",
     moreInfo: "Meer info",
   },
+  common: {
+    or : "Of",
+    clickHere: "Klik dan hier",    
+    availableCars: "Beschikbare auto's",
+    availableFormulas: "Beschikbare formules",
+    requirements: "Vereisten",
+    addTrackDay: "Voeg\xa0Toe"
+  }
 };
