@@ -49,6 +49,7 @@ export default function teambuilding() {
             </p>
             <p>
               Ontketen daarom samen met BE motorsport het potentieel van jouw bedrijf.
+              <br />
               <span className="font-bold">Wij faciliteren, jullie activeren!</span>
             </p>
           </div>
