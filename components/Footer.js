@@ -86,18 +86,15 @@ export const Footer = () => {
                   <Link href="/plans/renting">
                     <a className="text-sm py-3">Renting</a>
                   </Link>
-                  <p className="text-sm py-3">Business</p>
-                  <p className="text-sm py-3">Share a ride</p>
-                  <p className="text-sm py-3">VIP</p>
-                  {/* <Link href="#">
-                    <a className="text-sm">Business</a>
+                  <Link href="/business">
+                    <a className="text-sm py-3">Business</a>
                   </Link>
-                  <Link href="#">
-                    <a className="text-sm">Share a ride</a>
+                  <Link href="/plans/share">
+                    <a className="text-sm py-3">Share a ride</a>
                   </Link>
-                  <Link href="#">
-                    <a className="text-sm">VIP</a>
-                  </Link> */}
+                  <Link href="/plans/vip">
+                    <a className="text-sm py-3">VIP</a>
+                  </Link>
                 </div>
               </div>
               <div>
@@ -118,6 +115,14 @@ export const Footer = () => {
                     onClick={() => toggleLocale("en-US", router)}
                   >
                     English
+                  </p>
+                  <p
+                    className={`cursor-pointer py-3 ${
+                      locale === "fr" ? "text-motorblue" : "text-white"
+                    }`}
+                    onClick={() => toggleLocale("fr", router)}
+                  >
+                    Français
                   </p>
                 </div>
               </div>

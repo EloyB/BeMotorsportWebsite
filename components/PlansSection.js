@@ -43,7 +43,9 @@ export default function PlansSection() {
           <p className="pt-1 text-white w-full text-sm lg:text-base xl:text-lg transition-height duration-300 h-0 overflow-hidden group-hover:h-20 md:group-hover:h-16">
             {t.home.planSection.shareARide.hover}
           </p>
-          <SecondaryButton label="Coming soon" />
+          <div onClick={() => router.push("/plans/share")}>
+            <SecondaryButton label="Learn More" />
+          </div>
         </div>
       </div>
       <div
@@ -60,7 +62,9 @@ export default function PlansSection() {
           <p className="pt-1 text-white w-full text-sm lg:text-base xl:text-lg transition-height duration-300 h-0 overflow-hidden group-hover:h-20 md:group-hover:h-16">
             {t.home.planSection.VIP.hover}
           </p>
-          <SecondaryButton label="Coming soon" />
+          <div onClick={() => router.push("/plans/vip")}>
+            <SecondaryButton label="Learn More" />
+          </div>
         </div>
       </div>
       <div
