@@ -241,64 +241,64 @@ export default {
   },
   sharePage: {
     title: "Share a ride",
-    description: "Ontdek onze 'Share your ride’ formule voor een zeer aantrekkelijk budget!",
+    description: "Discover our 'Share your ride' formula for a very attractive budget!",
     block1: {
-      title: "Heb je altijd al op circuit willen rijden maar...",
+      title: "Have you always wanted to ride on a circuit but...",
       pointers: [
-        "Liet het budget dit niet toe?",
-        "Niet alleen een auto wenste te huren?",
-        "Je ook graag andere mensen leerde kennen?",
-        "Vul zelf maar aan!",
+        "Did the budget not allow it?",
+        "Dont want to rent the car alone?",
+        "You also liked getting to know other people?",
+        "Fill in the blanks yourself!",
       ],
       paragraph:
         "Via ons Share a Ride concept, zijn bovenstaande punten verleden tijd! We organiseren heel de dag voor je en dat met een zeer aantrekkelijk budget tot leven komt.",
     },
     block2: {
-      title: "Hoe gaat het precies in zijn werk?",
+      title: "Discover our 'Share your ride' formula for a very attractive budget!",
       paragraph1:
-        "Je informeert ons naar welke auto je voorkeur gaat, wanneer je beschikbaar bent & op welk circuit je graag wenst te rijden of op onze website vind je verschillende dagen terug waar we dit concept organiseren.",
+        "You inform us which car you prefer, when you are available & on which track you would like to drive.",
       paragraph2:
-        "Met deze informatie gaan we meteen aan de slag en zoeken we de perfecte combinatie voor je. We combineren verschillende personen die graag op samen op het circuit willen rijden voor een aanvaardbaar budget & leer je andere mensen kennen met dezelfde interesse.",
+        "With this information we will immediately get to work and look for the perfect combination for you. We search for copilots who also want to ‘share a ride’ and put you in a team of maximum five pilots for one car.",
     },
     block3: {
-      title: "Concreet voorbeeld:",
+      title: "Concrete example:",
       paragraph1:
-        "Op een Porsche-dag hebben we 5 verschillende piloten onze Porsche Cayman GT4 clubsport bestuurd. In plaats van dat 1 piloot het volledige bedrag betaald voor een dag, hebben we de kost kunnen verdelen over de 5 verschillende piloten. Geweldig idee toch?",
+        "On a Porsche day, we drove our Porsche Cayman GT4 club sport by 5 different drivers. Instead of 1 pilot paying the full amount for a day, we were able to divide the cost over the 5 different pilots. Great idea, right?",
       paragraph2:
-        "Een dag vol fun, waar je nieuwe mensen leert kennen, en waar krijgt voor je geld ? Dan is Share a ride iets voor jou !",
-      click: "Klik hier om onze share a ride formule te vinden",
+        "Are you looking for an adventurous day, where you get to know new people, and get value for your money? Then Share a ride is for you!",
+      click: "Click here to find our share a ride formulas.",
     },
   },
   vipPage: {
     title: "VIP",
     description:
-      "De renting en business modules dekken wat mensen het meest boeken. Er zijn echter zoveel meer programma's en pakketten dat je bij ons kan kiezen zonder je zorgen te maken over iets.",
+      "The renting and business modules cover what people book the most. However, there are so many more programs and packages that you can choose from with us without worrying about anything.",
     block1: {
-      title: "Alles. Is. Mogelijk.",
+      title: "Everything. Is. Possible.",
       pointers: [
-        "Wens je een volledig op maat gemaakt pakket?",
-        "Wil je graag op circuit rijden met aansluitend een luxe lunch waar een DJ ter plaatse je favoriete liedjes brengt?",
-        "Wil je met een sportwagen worden opgepikt en naar het circuit gebracht worden om dan met verschillende racewagens op circuit naar keuze te rijden?",
-        "Wil je graag een netwerk event organiseren voor je klanten op een luxueuze manier?",
+        "Would you like a fully customized package?",
+        "Would you like to drive on a track followed by a luxurious lunch where a DJ will play your favorite songs on site?",
+        "Do you want to be picked up with a sportscar and taken to the track to drive different racing cars on a track of your choice?",
+        "Would you like to organize a network event for your customers in a luxurious way?",
       ],
       paragraph1:
-        "Dan is de VIP-formule iets voor u! De VIP-formule is tot stand gekomen voor personen die all-in willen gaan.",
+        "Then the VIP formula is for you! The VIP formula has been developed for people who want to go all-in.",
       paragraph2:
-        "Ben je op zoek naar een exclusieve dag helemaal naar uw wensen uitgewerkt? Contacteer ons!",
+        "Are you looking for an exclusive day completely tailored to your wishes? Contact us!",
     },
     block2: {
-      title: "Wat zit er standaard in het VIP pakket?",
+      title: "What can you expect in a basic VIP package?",
       pointers: [
-        "Racewagen naar keuze (incl. 1 volle benzinetank)",
-        "3 sets velgen (slicks en/of regenbanden)",
-        "Verzekering",
-        "Open pitlane sessie (volgens organisatie)",
-        "Professionele onderseuning door technieker",
+        "Race car of your choice (incl. 1 full gas tank)",
+        "3 sets of rims (slicks and/or rain tires)",
+        "Insurance",
+        "Open pit lane session (according to organization)",
+        "Professional support by technician",
       ],
       paragraph1:
-        "Optie: Instructeur, Luxe Lunch, DJ, Taxidrive in sportwagen, helikoptervlucht etc.",
+        "Option: Instructor, Luxury Lunch, DJ, Taxi drive in sports car, helicopter flight etc.",
       paragraph2:
-        "Niets is te gek bij ons. Indien je graag een persoonlijk gesprek wenst over de VIP formule, contacteer ons hier.",
+        "Nothing is too crazy for us. If you would like a personal conversation about the VIP formula, contact us here.",
     },
   },
   footer: {
