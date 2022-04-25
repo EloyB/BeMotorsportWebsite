@@ -67,6 +67,7 @@ export default {
     noTrackdaysFoundPlaceholder: "Geen trackdays gevonden voor dit circuit",
   },
   reservationPage: {
+    step: "Stap",
     title: "Plan je trackday",
     description: "Plan nu je trackday en wij bezorgen je een vrijblijvende offerte!",
     trackdaysStep: {

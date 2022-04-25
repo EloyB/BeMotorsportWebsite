@@ -66,6 +66,7 @@ export default {
     noTrackdaysFoundPlaceholder: "No trackdays found for the selected circuit",
   },
   reservationPage: {
+    step: "Step",
     title: "Plan your trackday",
     description: "Plan your trackday now and we will send you a free quotation!",
     trackdaysStep: {

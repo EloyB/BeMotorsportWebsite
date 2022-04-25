@@ -66,6 +66,7 @@ export default {
       "Sélectez un circuit sur la carte afin de voir les journées de piste disponibles.",
   },
   reservationPage: {
+    step: "Étape",
     title: "Planifiez votre journée de piste.",
     description:
       "Planifiez votre journée maintenant et nous vous enverrons un devis sans obligation.",

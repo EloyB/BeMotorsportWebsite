@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 import { activeLocale } from "../../data/translations";
 
 export default function PersonalInformationStep() {
+  const activeStep = 3;
   const [{ personalInformation, selectedTrackdays, drivers, circuits }, dispatch] = useStateValue();
   const router = useRouter();
   const { locale } = router;
@@ -37,7 +38,7 @@ export default function PersonalInformationStep() {
     ) {
       console.log("nie goe");
     } else {
-      dispatch({ type: "SET_ACTIVE_STEP", activeStep: 3 });
+      dispatch({ type: "SET_ACTIVE_STEP", activeStep: activeStep });
       dispatch({ type: "SET_BOOKING" });
 
       firebase
@@ -85,7 +86,7 @@ export default function PersonalInformationStep() {
     <div className="w-full py-10 px-5 bg-gray-50">
       <div className="max-w-screen-lg m-auto">
         <p className="font-bold text-2xl pb-5 md:text-4xl">
-          <span className="text-motorblue">Stap 3 - </span>
+          <span className="text-motorblue">{t.reservationPage.step} {activeStep} - </span>
           {t.reservationPage.personalInformationStep.title}
         </p>
         <div className="flex flex-col">
