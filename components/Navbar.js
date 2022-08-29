@@ -108,7 +108,7 @@ export default function Navbar() {
               ENG
             </p>
             <p
-              className={`text-lg cursor-pointer ${
+              className={`text-lg pl-2 cursor-pointer ${
                 locale === "fr" ? "text-motorblue" : "text-gray-500"
               }`}
               onClick={() => {
@@ -119,7 +119,7 @@ export default function Navbar() {
               FR
             </p>
             <p
-              className={`text-lg cursor-pointer ${
+              className={`text-lg pl-2 cursor-pointer ${
                 locale === "de" ? "text-motorblue" : "text-gray-500"
               }`}
               onClick={() => {
