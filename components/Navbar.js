@@ -84,7 +84,7 @@ export default function Navbar() {
               </a>
             </Link>
           </div>
-          <div className="flex divide-x-2 items-center justify-end self-end space-x-2 bg-gray-50 px-4 py-2">
+          <div className="flex divide-x-4 items-center justify-end self-end space-x-4 bg-gray-50 px-4 py-2">
             <p
               className={`text-lg cursor-pointer ${
                 locale === "nl" ? "text-motorblue" : "text-gray-500"
@@ -106,6 +106,28 @@ export default function Navbar() {
               }}
             >
               ENG
+            </p>
+            <p
+              className={`text-lg cursor-pointer ${
+                locale === "fr" ? "text-motorblue" : "text-gray-500"
+              }`}
+              onClick={() => {
+                toggleLocale("fr", router);
+                setOpenMenu(false);
+              }}
+            >
+              FR
+            </p>
+            <p
+              className={`text-lg cursor-pointer ${
+                locale === "de" ? "text-motorblue" : "text-gray-500"
+              }`}
+              onClick={() => {
+                toggleLocale("de", router);
+                setOpenMenu(false);
+              }}
+            >
+              DE
             </p>
           </div>
         </div>

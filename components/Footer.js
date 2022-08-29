@@ -124,6 +124,14 @@ export const Footer = () => {
                   >
                     Français
                   </p>
+                  <p
+                    className={`cursor-pointer py-3 ${
+                      locale === "de" ? "text-motorblue" : "text-white"
+                    }`}
+                    onClick={() => toggleLocale("de", router)}
+                  >
+                    Deutsch
+                  </p>
                 </div>
               </div>
             </div>
