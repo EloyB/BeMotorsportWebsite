@@ -2,55 +2,61 @@ import Image from "next/image";
 import React from "react";
 import { FaFlagCheckered, FaRegHandshake } from "react-icons/fa";
 import { HiOutlinePresentationChartBar } from "react-icons/hi";
+import { useRouter } from "next/router";
+import { activeLocale } from "../../data/translations";
+import parse from "html-react-parser";
 
-const steps = [
-  {
-    title: "Meet & greet",
-    description:
-      "Graag komen we naar je toe om samen jullie behoeften en doelstellingen te bespreken. Na een vrijblijvend intake gesprek, maken wij een business experience op maat. Een uniek concept volledig gepersonaliseerd",
-    icon: <FaRegHandshake className="w-8 h-8 text-motorblue" />,
-  },
-  {
-    title: "Business Experience op maat",
-    description:
-      "Alles wordt tot in de puntjes voorzien om je experience optimaal te beleven en te laten renderen. Je wordt meteen ondergedompeld in een inspirerende sessie met top notch coaches in een motiverende omgeving",
-    icon: <HiOutlinePresentationChartBar className="w-8 h-8 text-motorblue" />,
-  },
-  {
-    title: "Teambuilding",
-    description:
-      "Dit exclusieve concept gaat door op een circuit naar keuze waar we uiteraard voor de nodige adrenaline zorgen",
-    icon: <FaFlagCheckered className="w-8 h-8 text-motorblue" />,
-  },
-];
 
 export default function teambuilding() {
+  const router = useRouter();
+  const { locale } = router;
+  const t = activeLocale(locale);
+
+  const steps = [
+    {
+      title: t.businessPage.teambuildingPage.steps.title1,
+      description:
+        t.businessPage.teambuildingPage.steps.description1,
+      icon: <FaRegHandshake className="w-8 h-8 text-motorblue" />,
+    },
+    {
+      title: t.businessPage.teambuildingPage.steps.title2,
+      description:
+        t.businessPage.teambuildingPage.steps.description2,
+      icon: <HiOutlinePresentationChartBar className="w-8 h-8 text-motorblue" />,
+    },
+    {
+      title: t.businessPage.teambuildingPage.steps.title3,
+      description:
+        t.businessPage.teambuildingPage.steps.description3,
+      icon: <FaFlagCheckered className="w-8 h-8 text-motorblue" />,
+    },
+  ];
+
   return (
     <div>
       <div className="max-w-screen-xl mx-auto px-5 pt-32 pb-10 md:flex md:items-center md:space-x-5 lg:justify-between xl:px-0">
         <div className="space-y-6 md:w-1/2">
           <div className="space-y-3">
             <h1 className="text-xl font-bold">
-              <span className="text-motorblue">Business coaching & Teambuildings</span>
+              <span className="text-motorblue">{t.businessPage.teambuildingPage.title}</span>
             </h1>
             <p>
-              Wil jij je team terug verbinden en tijden vol met digitale meetings? Wil je jouw
-              mensen alsook je bedrijf een positieve boost geven en perspectief bieden?
+              {t.businessPage.teambuildingPage.introduction.paragraph1}
             </p>
             <p>
-              Creëer dan samen met ons een beleving in een veilige omgeving waar{" "}
-              <span className="font-bold">'connectiviteit', 'innovatie' en 'fun'</span> centraal
-              staan! Geef je team de tools om nieuwe manieren van samenwerken, processen, diensten,
-              producten uit te werken in een motiverende omgeving. Een{" "}
+              {t.businessPage.teambuildingPage.introduction.paragraph2.senctence1}{" "}
+              <span className="font-bold">{t.businessPage.teambuildingPage.introduction.paragraph2.senctence2}</span> 
+              {t.businessPage.teambuildingPage.introduction.paragraph2.senctence3}{" "}
               <span className="font-bold">
-                veranderlijke omgeving is vaak de motor van innovatie,
+                {t.businessPage.teambuildingPage.introduction.paragraph2.senctence4}
               </span>{" "}
-              deze laatste durven we zowel letterlijk als figuurlijk te nemen.
+              {t.businessPage.teambuildingPage.introduction.paragraph2.senctence5}
             </p>
             <p>
-              Ontketen daarom samen met BE motorsport het potentieel van jouw bedrijf.
+              {t.businessPage.teambuildingPage.introduction.paragraph3.senctence1}
               <br />
-              <span className="font-bold">Wij faciliteren, jullie activeren!</span>
+              <span className="font-bold">{t.businessPage.teambuildingPage.introduction.paragraph3.senctence2}</span>
             </p>
           </div>
         </div>
@@ -60,18 +66,16 @@ export default function teambuilding() {
       </div>
       <div className="max-w-screen-xl mx-auto px-5 py-20 md:flex md:items-center md:space-x-5 lg:justify-between xl:px-0">
         <div className="space-y-3">
-          <h1 className="text-2xl md:text-4xl font-bold">Voor wie is deze beleving?</h1>
+          <h1 className="text-2xl md:text-4xl font-bold">{t.businessPage.teambuildingPage.introduction.title2}</h1>
           <p>
-            De "BEM" Business Experience richt zich vooral tot zelfstandige ondernemers,
-            bestuurders, bedrijfsleiders en managers die samen met hun medewerkers doelmatig en
-            vanuit een praktische aanpak willen groeien.
+            {t.businessPage.teambuildingPage.introduction.paragraph4}
           </p>
         </div>
       </div>
       <div className="w-full bg-gray-50">
         <div className="max-w-screen-xl mx-auto px-5 xl:px-0 py-20">
           <h1 className="text-xl font-bold text-center sm:text-2xl">
-            BE motorsport heeft een sterk netwerk van coaches om volgende thema's te behandelen:
+            {t.businessPage.teambuildingPage.theme.title}
           </h1>
           <div className="mt-8 space-y-3 sm:flex sm:flex-col sm:items-center">
             <div className="flex space-x-3">
@@ -87,7 +91,7 @@ export default function teambuilding() {
                   clipRule="evenodd"
                 />
               </svg>
-              <p className="text-sm sm:text-base">Timemanagement en omgaan met stress</p>
+              <p className="text-sm sm:text-base">{t.businessPage.teambuildingPage.theme.point1}</p>
             </div>
             <div className="flex space-x-3">
               <svg
@@ -102,7 +106,7 @@ export default function teambuilding() {
                   clipRule="evenodd"
                 />
               </svg>
-              <p className="text-sm sm:text-base">Work-life balance</p>
+              <p className="text-sm sm:text-base">{t.businessPage.teambuildingPage.theme.point2}</p>
             </div>
             <div className="flex space-x-3">
               <svg
@@ -117,7 +121,7 @@ export default function teambuilding() {
                   clipRule="evenodd"
                 />
               </svg>
-              <p className="text-sm sm:text-base">Communicatie</p>
+              <p className="text-sm sm:text-base">{t.businessPage.teambuildingPage.theme.point3}</p>
             </div>
             <div className="flex space-x-3">
               <svg
@@ -132,7 +136,7 @@ export default function teambuilding() {
                   clipRule="evenodd"
                 />
               </svg>
-              <p className="text-sm sm:text-base">Productiviteit en vitaliteit</p>
+              <p className="text-sm sm:text-base">{t.businessPage.teambuildingPage.theme.point4}</p>
             </div>
             <div className="flex space-x-3">
               <svg
@@ -147,14 +151,14 @@ export default function teambuilding() {
                   clipRule="evenodd"
                 />
               </svg>
-              <p className="text-sm sm:text-base">Management en teamwork</p>
+              <p className="text-sm sm:text-base">{t.businessPage.teambuildingPage.theme.point5}</p>
             </div>
           </div>
         </div>
       </div>
       <div className="max-w-screen-xl mx-auto px-5 py-20 xl:px-0">
         <h1 className="text-xl font-bold">
-          Hoe gaat dit <span className="text-motorblue">concreet </span> in zijn werk?
+        {parse(t.businessPage.flirtingPage.block4.title)}
         </h1>
         <div className="grid grid-cols-1 gap-10 pt-10 md:grid-cols-3">
           {steps.map((item, index) => (
@@ -171,17 +175,16 @@ export default function teambuilding() {
       <div className="bg-motorblue py-20">
         <div className="max-w-screen-xl mx-auto px-5 xl:px-0 text-center text-white text-sm md:text-lg space-y-5">
           <p>
-            Heeft jouw bedrijf gewoon nood aan een leuke{" "}
-            <span className="font-bold">teambuilding zonder extra coaching?</span> Dat kan ook, wij
-            voorzien een dag vol met fun!
+           {t.businessPage.teambuildingPage.block4.paragraph1.senctence1}{" "}
+            {parse(t.businessPage.teambuildingPage.block4.paragraph1.senctence2)}
           </p>
           <p>
             <span className="font-bold">
-              Ben jij zelf een life - business coach of organisatie{" "}
+              {t.businessPage.teambuildingPage.block4.paragraph2.senctence1}{" "}
             </span>{" "}
-            die op zoek is naar een inspirerende omgeving? Neem dan zeker contact met ons op!
+            {t.businessPage.teambuildingPage.block4.paragraph2.senctence2}
           </p>
-          <p className="font-bold text-base">Vraag het ons nu. Een eerste gesprek is kosteloos!</p>
+          <p className="font-bold text-base">{t.businessPage.teambuildingPage.block4.paragraph3}</p>
         </div>
       </div>
     </div>

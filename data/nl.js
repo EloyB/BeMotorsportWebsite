@@ -241,6 +241,52 @@ export default {
       paragraph1: "Plan een kennismakend gesprek in waar we samen met jou gaan kijken wat jouw bedrijf nodig heeft. Plan nu een vrijblijvend gesprek in van 30-minuten en we tonen je graag hoe je jouw business tot de next level brengt!",
       paragraph2: "Vraag het ons nu. Een eerste gesprek is kosteloos!"
     },
+    teambuildingPage: {
+      title: "Business coaching & Teambuildings",
+      introduction: {
+        paragraph1 :"Wil jij je team terug verbinden en tijden vol met digitale meetings? Wil je jouw mensen alsook je bedrijf een positieve boost geven en perspectief bieden?",
+        paragraph2: {
+          senctence1: "Creëer dan samen met ons een beleving in een veilige omgeving waar" ,
+          senctence2: "'connectiviteit', 'innovatie' en 'fun'",
+          senctence3: "centraal staan! Geef je team de tools om nieuwe manieren van samenwerken, processen, diensten, producten uit te werken in een motiverende omgeving. Een",
+          senctence4: "veranderlijke omgeving is vaak de motor van innovatie,",
+          senctence5: "deze laatste durven we zowel letterlijk als figuurlijk te nemen.",
+        },
+        paragraph3: {
+          senctence1: "Ontketen daarom samen met BE motorsport het potentieel van jouw bedrijf.",
+          senctence2: "Wij faciliteren, jullie activeren!",
+        },
+        title2: "Voor wie is deze beleving?",
+        paragraph4: "De 'BEM' Business Experience richt zich vooral tot zelfstandige ondernemers, bestuurders, bedrijfsleiders en managers die samen met hun medewerkers doelmatig en vanuit een praktische aanpak willen groeien.",
+      },
+      theme: {
+        title: "BE motorsport heeft een sterk netwerk van coaches om volgende thema's te behandelen:",
+        point1: "Timemanagement en omgaan met stress",
+        point2: "Work-life balance",
+        point3: "Communicatie",
+        point4: "Productiviteit en vitaliteit",
+        point5: "Management en teamwork",
+      },
+      steps: {
+        title1: "Meet & greet",
+        description1: "Graag komen we naar je toe om samen jullie behoeften en doelstellingen te bespreken. Na een vrijblijvend intake gesprek, maken wij een business experience op maat. Een uniek concept volledig gepersonaliseerd",
+        title2: "Business Experience op maat",
+        description2: "Alles wordt tot in de puntjes voorzien om je experience optimaal te beleven en te laten renderen. Je wordt meteen ondergedompeld in een inspirerende sessie met top notch coaches in een motiverende omgeving",
+        title3: "Teambuilding",
+        description3: "Dit exclusieve concept gaat door op een circuit naar keuze waar we uiteraard voor de nodige adrenaline zorgen",
+      },
+      block4: {
+        paragraph1:{
+          senctence1: "Heeft jouw bedrijf gewoon nood aan een leuke",
+          senctence2: "<span className='font-bold'>teambuilding zonder extra coaching?</span> Dat kan ook, wij voorzien een dag vol met fun!"
+        },
+        paragraph2:{
+          senctence1: "Ben jij zelf een life - business coach of organisatie",
+          senctence2: "die op zoek is naar een inspirerende omgeving? Neem dan zeker contact met ons op!"
+        },
+        paragraph3: "Vraag het ons nu. Een eerste gesprek is kosteloos!",
+      }
+    },
   },
   sharePage: {
     title: "Share a ride",
