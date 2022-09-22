@@ -81,7 +81,7 @@ export default {
       title: "Wählen Sie Ihre Piloten",
       placeholder: "Fügen Sie zuerst Piloten über das Formular hinzu",
       addButtonText: "hinzufügen",
-      age: "das Alter",
+      age: "Das Alter",
       hasExperience: "Hat Erfahrung",
       hasNoExperience: "Hat keine Erfahrung",
       instructorNeeded: "Instruktor benötigt",

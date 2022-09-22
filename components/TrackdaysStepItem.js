@@ -30,7 +30,7 @@ export default function TrackdaysStepItem({ trackday }) {
       show: trackday.cars.porsche,
     },
     {
-      name: "Peugeot 206 GTi",
+      name: "Porsche Boxster 981",
       value: "Peugeot",
       image: "/peugeot-links.jpg",
       show: trackday.cars.peugeot,
