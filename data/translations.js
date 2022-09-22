@@ -1,9 +1,23 @@
 import enUS from "./en-US";
 import nl from "./nl";
 import fr from "./fr";
+import de from "./de"
 
 export const activeLocale = (locale) => {
-  return locale === "en-US" ? enUS : locale === "nl" ? nl : fr;
+  switch (locale){
+    case "en-US":
+      return enUS
+      break;
+    case "nl":
+      return nl
+      break;
+    case "fr": 
+      return fr
+      break;
+    case "de": 
+      return de
+      break;
+  }
 };
 
 export const toggleLocale = (locale, router) => {
