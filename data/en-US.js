@@ -11,7 +11,7 @@ export default {
     planSection: {
       renting: {
         title: "Renting",
-        hover: "Rent our Porsche Cayman GT4 Clubsport or the Peugeot 206 GTi",
+        hover: "Rent our Porsche Cayman GT4 Clubsport or the Porsche Boxster 2,5l",
       },
       shareARide: {
         title: "Share a ride",
@@ -47,12 +47,12 @@ export default {
       safety: "Original Porsche welded cage with racing kit and completely stripped interior",
     },
     peugeotData: {
-      typeOfDrive: "Front-wheel drive",
-      power: "100 kW (139 hp)",
+      typeOfDrive: "Rear wheel drive",
+      power: "150 kW (204 hp)",
       transmission: "5 gear manual gear box",
-      topspeed: "210 km/h",
-      engine: "1997 cc",
-      tank: "50 Liter",
+      topspeed: "240 km/h",
+      engine: "2480 cc",
+      tank: "57 Liter",
       safety: "Welded cage with racing kit and fully stripped interior",
     },
     title: "Meet the fleet",
@@ -112,11 +112,11 @@ export default {
   contactPage: {
     title: "Our team",
     description:
-      "BE\xa0motorsport is a family company with a great interest in motorsport. Racing is the metaphor that made us rethink this new project. Doing business has been a great part of our lives and we will therefore take the opportunity to grow this passion into your business experience.    BE\xa0motorsport is professionally engaged in customizing your event to your personal needs so that you and especially your participants are extremely satisfied with our service.    What do you have in mind? We will make it happen!",
+      "BE\xa0motorsport is a family company with a great interest in motorsport. Racing is the metaphor that made us rethink this new project. Doing business has been a great part of our lives and we will therefore take the opportunity to grow this passion into your business experience. BE\xa0motorsport is professionally engaged in customizing your event to your personal needs so that you and especially your participants are extremely satisfied with our service. What do you have in mind? We will make it happen!",
     didierDescription:
       "Do not hesitate to contact me if you have any questions about our packages. I am happy to help you!",
     stephanDescription:
-      "Do you have  any technical questions or would you like to brainstorm about how we can boost your company to the next level? Do not hesitate to contact me! Personal contact remains important in business, so: let's meet!",
+      "Do you have any technical questions or would you like to brainstorm about how we can boost your company to the next level? Do not hesitate to contact me! Personal contact remains important in business, so: let's meet!",
     julieDescription:
       "Would you like to organize a creative event for your team? Or would you like to organize a team building with inspiring workshops, but you are not sure where to start? Don't hesitate and give me a call! I am happy to help you!",
     fullName: "Full name",
@@ -126,7 +126,7 @@ export default {
   rentingPage: {
     title: "Renting",
     description:
-      "BE\xa0motorsport rents out the Porsche Cayman GT4 Clubsport & the Peugeot 206 GTi to enjoy the most beautiful and challenging circuits in Belgium and abroad. This race car is ready to go out with you for half a day, a full day or several days. Book now and we'll take care of the rest! Ready? Set? Go!",
+      "BE\xa0motorsport rents out the Porsche Cayman GT4 Clubsport & the Porsche Boxster to enjoy the most beautiful and challenging circuits in Belgium and abroad. This race car is ready to go out with you for half a day, a full day or several days. Book now and we'll take care of the rest! Ready? Set? Go!",
     receive: "Then you choose this package:",
     callToAction: "Plan a trackday",
     extra: "What else is included?",
@@ -141,11 +141,11 @@ export default {
       bullet5: "Technical support by a professional Porsche technician",
     },
     section2: {
-      title: '"I am an experienced driver and want to rent a racing car"',
-      bullet1: "Peugeot 206 GTi",
+      title: '"I am a(n) (non)-experienced driver and want to rent a racing car"',
+      bullet1: "Porsche Boxster 2,5l",
       bullet2: "Including 1 full fuel tank",
-      bullet3: "Semi slicks tires",
-      bullet4: "Technical Support",
+      bullet3: "3 sets of rims (slicks and / or rain tires)",
+      bullet4: "Technical Support by a professional Porsche technician",
       bullet5: "Open pit lane session (according to organisation)",
       bullet6: "Instructor*",
     },
@@ -161,77 +161,77 @@ export default {
   businessPage: {
     selectionPage: {
       flirtingCard: {
-        title: "Is jouw bedrijf op zoek naar:",
+        title: "Is your company looking for:",
         pointers: [
-          "Vernieuwde verkoopstrategiëen?",
-          "Snellere ROI?",
-          "Unieke beleving voor jou en je prospect?",
+          "New sales strategies?",
+          "Faster ROI?",
+          "Unique experience for you and your prospect?",
         ],
       },
       teamBuildingCard: {
-        title: "Is jouw bedrijf op zoek naar:",
+        title: "Is your company looking for:",
         pointers: [
-          "Een uitdagende teambuidling op maat?",
-          "Business coaching gecombineerd met fun?",
-          "Een leuke incentive?",
+          "A challenging customized team building?",
+          "Business coaching combined with fun?",
+          "A nice incentive?",
         ],
       },
     },
     flirtingPage: {
       block1: {
-        title1: "Business flirting: Hoe maak ik van mijn prospect een nieuwe klant?",
+        title1: "Business flirting: how do I turn my prospect into a new customer?",
         paragraph1:
-          "Onze samenleving evolueert. Het gedrag van consumenten verandert constant en wordt steeds veeleisender. Prospectie is de basis van de verkoopsstrategie en heeft nooit aan belang verloren, integendeel. Verder is er een nieuwe verhouding ontstaan tussen off- en online prospectie. Bedrijven moeten de behoeften van de doelgroep correct kunnen inschatten en aangepaste oplossingen kunnen aanbieden.",
-        title2: "Hoe ga je van een lead naar klant in no time vanaf het eerste contact?",
+          "Our society is evolving. Consumer behavior is constantly changing and becoming more and more demanding. Prospecting is the basis of the sales strategy and has never lost importance, on the contraty. Furthermore, a new relationship has emerged between off-and online prospecting. Companies must be able to correctly assess the needs of the target group and offer customized solutions.",
+        title2: "How do you go from a lead to a customer in no time from the first contact?",
         paragraph2:
-          "Door een toekomstige klant op een originele manier te benaderen en gebruik te maken van een unieke gepersonaliseerde oplossing!",
+          "By approaching a future customer in an original way and using a unique personalized solution!",
       },
       block2: {
-        title: "Als je op deze pagina beland, is je bedrijf opzoek naar:",
+        title: "If you landed on this page, your company is looking for:",
         pointers: [
-          "Vernieuwde verkoopstrategiëen en prospectie voor huidige en/of nieuwe klanten",
-          "Snellere ROI bij toekomstige klanten",
-          "Unieke beleving voor jou en je prospect",
-          "Gepersonaliseerde concepten en oplossingen op maat",
+          "Renewed sales strategies and prospecting for current and/or new customers",
+          "Faster ROI with future customers",
+          "Unique experience for you and your prospect",
+          "Personalized concepts and tailor-made solutions",
         ],
       },
       block3: {
         title: "BEM team",
         paragraph:
-          "Ontmoet een divers team dat altijd de grenzen opzoekt en die vertrouwd is met deze technieken/strategieën. We hebben meer dan 30 jaar aan prospectie-ervaring op de nationale en internationale B2B markten. Door het grote aanbod aan bedrijven die uitblinken in online marketing, maken wij daarentegen het verschil in de OFFLINE, oldschool, persoonlijke prospectie. Daarom zijn we ervan overtuigd dat we voor jouw bedrijf het verschil kunnen maken.",
+          "Meet a diverse team that always pushes the boundaries and is familiar with these techniques/strategies. We have more than 30 years of prospecting experience in the national and international B2B markets. Due to the wide range of companies that excel in online marketing, we make the difference in OFFLINE, old school, personal prospecting. That is why we are convinced that we can make a difference for your company.",
         offer: {
-          title: "Als je met ons werkt, krijg je:",
+          title: "When you work with us, you get:",
           pointers: [
-            "Ongeëvenaarde klantenservice",
-            "Personalisatie, personalisatie en nog meer personalisatie",
-            "Een uniek onvergetelijk concept",
+            "Extremely high-level customer service",
+            "Personalization, personalization and more personalization",
+            "A unique unforgettable concept",
           ],
         },
       },
       block4: {
-        title: "Hoe gaat dit <span class='text-motorblue'>concreet </span> in zijn werk?",
+        title: "How does this <span class='text-motorblue'>actually</span> work?",
         steps: [
           {
             title: "Meet & greet",
             description:
-              "Graag komen we naar je toe om samen jullie behoeften en doelstellingen te bespreken",
+              "We are happy to come to you to discuss your needs and objectives together",
             icon: <FaRegHandshake className="w-8 h-8 text-motorblue" />,
           },
           {
             title: "Business flirting plan",
             description:
-              "Na een vrijblijvend intake gesprek, maken wij een 'Business Flirting Plan' dat we uitgebreid met jullie bespreken",
+              "After a non-binding intake conversation, we will make a 'Business Flirting Plan' that we discuss extensively with you",
             icon: <HiOutlinePresentationChartBar className="w-8 h-8 text-motorblue" />,
           },
           {
-            title: "JOUW prospect wordt ONZE prospect",
-            description: "Wij gaan voor jullie aan de slag volgens onze overeenkomst",
+            title: "YOUR prospect becomes OUR prospect",
+            description: "We will work for you according to our agreement",
             icon: <FiPhoneCall className="w-8 h-8 text-motorblue" />,
           },
           {
-            title: "ONZE prospect wordt JOUW klant",
+            title: "OUR prospect becomes YOUR customer",
             description:
-              "Wij organiseren een onvergetelijke dag en zorgen ervoor dat onze prospect de jouwe wordt",
+              "We organize an unforgettable day and make sure that our prospect becomes yours",
             icon: <FaFlagCheckered className="w-8 h-8 text-motorblue" />,
           },
         ],
@@ -242,47 +242,47 @@ export default {
     teambuildingPage: {
       title: "Business coaching & Teambuildings",
       introduction: {
-        paragraph1 :"Wil jij je team terug verbinden en tijden vol met digitale meetings? Wil je jouw mensen alsook je bedrijf een positieve boost geven en perspectief bieden?",
+        paragraph1 :"Do you want to reconnect your team and times full of digital meetings? Do you want to give your people as well as your company a positive boost and offer perspective?",
         paragraph2: {
-          senctence1: "Creëer dan samen met ons een beleving in een veilige omgeving waar" ,
-          senctence2: "'connectiviteit', 'innovatie' en 'fun'",
-          senctence3: "centraal staan! Geef je team de tools om nieuwe manieren van samenwerken, processen, diensten, producten uit te werken in een motiverende omgeving. Een",
-          senctence4: "veranderlijke omgeving is vaak de motor van innovatie,",
-          senctence5: "deze laatste durven we zowel letterlijk als figuurlijk te nemen.",
+          senctence1: "Then create an experience with us in a safe environment where" ,
+          senctence2: "'connectivity', 'innovation' and 'fun'",
+          senctence3: "being central! Give your team the tools to develop new ways of working together, processes, services, products in a motivating environment. A",
+          senctence4: "changing environment is often the engine of innovation,",
+          senctence5: "we dare to take the latter both literally and figuratively.",
         },
         paragraph3: {
-          senctence1: "Ontketen daarom samen met BE motorsport het potentieel van jouw bedrijf.",
-          senctence2: "Wij faciliteren, jullie activeren!",
+          senctence1: "Therefore, together with BE motorsport, unleash the potential of your company.",
+          senctence2: "We facilitate, you activate!",
         },
-        title2: "Voor wie is deze beleving?",
-        paragraph4: "De 'BEM' Business Experience richt zich vooral tot zelfstandige ondernemers, bestuurders, bedrijfsleiders en managers die samen met hun medewerkers doelmatig en vanuit een praktische aanpak willen groeien.",
+        title2: "Who is this experience for?",
+        paragraph4: "The 'BEM' Business Experience is mainly aimed at independent entrepreneurs, directors, business leaders and managers who, together with their employees, want to grow efficiently and based on a practical approach.",
       },
       theme: {
-        title: "BE motorsport heeft een sterk netwerk van coaches om volgende thema's te behandelen:",
-        point1: "Timemanagement en omgaan met stress",
-        point2: "Work-life balance",
-        point3: "Communicatie",
-        point4: "Productiviteit en vitaliteit",
-        point5: "Management en teamwork",
+        title: "BE motorsport has a strong network of coaches to cover the following topics:",
+        point1: "Time management and dealing with stress",
+        point2: "Work life balance",
+        point3: "Communication",
+        point4: "Productivity and vitality",
+        point5: "Management and teamwork",
       },
       steps: {
         title1: "Meet & greet",
-        description1: "Graag komen we naar je toe om samen jullie behoeften en doelstellingen te bespreken. Na een vrijblijvend intake gesprek, maken wij een business experience op maat. Een uniek concept volledig gepersonaliseerd",
-        title2: "Business Experience op maat",
-        description2: "Alles wordt tot in de puntjes voorzien om je experience optimaal te beleven en te laten renderen. Je wordt meteen ondergedompeld in een inspirerende sessie met top notch coaches in een motiverende omgeving",
+        description1: "We would be happy to meet with you to discuss your needs and goals. After a non-binding intake conversation, we create a tailor-made business experience. A unique concept fully personalized",
+        title2: "Tailor-made business experience",
+        description2: "Everything is provided down to the last detail to optimally experience your experience and make it profitable. You will immediately be immersed in an inspiring session with top notch coaches in a motivational environment",
         title3: "Teambuilding",
-        description3: "Dit exclusieve concept gaat door op een circuit naar keuze waar we uiteraard voor de nodige adrenaline zorgen",
+        description3: "This exclusive concept will continue on a track of your choice where we will of course provide the necessary adrenaline",
       },
       block4: {
         paragraph1:{
-          senctence1: "Heeft jouw bedrijf gewoon nood aan een leuke",
-          senctence2: "<span className='font-bold'>teambuilding zonder extra coaching?</span> Dat kan ook, wij voorzien een dag vol met fun!"
+          senctence1: "Does your company just need a nice ",
+          senctence2: "<span className='font-bold'>team building without extra coaching?</span> That's also possible, we provide a day full of fun!"
         },
         paragraph2:{
-          senctence1: "Ben jij zelf een life - business coach of organisatie",
-          senctence2: "die op zoek is naar een inspirerende omgeving? Neem dan zeker contact met ons op!"
+          senctence1: "Are you a life - business coach or organization yourself?",
+          senctence2: "who is looking for an inspiring environment? Then be sure to contact us!"
         },
-        paragraph3: "Vraag het ons nu. Een eerste gesprek is kosteloos!",
+        paragraph3: "Ask us now. A first conversation is free of charge!",
       }
     },
   },
@@ -298,7 +298,7 @@ export default {
         "Fill in the blanks yourself!",
       ],
       paragraph:
-        "Via ons Share a Ride concept, zijn bovenstaande punten verleden tijd! We organiseren heel de dag voor je en dat met een zeer aantrekkelijk budget tot leven komt.",
+        "With our Share a Ride concept, the above points are a thing of the past! We organize the whole day for you and that comes to life with a very attractive budget.",
     },
     block2: {
       title: "Discover our 'Share your ride' formula for a very attractive budget!",
