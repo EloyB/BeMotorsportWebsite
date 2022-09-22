@@ -11,7 +11,7 @@ export default {
     planSection: {
       renting: {
         title: "Renting",
-        hover: "Huur onze Porsche Cayman GT4 Clubsport of de Porsche Boxster 2,5",
+        hover: "Huur onze Porsche Cayman GT4 Clubsport of de Porsche Boxster 2,5l",
       },
       shareARide: {
         title: "Share a ride",
