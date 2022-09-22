@@ -11,7 +11,7 @@ export default {
     planSection: {
       renting: {
         title: "Renting",
-        hover: "Huur onze Porsche Cayman GT4 Clubsport of de Peugeot 206 GTi",
+        hover: "Huur onze Porsche Cayman GT4 Clubsport of de Porsche Boxster 2,5",
       },
       shareARide: {
         title: "Share a ride",
@@ -47,12 +47,12 @@ export default {
       safety: "Originele Porsche rolkooi met racing kit en volledig gestript interieur",
     },
     peugeotData: {
-      typeOfDrive: "Voorwielaandrijving",
-      power: "100 kW (139 pk)",
+      typeOfDrive: "Achterwielaandrijving",
+      power: "150 kW (204 pk)",
       transmission: "5 versnellingen, handgeschakeld",
-      topspeed: "210 km/h",
-      engine: "1997 cc",
-      tank: "50 liter",
+      topspeed: "240 km/h",
+      engine: "2480 cc",
+      tank: "57 liter",
       safety: "Rolkooi met racing kit en volledig gestript interieur",
     },
     title: "Meet the fleet",
@@ -127,7 +127,7 @@ export default {
   rentingPage: {
     title: "Renting",
     description:
-      "BE\xa0motorsport verhuurt de Porsche Cayman GT4 Clubsport & de Peugeot 206 GTi om te vertoeven op de mooiste en meest uitdagende circuits in binnen -en buitenland. Onze auto’s staan klaar om met jou op stap te gaan voor een halve dag, hele dag of meerdere dagen. Boek nu en de rest verzorgen wij! Ready? Set? Go!",
+      "BE\xa0motorsport verhuurt de Porsche Cayman GT4 Clubsport & de Porsche Boxster om te vertoeven op de mooiste en meest uitdagende circuits in binnen -en buitenland. Onze auto’s staan klaar om met jou op stap te gaan voor een halve dag, hele dag of meerdere dagen. Boek nu en de rest verzorgen wij! Ready? Set? Go!",
     receive: "Dan ontvang je dit pakket:",
     callToAction: "Plan een trackday",
     extra: "Wat is er verder inbegrepen in dit pakket:",
@@ -142,11 +142,11 @@ export default {
       bullet5: "Professionele ondersteuning door Porsche technieker",
     },
     section2: {
-      title: '"Ik ben een (on)ervaren piloot en wil de Peugeot 206 GTi huren"',
-      bullet1: "Peugeot 206 GTi",
+      title: '"Ik ben een (on)ervaren piloot en wil de Porsche Boxster huren"',
+      bullet1: "Porsche Boxster 986",
       bullet2: "Inclusief 1 volle bezinetank",
-      bullet3: "Semi slicks banden",
-      bullet4: "Technische ondersteuning",
+      bullet3: "3 Sets velgen (slicks en/of regenbanden)",
+      bullet4: "Technische ondersteuning door Porsche  technieker",
       bullet5: "Open pitlane sessie (volgens organisatie)",
       bullet6: "Instructeur*",
     },
