@@ -11,7 +11,7 @@ export default {
     planSection: {
       renting: {
         title: "Location",
-        hover: "Louez notre Porsche Cayman GT4 Clubsport ou notre Peugeot 206 GTi",
+        hover: "Louez notre Porsche Cayman GT4 Clubsport ou notre Porsche Boxster 2,5l",
       },
       shareARide: {
         title: "Share a ride",
@@ -46,13 +46,13 @@ export default {
       safety: "Arceau-cage original Porsche avec race kit et intérieur dépouillé",
     },
     peugeotData: {
-      typeOfDrive: "Traction avant",
-      power: "100 kW (139 PS)",
+      typeOfDrive: "Traction arrière",
+      power: "150 kW (204 PS)",
       transmission: "Boîte manuelle à 5 vitesses",
       topspeed: "240 km/h",
       engine: "2480 cc",
       tank: "57 Liter",
-      safety: "Arceau-cage et intérieur dépouillé",
+      safety: "Arceau-cage avec kit racing et intérieur dépouillé",
     },
     title: "Rencontrez notre flotte",
   },
@@ -127,7 +127,7 @@ export default {
   rentingPage: {
     title: "Location",
     description:
-      "BE\xa0motorsport loue la Porsche Cayman GT4 Clubsport et la Peugeot 206 GTi pour profiter des circuits les plus beaux et les plus défiants de Belgique et à l'étranger. Cette voiture de course est prête à sortir avec vous pour une demi-journée, une journée complète ou plusieurs jours. Réservez maintenant et nous nous occupons du reste! Ready? Set? Go!",
+      "BE\xa0motorsport loue la Porsche Cayman GT4 Clubsport et la Porsche Boxster 2,5l pour profiter des circuits les plus beaux et les plus défiants de Belgique et à l'étranger. Cette voiture de course est prête à sortir avec vous pour une demi-journée, une journée complète ou plusieurs jours. Réservez maintenant et nous nous occupons du reste! Ready? Set? Go!",
     receive: "Ensuite, vous choisissez une des options:",
     callToAction: "Planifier une nouvelle journée de piste",
     extra: "Quoi d'autre est inclus?",
@@ -142,11 +142,11 @@ export default {
       bullet5: "Assistance technique par un technicien Porsche professionnel",
     },
     section2: {
-      title: '"Je suis un pilote expérimenté et je souhaite louer une voiture de course"',
-      bullet1: "Peugeot 206 GTi",
+      title: '"Je suis un pilote (non) expérimenté et je souhaite louer une voiture de course"',
+      bullet1: "Porsche Boxster 986 ",
       bullet2: "Incl. 1 réservoir d’essence rempli",
-      bullet3: "Pneus semi slicks",
-      bullet4: "Assistance technique",
+      bullet3: "3 sets de jantes (slicks et / ou pneus pluie)",
+      bullet4: "Assistance technique par un technicien Porsche professionnel",
       bullet5: "Open pit lane session (selon l’organisation)",
       bullet6: "Instructeur*",
     },
@@ -243,47 +243,47 @@ export default {
     teambuildingPage: {
       title: "Business coaching & Teambuildings",
       introduction: {
-        paragraph1 :"Wil jij je team terug verbinden en tijden vol met digitale meetings? Wil je jouw mensen alsook je bedrijf een positieve boost geven en perspectief bieden?",
+        paragraph1 :"Vous souhaitez reconnecter votre équipe en ces temps pleins de réunions digitales ? Voulez-vous donner à vos employés ainsi qu'à votre entreprise un coup de pouce positif et offrir une perspective ?",
         paragraph2: {
-          senctence1: "Creëer dan samen met ons een beleving in een veilige omgeving waar" ,
-          senctence2: "'connectiviteit', 'innovatie' en 'fun'",
-          senctence3: "centraal staan! Geef je team de tools om nieuwe manieren van samenwerken, processen, diensten, producten uit te werken in een motiverende omgeving. Een",
-          senctence4: "veranderlijke omgeving is vaak de motor van innovatie,",
-          senctence5: "deze laatste durven we zowel letterlijk als figuurlijk te nemen.",
+          senctence1: "Alors créez une expérience avec nous dans un environnement sûr où" ,
+          senctence2: "'connectivité', 'innovation' et 'fun'",
+          senctence3: "être central ! Donnez à votre équipe les outils pour développer de nouvelles façons de travailler ensemble, des processus, des services, des produits dans un environnement motivant. Une",
+          senctence4: "l'évolution de l'environnement est souvent le moteur de l'innovation,",
+          senctence5: "ous osons prendre ce dernier au propre comme au figuré.",
         },
         paragraph3: {
-          senctence1: "Ontketen daarom samen met BE motorsport het potentieel van jouw bedrijf.",
-          senctence2: "Wij faciliteren, jullie activeren!",
+          senctence1: "Par conséquent, avec BE motorsport, libérez le potentiel de votre entreprise.",
+          senctence2: "Nous facilitons, vous activez !",
         },
-        title2: "Voor wie is deze beleving?",
-        paragraph4: "De 'BEM' Business Experience richt zich vooral tot zelfstandige ondernemers, bestuurders, bedrijfsleiders en managers die samen met hun medewerkers doelmatig en vanuit een praktische aanpak willen groeien.",
+        title2: "A qui s'adresse cette expérience ?",
+        paragraph4: "L'expérience d'entreprise « BEM » s'adresse principalement aux entrepreneurs indépendants, administrateurs, chefs d'entreprise et managers qui, avec leurs employés, souhaitent se développer efficacement et sur la base d'une approche pratique.",
       },
       theme: {
-        title: "BE motorsport heeft een sterk netwerk van coaches om volgende thema's te behandelen:",
-        point1: "Timemanagement en omgaan met stress",
-        point2: "Work-life balance",
-        point3: "Communicatie",
-        point4: "Productiviteit en vitaliteit",
-        point5: "Management en teamwork",
+        title: "BE motorsport dispose d'un solide réseau de coachs pour couvrir les sujets suivants:",
+        point1: "Gestion du temps et gestion du stress",
+        point2: "L'équilibre travail-vie",
+        point3: "Communication",
+        point4: "Productivité et vitalité",
+        point5: "Gestion et travail d'équipe",
       },
       steps: {
         title1: "Meet & greet",
-        description1: "Graag komen we naar je toe om samen jullie behoeften en doelstellingen te bespreken. Na een vrijblijvend intake gesprek, maken wij een business experience op maat. Een uniek concept volledig gepersonaliseerd",
-        title2: "Business Experience op maat",
-        description2: "Alles wordt tot in de puntjes voorzien om je experience optimaal te beleven en te laten renderen. Je wordt meteen ondergedompeld in een inspirerende sessie met top notch coaches in een motiverende omgeving",
+        description1: "Il nous fera plaisir de vous rencontrer pour discuter de vos besoins et de vos objectifs. Après une conversation d'admission sans engagement, nous créons une expérience d'affaires sur mesure. Un concept unique entièrement personnalisé",
+        title2: "Une expérience commerciale sur mesure",
+        description2: "Tout est prévu dans les moindres détails pour vivre au mieux votre expérience et la rentabiliser. Vous serez immédiatement immergé dans une session inspirante avec des coachs de haut niveau dans un environnement motivant",
         title3: "Teambuilding",
-        description3: "Dit exclusieve concept gaat door op een circuit naar keuze waar we uiteraard voor de nodige adrenaline zorgen",
+        description3: "Ce concept exclusif se poursuivra sur une piste de votre choix où nous fournirons bien sûr l'adrénaline nécessaire",
       },
       block4: {
         paragraph1:{
-          senctence1: "Heeft jouw bedrijf gewoon nood aan een leuke",
-          senctence2: "<span className='font-bold'>teambuilding zonder extra coaching?</span> Dat kan ook, wij voorzien een dag vol met fun!"
+          senctence1: "Votre entreprise a-t-elle juste besoin d'un bon",
+          senctence2: "<span className='font-bold'>teambuilding sans coaching supplémentaire?</span> C'est aussi possible, nous vous proposons une journée pleine de plaisir!"
         },
         paragraph2:{
-          senctence1: "Ben jij zelf een life - business coach of organisatie",
-          senctence2: "die op zoek is naar een inspirerende omgeving? Neem dan zeker contact met ons op!"
+          senctence1: "Êtes-vous vous-même un coach spécialisé ou une organisation?",
+          senctence2: "qui recherche un environnement inspirant? Alors n'hésitez pas à nous contacter !"
         },
-        paragraph3: "Vraag het ons nu. Een eerste gesprek is kosteloos!",
+        paragraph3: "Demandez-nous maintenant. Une première conversation est gratuite!",
       }
     },
   },
