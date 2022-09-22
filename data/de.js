@@ -43,7 +43,7 @@ export default {
       steering: "elektromechanische Servolenkung",
       engine: "3.800 cc",
       tank: "60 l-Sicherheitstank",
-      safety: "Originele Porsche rolkooi met racing kit en volledig gestript interieur",
+      safety: "Original Porsche eingeschweissten Sicherheitskäfig und völlig abgespeckter Innenraum.",
     },
     peugeotData: {
       typeOfDrive: "Hinterradantrieb",

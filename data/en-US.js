@@ -131,7 +131,7 @@ export default {
     callToAction: "Plan a trackday",
     extra: "What else is included?",
     quote:
-      "Bij BE motorsport wordt de totaal service hoog in het vaandel gedragen. Het is fantastisch dat je warm ontvangen wordt, dat alles tot in de puntjes is georganiseerd en dat je altijd een veilig gevoel hebt!",
+      "At BE motorsport, high quality service is taken very seriously. It is fantastic that you receive a warm welcome, that everything is organized to the last detail and that you always feel safe!",
     section1: {
       title: '"I am an experienced driver and want to rent a racing car"',
       bullet1: "Porsche Cayman GT4 Clubsport (incl. 1 full fuel tank)",
