@@ -364,6 +364,6 @@ export default {
     availableCars: "Verfügbare Autos",
     availableFormulas: "Verfügbare Formeln",
     requirements: "Anforderungen",
-    addTrackDay: "Hinzufügen\xa0Hinzufügen"
+    addTrackDay: "Zufügen\xa0"
   }
 };
