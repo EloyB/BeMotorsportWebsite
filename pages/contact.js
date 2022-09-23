@@ -260,7 +260,7 @@ export default function contact() {
               required
             />
             <TextInput
-              placeholder={t.contactPage.fullName}
+              placeholder={t.contactPage.phone}
               value={mail.phone}
               onChange={(value) => setMail({ ...mail, phone: value })}
               requirement={mail.phone === ""}

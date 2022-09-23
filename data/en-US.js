@@ -122,6 +122,7 @@ export default {
     fullName: "Full name",
     message: "Message",
     sendMessageButtonText: "Send message",
+    phone: "Phone number"
   },
   rentingPage: {
     title: "Renting",

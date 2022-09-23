@@ -123,6 +123,7 @@ export default {
     fullName: "Nom",
     message: "Message",
     sendMessageButtonText: "Envoyez message",
+    phone: "N° de téléphone"
   },
   rentingPage: {
     title: "Location",

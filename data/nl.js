@@ -123,6 +123,7 @@ export default {
     sendMessageButtonText: "Verstuur bericht",
     fullName: "Voor- en achternaam",
     message: "Bericht",
+    phone: "Telefoonnummer"
   },
   rentingPage: {
     title: "Renting",
