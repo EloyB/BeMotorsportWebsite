@@ -99,7 +99,7 @@ export default function Home() {
                 />
                 <div className="px-4 divide-gray-50 divide-y-2">
                   <p className="text-motorblue font-semibold py-6 text-xl sm:text-2xl lg:text-3xl">
-                    Peugeot 206 GTi
+                      Porsche Boxster 981 – 2,5l
                   </p>
                   {peugeotData.map((item, index) => (
                     <div key={index} className="py-2 text-sm grid grid-cols-2">

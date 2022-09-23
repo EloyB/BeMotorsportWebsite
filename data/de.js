@@ -80,7 +80,7 @@ export default {
     driversStep: {
       title: "Wählen Sie Ihre Piloten",
       placeholder: "Fügen Sie zuerst Piloten über das Formular hinzu",
-      addButtonText: "hinzufügen",
+      addButtonText: "Hinzufügen",
       age: "Das Alter",
       hasExperience: "Hat Erfahrung",
       hasNoExperience: "Hat keine Erfahrung",
@@ -123,6 +123,7 @@ export default {
     fullName: "Vor-und Nachname",
     message: "Nachricht",
     sendMessageButtonText: "Nachricht senden",
+    phone: "Telefonnummer"
   },
   rentingPage: {
     title: "Renting",
@@ -364,6 +365,6 @@ export default {
     availableCars: "Verfügbare Autos",
     availableFormulas: "Verfügbare Formeln",
     requirements: "Anforderungen",
-    addTrackDay: "Hinzufügen\xa0Hinzufügen"
+    addTrackDay: "Zufügen\xa0"
   }
 };

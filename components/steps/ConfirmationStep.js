@@ -23,7 +23,7 @@ export default function ConfirmationStep() {
         <p>{t.reservationPage.confirmationStep.description}</p>
       </div>
       <div className="max-w-screen-lg m-auto pt-10">
-        <PrimaryButton label="Nieuwe boeking" onClick={() => dispatch({ type: "RESET_FORM" })} />
+        <PrimaryButton label={t.reservationPage.confirmationStep.buttonText} onClick={() => dispatch({ type: "RESET_FORM" })} />
       </div>
     </div>
   );
